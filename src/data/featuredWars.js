@@ -10839,4 +10839,3816 @@ export const featuredWarsByName = {
     },
   },
 
+
+  "Sino-Vietnamese Conflicts": {
+    theater: "Southeast Asian borderlands - the **Sino-Vietnamese frontier**, **Spratly Islands**, and contested maritime zones",
+    summary: "The **Sino-Vietnamese Conflicts (1979-1990)** began with China's punitive invasion of northern Vietnam in February 1979 and continued as a decade-long series of border clashes, artillery duels, and naval confrontations. **China** launched the 1979 war ostensibly to 'teach Vietnam a lesson' for its invasion of **Cambodia** and alliance with the **Soviet Union**. Vietnam's border defenses - largely militia and regional forces - inflicted heavier-than-expected casualties on the **PLA**, which withdrew after a few weeks claiming mission accomplished. The border then simmered with intermittent fighting through the 1980s, punctuated by the **1988 Johnson South Reef skirmish** in the Spratlys. It was a conflict where both sides claimed victory and neither side's version fully survived contact with the casualty reports.",
+    background: [
+      "The **Sino-Soviet split** placed Vietnam firmly in Moscow's orbit after reunification, alarming Beijing.",
+      "Vietnam's **1978 invasion of Cambodia** toppled China's Khmer Rouge ally, creating a direct strategic grievance.",
+      "Border tensions had been building since the mid-1970s over ethnic Chinese expulsions and territorial disputes.",
+      "**Deng Xiaoping** sought to demonstrate that Soviet-aligned states could not act with impunity on China's periphery.",
+    ],
+    participants: [
+      { name: "People's Republic of China", role: "Launched punitive invasion in 1979 and maintained border pressure through the 1980s to constrain Vietnamese regional ambitions.", side: "belligerent" },
+      { name: "Socialist Republic of Vietnam", role: "Defended northern border with militia and regular forces while maintaining occupation of Cambodia.", side: "belligerent" },
+      { name: "Soviet Union", role: "Provided diplomatic backing and military supplies to Vietnam but did not intervene directly against China.", side: "nonBelligerent" },
+      { name: "Cambodia (PRK)", role: "Vietnamese-installed government whose existence was a core Chinese grievance driving the conflict.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Feb-Mar 1979", title: "Chinese invasion", detail: "PLA crosses border with 200,000+ troops, captures provincial capitals, suffers significant casualties, withdraws after three weeks." },
+      { period: "1979-1987", title: "Border war of attrition", detail: "Continuous artillery exchanges and infantry clashes along the frontier, particularly around **Lao Shan** and **Vi Xuyen**." },
+      { period: "Mar 1988", title: "Johnson South Reef", detail: "Chinese and Vietnamese naval forces clash in the **Spratlys**; China sinks Vietnamese transport ships and occupies reefs." },
+      { period: "1989-1991", title: "Normalization", detail: "Collapse of Soviet Union and Vietnamese withdrawal from Cambodia remove core grievances; relations normalize in 1991." },
+    ],
+    outcome: "Strategic stalemate on land; China gained footholds in the Spratlys; both sides eventually normalized relations after the Cold War framework dissolved.",
+    casualties: {
+      military: "The 1979 invasion alone cost China an estimated **20,000-30,000** casualties; Vietnamese losses were comparable. Border fighting through the 1980s added thousands more.",
+      civilian: "Northern Vietnamese towns were devastated during the 1979 invasion; Chinese border communities also suffered from Vietnamese artillery.",
+      displacement: "Hundreds of thousands of ethnic Chinese were expelled or fled Vietnam; border populations on both sides were displaced repeatedly.",
+      note: "Casualty figures remain politically sensitive and disputed by both governments to this day.",
+    },
+    orderOfBattle: [
+      { name: "PLA invasion force (1979)", strength: "200,000-600,000 troops across multiple army corps with armor and artillery support", note: "Numerical superiority was offset by poor coordination, outdated tactics, and determined Vietnamese defense." },
+      { name: "Vietnamese border defense", strength: "Regional forces, militia, and redeployed regular units with extensive fortification networks", note: "Defense-in-depth and local knowledge inflicted disproportionate casualties on advancing Chinese forces." },
+    ],
+    aftermath: [
+      "The PLA's poor performance in 1979 catalyzed major **Chinese military modernization** reforms under Deng Xiaoping.",
+      "Vietnam's two-front burden (Cambodia occupation + China border) strained its economy and accelerated **Doi Moi** reforms.",
+      "The Spratly Islands disputes established during this period remain unresolved and central to **South China Sea** tensions.",
+      "Normalization in 1991 created the framework for modern Sino-Vietnamese relations - cooperative on economics, competitive on maritime claims.",
+    ],
+    maps: {
+      title: "Sino-Vietnamese conflict zones 1979-1990",
+      description: "From the northern border invasion corridors to the distant Spratly reef clashes.",
+      points: [
+        { name: "Lang Son", x: 56, y: 38, year: "1979", note: "Key provincial capital captured by PLA before withdrawal; symbolized the invasion's deepest penetration." },
+        { name: "Vi Xuyen / Lao Shan", x: 54, y: 36, year: "1984-1987", note: "Epicenter of prolonged border artillery and infantry battles through the 1980s." },
+        { name: "Johnson South Reef", x: 58, y: 58, year: "1988", note: "Naval clash that established Chinese physical presence in disputed Spratly Islands." },
+      ],
+    },
+    technology: [
+      { name: "Human-wave infantry tactics", type: "Conventional assault doctrine", side: "China", impact: "Mass infantry attacks proved costly against prepared Vietnamese defenses and exposed PLA doctrinal weaknesses." },
+      { name: "Defense-in-depth fortifications", type: "Territorial defense", side: "Vietnam", impact: "Tunnel networks, minefields, and prepared positions maximized defensive advantage against numerically superior forces." },
+      { name: "Naval power projection", type: "Maritime force", side: "China", impact: "1988 Spratly operations demonstrated growing Chinese naval capability and willingness to use force over island claims." },
+    ],
+    centralFigures: [
+      {
+        name: "Deng Xiaoping",
+        role: "Chinese paramount leader",
+        side: "belligerent",
+        importance: 95,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/1/16/Deng_Xiaoping_and_Jimmy_Carter_at_the_arrival_ceremony_for_the_Vice_Premier_of_China._-_NARA_-_183157-restored.jpg",
+        note: "Personally authorized the 1979 invasion and used its lessons to drive PLA modernization.",
+      },
+      {
+        name: "Le Duan",
+        role: "General Secretary of Vietnam",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Directed Vietnamese strategy of simultaneous Cambodia occupation and northern border defense.",
+      },
+      {
+        name: "Xu Shiyou",
+        role: "PLA Guangzhou Military Region commander",
+        side: "belligerent",
+        importance: 68,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the eastern prong of the 1979 invasion with mixed operational results.",
+      },
+    ],
+    infobox: {
+      dates: "1979 - 1990",
+      location: "Sino-Vietnamese border and Spratly Islands",
+      result: "Strategic stalemate; eventual normalization in 1991",
+      belligerents: "China vs Vietnam",
+      strength: "Large PLA conventional force vs Vietnamese defense-in-depth",
+      casualties: "Tens of thousands killed across all phases",
+    },
+  },
+
+  "Iranian Embassy Siege": {
+    theater: "Central London - **16 Princes Gate**, the **Iranian Embassy** in **South Kensington**",
+    summary: "The **Iranian Embassy Siege (1980)** was a six-day hostage crisis in London that ended with one of the most famous special forces operations in history. On April 30, 1980, six gunmen from the **Democratic Revolutionary Front for the Liberation of Arabistan** seized the Iranian Embassy, taking 26 hostages and demanding autonomy for **Khuzestan** and the release of prisoners. After negotiations stalled and the gunmen killed a hostage, **Operation Nimrod** was launched: the **SAS** stormed the building live on television, killing five of six gunmen and rescuing all but one hostage in seventeen minutes. It was the moment counter-terrorism went from classified briefing to prime-time television.",
+    background: [
+      "Iran's **1979 revolution** created internal ethnic tensions; Arab separatists in **Khuzestan** sought autonomy from the new Islamic Republic.",
+      "The gunmen were trained in **Iraq**, which was preparing for war with Iran and saw the siege as a useful provocation.",
+      "Britain's **SAS** had been developing hostage-rescue capabilities since the **1972 Munich massacre** but had never deployed them publicly.",
+      "The siege coincided with the ongoing **Iran hostage crisis** in Tehran, creating a complex diplomatic backdrop.",
+    ],
+    participants: [
+      { name: "Democratic Revolutionary Front for the Liberation of Arabistan", role: "Six gunmen who seized the embassy demanding Khuzestan autonomy and prisoner releases.", side: "belligerent" },
+      { name: "British Government / Metropolitan Police", role: "Managed negotiations and outer cordon while preparing military option.", side: "belligerent" },
+      { name: "22 SAS Regiment", role: "Executed Operation Nimrod, the assault that ended the siege in seventeen minutes.", side: "belligerent" },
+      { name: "Iranian Government", role: "Nominal owner of the embassy; complicated diplomatic stakeholder given ongoing US hostage crisis.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "30 Apr 1980", title: "Seizure", detail: "Six armed men storm the Iranian Embassy and take 26 hostages including embassy staff, visitors, and a BBC journalist." },
+      { period: "1-4 May 1980", title: "Negotiation phase", detail: "Police negotiate release of some hostages while SAS teams rehearse assault plans on a replica building." },
+      { period: "5 May 1980", title: "Crisis point", detail: "Gunmen kill hostage Abbas Lavasani and threaten to execute more; government authorizes military intervention." },
+      { period: "5 May 1980, 19:23", title: "Operation Nimrod", detail: "SAS teams assault from roof and windows, clear the building in seventeen minutes, kill five gunmen, rescue remaining hostages." },
+    ],
+    outcome: "All surviving hostages rescued; five of six gunmen killed; one gunman captured. The SAS became internationally famous overnight.",
+    casualties: {
+      military: "No SAS fatalities; minor injuries to assault team members from fire and flashbang effects.",
+      civilian: "One hostage killed by gunmen before the assault; one hostage wounded during the rescue operation.",
+      displacement: "Not applicable - urban hostage incident.",
+      note: "The remarkably low casualty count for the rescue became the gold standard for counter-terrorism operations worldwide.",
+    },
+    orderOfBattle: [
+      { name: "SAS assault teams", strength: "Approximately 30 operators from B Squadron, 22 SAS", note: "Divided into Red and Blue teams for simultaneous multi-entry assault using abseiling, explosive charges, and stun grenades." },
+      { name: "Hostage-takers", strength: "Six lightly armed gunmen with pistols, a submachine gun, and hand grenades", note: "Outmatched in training and equipment once military option was activated." },
+    ],
+    aftermath: [
+      "The SAS's public debut transformed global counter-terrorism doctrine and inspired dozens of national hostage-rescue units.",
+      "**Margaret Thatcher's** government received a massive popularity boost from the successful resolution.",
+      "The surviving gunman, **Fowzi Nejad**, was convicted and served 27 years in British prison.",
+      "The operation demonstrated that liberal democracies could resolve hostage crises with precision force - a lesson studied by every Western military since.",
+    ],
+    maps: {
+      title: "Iranian Embassy Siege - 16 Princes Gate",
+      description: "A single building in South Kensington that became the world's most-watched battlefield.",
+      points: [
+        { name: "16 Princes Gate", x: 50, y: 50, year: "1980", note: "The Iranian Embassy; site of the six-day siege and SAS assault." },
+        { name: "Royal Albert Hall area", x: 48, y: 48, year: "1980", note: "Outer police cordon and media staging area during the crisis." },
+        { name: "Regent's Park Barracks", x: 52, y: 44, year: "1980", note: "SAS forward staging location during the siege." },
+      ],
+    },
+    technology: [
+      { name: "Stun grenades (flashbangs)", type: "Non-lethal entry device", side: "SAS", impact: "Disoriented hostage-takers during the critical first seconds of room entry." },
+      { name: "Frame charges", type: "Explosive breaching", side: "SAS", impact: "Enabled simultaneous multi-point entry through windows and walls." },
+      { name: "Live television coverage", type: "Media technology", side: "N/A", impact: "BBC cameras captured the assault live, making it the first globally televised special forces operation." },
+    ],
+    centralFigures: [
+      {
+        name: "Margaret Thatcher",
+        role: "British Prime Minister",
+        side: "belligerent",
+        importance: 88,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/2/20/Margaret_Thatcher_stock_photo.jpg",
+        note: "Authorized the military option and personally congratulated the SAS team at their barracks afterward.",
+      },
+      {
+        name: "Oan Ali Mohammed",
+        role: "Lead hostage-taker (codename 'Salim')",
+        side: "belligerent",
+        importance: 65,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the six-man team; killed during the SAS assault.",
+      },
+      {
+        name: "Sim Harris",
+        role: "BBC sound recordist / hostage",
+        side: "nonBelligerent",
+        importance: 45,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His escape from a first-floor window during the assault became one of the siege's iconic images.",
+      },
+    ],
+    infobox: {
+      dates: "30 April - 5 May 1980",
+      location: "Iranian Embassy, London, UK",
+      result: "SAS assault; hostages rescued; five gunmen killed",
+      belligerents: "Arabistan separatists vs British security forces",
+      strength: "Six gunmen vs ~30 SAS operators",
+      casualties: "One hostage and five gunmen killed",
+    },
+  },
+
+  "Invasion of Grenada": {
+    theater: "Eastern Caribbean - the island of **Grenada** and its satellite **Carriacou**",
+    summary: "The **Invasion of Grenada (1983)** was a US-led military intervention triggered by a Marxist coup that overthrew and killed Prime Minister **Maurice Bishop**. The **Reagan administration** cited the safety of American medical students and a request from the **Organisation of Eastern Caribbean States** to justify **Operation Urgent Fury**. US forces, joined by token Caribbean contingents, overwhelmed **Cuban** construction workers-turned-defenders and the **People's Revolutionary Army** in a few days of sometimes chaotic fighting. The operation succeeded militarily but exposed serious inter-service coordination problems that later drove the **Goldwater-Nichols Act** reforms. It was the kind of victory where the after-action report was almost as important as the battle.",
+    background: [
+      "**Maurice Bishop's** 1979 revolution had aligned Grenada with **Cuba** and the **Soviet Union**, alarming Washington.",
+      "A hardline faction led by **Bernard Coard** and **Hudson Austin** overthrew and executed Bishop on October 19, 1983.",
+      "The new military junta imposed a shoot-on-sight curfew, raising concerns about 600+ American medical students on the island.",
+      "The **OECS** formally requested US intervention, providing diplomatic cover for an operation already being planned.",
+    ],
+    participants: [
+      { name: "United States", role: "Primary invasion force using Army Rangers, Marines, 82nd Airborne, Navy SEALs, and Delta Force.", side: "belligerent" },
+      { name: "Caribbean coalition (OECS states)", role: "Small contingents from Jamaica, Barbados, and Eastern Caribbean nations providing political legitimacy.", side: "belligerent" },
+      { name: "People's Revolutionary Army (Grenada)", role: "Grenadian military forces loyal to the coup government, defending key installations.", side: "belligerent" },
+      { name: "Cuban military construction workers", role: "Approximately 700 Cubans, mostly construction workers at Point Salines airport, some armed and organized for defense.", side: "belligerent" },
+    ],
+    timeline: [
+      { period: "19 Oct 1983", title: "Coup and crisis", detail: "Bishop overthrown and executed; military junta takes power; US begins invasion planning." },
+      { period: "25 Oct 1983", title: "D-Day", detail: "US forces land at Point Salines and Pearls airports; encounter heavier resistance than expected." },
+      { period: "26-27 Oct 1983", title: "Consolidation", detail: "Rangers and 82nd Airborne secure medical school campuses; resistance collapses across the island." },
+      { period: "28 Oct - 15 Dec 1983", title: "Mop-up and withdrawal", detail: "Organized resistance ends; US forces gradually withdraw; democratic elections scheduled." },
+    ],
+    outcome: "Complete US military victory; coup leaders arrested; democratic government restored; American students evacuated safely.",
+    casualties: {
+      military: "US: 19 killed, 116 wounded. Cuban: 25 killed, 59 wounded. Grenadian military: 45 killed.",
+      civilian: "At least 24 Grenadian civilians killed, including patients in a mental hospital accidentally bombed by US aircraft.",
+      displacement: "Minimal long-term displacement given the island's small size and short duration of fighting.",
+      note: "Casualties were light by invasion standards but the mental hospital bombing and friendly fire incidents drew significant criticism.",
+    },
+    orderOfBattle: [
+      { name: "US Joint Task Force 120", strength: "~7,600 troops including Rangers, Marines, 82nd Airborne, SEALs, Delta Force, and AC-130 gunships", note: "Overwhelming force applied with poor inter-service communication that nearly caused several disasters." },
+      { name: "Grenadian/Cuban defenders", strength: "~1,500 PRA troops plus ~700 Cubans with light weapons and some armored vehicles", note: "Fragmented command and limited heavy weapons made sustained defense impossible." },
+    ],
+    aftermath: [
+      "The operation's communication failures directly contributed to the **1986 Goldwater-Nichols Act** reforming US joint military operations.",
+      "Grenada returned to democratic governance and remains a stable Caribbean democracy.",
+      "The invasion was condemned by the **UN General Assembly** 108-9 but was popular domestically in both the US and Grenada.",
+      "It established a post-Vietnam template for short, decisive US military interventions with clear exit strategies.",
+    ],
+    maps: {
+      title: "Operation Urgent Fury - Grenada 1983",
+      description: "A tiny island, a massive force, and a very steep learning curve.",
+      points: [
+        { name: "Point Salines Airport", x: 48, y: 62, year: "1983", note: "Cuban-built runway; primary Ranger assault objective and site of heaviest initial fighting." },
+        { name: "Pearls Airport", x: 54, y: 42, year: "1983", note: "Marine helicopter assault secured the eastern airfield with lighter resistance." },
+        { name: "Grand Anse campus", x: 46, y: 56, year: "1983", note: "Second medical school campus; dramatic helicopter rescue of students under fire." },
+      ],
+    },
+    technology: [
+      { name: "AC-130 Spectre gunship", type: "Close air support", side: "US", impact: "Provided devastating fire support but also caused the mental hospital bombing due to targeting errors." },
+      { name: "Inter-service radio incompatibility", type: "Communications failure", side: "US", impact: "Army and Navy units literally could not talk to each other; one soldier famously used a payphone to call Fort Bragg for fire support." },
+      { name: "Cuban-built Point Salines runway", type: "Strategic infrastructure", side: "Cuba/Grenada", impact: "The 10,000-foot runway was cited by the US as evidence of Soviet-Cuban military intentions in the Caribbean." },
+    ],
+    centralFigures: [
+      {
+        name: "Ronald Reagan",
+        role: "US President",
+        side: "belligerent",
+        importance: 92,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Portrait_of_President_Reagan_1981.jpg",
+        note: "Ordered the invasion citing student safety and regional stability; used success to rebuild post-Vietnam military confidence.",
+      },
+      {
+        name: "Hudson Austin",
+        role: "Leader of Grenadian military junta",
+        side: "belligerent",
+        importance: 62,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the coup that killed Bishop and triggered the invasion; arrested and imprisoned.",
+      },
+      {
+        name: "Maurice Bishop",
+        role: "Overthrown Prime Minister of Grenada",
+        side: "nonBelligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His execution by hardliners within his own movement created the crisis that led to US intervention.",
+      },
+    ],
+    infobox: {
+      dates: "25 October - 15 December 1983",
+      location: "Grenada, Eastern Caribbean",
+      result: "US victory; democratic government restored",
+      belligerents: "US and Caribbean coalition vs Grenadian junta and Cuban forces",
+      strength: "~7,600 US troops vs ~2,200 defenders",
+      casualties: "19 US, 45 Grenadian military, 25 Cuban, 24+ civilians killed",
+    },
+  },
+
+  "Bougainville Civil War": {
+    theater: "Southwest Pacific - **Bougainville Island**, **Papua New Guinea**, and the **Panguna mine** region",
+    summary: "The **Bougainville Civil War (1988-1998)** was a secessionist conflict on the island of **Bougainville** against the government of **Papua New Guinea**, triggered by environmental destruction and revenue disputes around the **Panguna copper mine** - one of the world's largest. The **Bougainville Revolutionary Army** under **Francis Ona** shut down the mine and fought for independence, while PNG forces and local resistance militias fought back with considerable brutality. A naval blockade caused a humanitarian crisis. After failed peace attempts and a mercenary scandal (the **Sandline Affair**), a ceasefire and eventual autonomy agreement led to a 2019 independence referendum where **97.7%** voted for independence. It was a war started by a mine and ended by a ballot - which is the order those things should happen in.",
+    background: [
+      "The **Panguna mine**, operated by **Bougainville Copper Limited** (a Rio Tinto subsidiary), generated massive revenue for PNG but devastated local land and waterways.",
+      "Bougainvilleans received minimal compensation while bearing all environmental costs, creating deep resentment.",
+      "Ethnic and cultural differences between Bougainville and mainland PNG reinforced separatist sentiment.",
+      "Militant landowners began sabotaging the mine in **1988**, escalating into full armed conflict by 1989.",
+    ],
+    participants: [
+      { name: "Bougainville Revolutionary Army (BRA)", role: "Secessionist force fighting for independence from PNG, initially focused on mine shutdown.", side: "belligerent" },
+      { name: "Papua New Guinea Defence Force", role: "Government military attempting to suppress secession and restore control over Bougainville.", side: "belligerent" },
+      { name: "Resistance Forces", role: "Pro-PNG Bougainvillean militias opposing the BRA, often armed by the government.", side: "belligerent" },
+      { name: "New Zealand / Australia / regional mediators", role: "Facilitated peace negotiations and provided the Truce Monitoring Group and Peace Monitoring Group.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "1988-1989", title: "Mine sabotage to war", detail: "Landowner militancy escalates; Panguna mine closes permanently; PNG declares state of emergency." },
+      { period: "1990-1994", title: "Blockade and brutality", detail: "PNG imposes naval blockade; humanitarian crisis; both sides commit atrocities against civilians." },
+      { period: "1997", title: "Sandline Affair", detail: "PNG government hires mercenaries from **Sandline International**; military mutiny forces their expulsion and collapses the government." },
+      { period: "1998-2001", title: "Peace process", detail: "Ceasefire, Lincoln Agreement, and Bougainville Peace Agreement establish autonomy framework and future referendum." },
+    ],
+    outcome: "Ceasefire and autonomy agreement; 2019 referendum produced 97.7% vote for independence; final political status still under negotiation with PNG.",
+    casualties: {
+      military: "Military casualties numbered in the hundreds on both sides across a decade of fighting.",
+      civilian: "Estimated **15,000-20,000** deaths, mostly civilians, primarily from the blockade's denial of medicine and supplies.",
+      displacement: "Tens of thousands displaced into care centers or fled to neighboring Solomon Islands.",
+      note: "The naval blockade killed far more people than the actual fighting - a pattern that rarely makes headlines but defines the war's human cost.",
+    },
+    orderOfBattle: [
+      { name: "BRA guerrilla forces", strength: "Several thousand fighters with captured weapons, homemade firearms, and improvised equipment", note: "Jungle terrain and local support compensated for massive material disadvantage." },
+      { name: "PNGDF and Resistance", strength: "Regular military with helicopter support plus local pro-government militias", note: "Superior firepower offset by difficult terrain, poor logistics, and low morale." },
+    ],
+    aftermath: [
+      "The **Panguna mine** remains closed decades later - a $58 billion copper deposit sitting untouched in the jungle.",
+      "The **Sandline Affair** triggered a constitutional crisis in PNG and became a cautionary tale about private military companies.",
+      "Bougainville's 2019 independence vote was overwhelming but non-binding; negotiations with PNG continue.",
+      "The conflict demonstrated how resource extraction grievances can fuel full-scale secessionist wars in post-colonial states.",
+    ],
+    maps: {
+      title: "Bougainville conflict zone",
+      description: "One island, one mine, one decade of war, one overwhelming referendum.",
+      points: [
+        { name: "Panguna mine", x: 52, y: 48, year: "1988-1989", note: "The copper mine whose environmental destruction and revenue inequity sparked the entire conflict." },
+        { name: "Arawa", x: 54, y: 50, year: "1990s", note: "Provincial capital and administrative center; contested throughout the war." },
+        { name: "Buka", x: 52, y: 40, year: "1990s", note: "Northern Bougainville; site of PNG military operations and later peace negotiations." },
+      ],
+    },
+    technology: [
+      { name: "Naval blockade", type: "Economic warfare", side: "PNG", impact: "Denied medicine, fuel, and supplies to Bougainville; caused the majority of civilian deaths." },
+      { name: "Improvised weapons", type: "Guerrilla innovation", side: "BRA", impact: "Homemade firearms and coconut-shell grenades sustained resistance despite total arms embargo." },
+      { name: "Sandline mercenary contract", type: "Private military", side: "PNG", impact: "Hired mercenaries with helicopter gunships; military mutiny expelled them before deployment." },
+    ],
+    centralFigures: [
+      {
+        name: "Francis Ona",
+        role: "BRA leader and self-declared King of Bougainville",
+        side: "belligerent",
+        importance: 85,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the mine sabotage campaign and secessionist war; refused to participate in peace negotiations; died in 2005.",
+      },
+      {
+        name: "Sam Kauona",
+        role: "BRA military commander",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Directed BRA military operations and later participated in peace negotiations.",
+      },
+      {
+        name: "Joseph Kabui",
+        role: "Political leader of Bougainville independence movement",
+        side: "belligerent",
+        importance: 68,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Became first President of the Autonomous Region of Bougainville after the peace agreement.",
+      },
+    ],
+    infobox: {
+      dates: "1988 - 1998",
+      location: "Bougainville Island, Papua New Guinea",
+      result: "Ceasefire; autonomy agreement; 2019 independence referendum (97.7% yes)",
+      belligerents: "BRA vs PNG Defence Force and Resistance militias",
+      strength: "Guerrilla force vs conventional military with naval blockade",
+      casualties: "15,000-20,000 dead (mostly civilians from blockade)",
+    },
+  },
+
+  "First Liberian Civil War": {
+    theater: "West Africa - **Liberia**, from **Nimba County** borderlands to the capital **Monrovia**",
+    summary: "The **First Liberian Civil War (1989-1996)** was a catastrophic multi-faction conflict that destroyed Africa's oldest republic. **Charles Taylor's** National Patriotic Front of Liberia (**NPFL**) invaded from **Cote d'Ivoire** in December 1989 to overthrow President **Samuel Doe**, but the war quickly fragmented into a kaleidoscope of armed factions fighting over territory, resources, and ethnic grievances. **ECOWAS** intervened with the **ECOMOG** peacekeeping force, which became a combatant itself. Doe was captured and tortured to death on camera by **Prince Johnson's** splinter faction. After seven years, fourteen peace agreements, and approximately **200,000** dead, Taylor was elected president in 1997 on the logic that people voted for the man most likely to restart the war if he lost.",
+    background: [
+      "Liberia's **Americo-Liberian** elite had dominated indigenous populations since the country's founding in 1847.",
+      "**Samuel Doe's** 1980 coup ended Americo-Liberian rule but replaced it with ethnic Krahn favoritism and brutal repression.",
+      "**Charles Taylor**, a former Doe official who escaped a US prison, organized the NPFL with Libyan and Burkinabe support.",
+      "Ethnic tensions between **Gio/Mano** peoples (backing Taylor) and **Krahn/Mandingo** peoples (backing Doe) provided the conflict's combustible fuel.",
+    ],
+    participants: [
+      { name: "NPFL (Charles Taylor)", role: "Primary rebel faction that invaded Liberia and controlled most of the countryside; later became the dominant political force.", side: "belligerent" },
+      { name: "Armed Forces of Liberia / Samuel Doe government", role: "Government forces defending the capital; collapsed after Doe's capture and murder.", side: "belligerent" },
+      { name: "INPFL (Prince Johnson)", role: "NPFL splinter faction that captured and killed Doe; controlled parts of Monrovia.", side: "belligerent" },
+      { name: "ECOMOG (ECOWAS peacekeeping force)", role: "Nigerian-led intervention force that became a de facto combatant defending Monrovia against Taylor.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Dec 1989", title: "NPFL invasion", detail: "Taylor's forces cross from Cote d'Ivoire into Nimba County; rapid advance amid ethnic violence." },
+      { period: "1990", title: "Monrovia siege and Doe's death", detail: "NPFL besieges capital; ECOMOG intervenes; Prince Johnson captures and kills Doe on camera." },
+      { period: "1990-1995", title: "Factional fragmentation", detail: "War splinters into 7+ factions; multiple failed ceasefires; warlord economies based on diamonds, timber, and rubber." },
+      { period: "1996-1997", title: "Abuja Accords and election", detail: "Final peace agreement holds; Taylor wins 1997 election with 75% of the vote." },
+    ],
+    outcome: "Charles Taylor elected president after seven years of war; peace was fragile and collapsed again in 1999 with the Second Liberian Civil War.",
+    casualties: {
+      military: "Thousands of combatants killed across all factions; exact figures impossible to disaggregate from civilian deaths.",
+      civilian: "Estimated **150,000-200,000** total deaths; massive civilian targeting by all factions including systematic use of child soldiers.",
+      displacement: "Over **700,000** refugees fled to neighboring countries; half the population was internally displaced.",
+      note: "The war's signature horror was the widespread use of child soldiers, some as young as seven, by virtually every faction.",
+    },
+    orderOfBattle: [
+      { name: "NPFL", strength: "Peak strength ~10,000+ fighters including many child soldiers; controlled most of rural Liberia", note: "Effective at territorial seizure but fragmented repeatedly as commanders broke away." },
+      { name: "ECOMOG", strength: "~12,000 troops, primarily Nigerian, with armor, artillery, and air support", note: "Prevented Taylor from capturing Monrovia but could not end the war militarily." },
+    ],
+    aftermath: [
+      "Taylor's presidency proved as destructive as his rebellion; he fueled the **Sierra Leone civil war** and was eventually convicted of war crimes by the **Special Court for Sierra Leone**.",
+      "The war created a generation of traumatized child soldiers whose reintegration remains incomplete decades later.",
+      "Liberia's infrastructure was almost completely destroyed; recovery took decades of international assistance.",
+      "The conflict established patterns of West African regional intervention through **ECOWAS** that continue to shape continental security architecture.",
+    ],
+    maps: {
+      title: "First Liberian Civil War factional zones",
+      description: "A country carved into warlord fiefdoms connected by violence and resource extraction.",
+      points: [
+        { name: "Nimba County", x: 54, y: 44, year: "1989", note: "NPFL invasion launch point and site of initial ethnic massacres." },
+        { name: "Monrovia", x: 42, y: 50, year: "1990-1996", note: "Capital besieged repeatedly; defended by ECOMOG; site of Doe's murder." },
+        { name: "Gbarnga", x: 50, y: 48, year: "1990-1996", note: "Taylor's NPFL capital and administrative center in the interior." },
+      ],
+    },
+    technology: [
+      { name: "Child soldier recruitment", type: "Manpower strategy", side: "All factions", impact: "Drugged and brutalized children became a primary combat resource across all armed groups." },
+      { name: "Warlord resource extraction", type: "War economy", side: "All factions", impact: "Diamonds, timber, and rubber funded continued fighting independent of any political objective." },
+      { name: "ECOMOG conventional intervention", type: "Regional peacekeeping", side: "ECOWAS", impact: "Nigerian-led force with armor and air power prevented complete state collapse but could not impose peace." },
+    ],
+    centralFigures: [
+      {
+        name: "Charles Taylor",
+        role: "NPFL leader, later President of Liberia",
+        side: "belligerent",
+        importance: 95,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Launched the war, won the peace, destabilized the region, and ended up convicted of war crimes at The Hague.",
+      },
+      {
+        name: "Samuel Doe",
+        role: "President of Liberia",
+        side: "belligerent",
+        importance: 80,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His brutal rule created the conditions for war; his filmed torture and murder became the conflict's most infamous image.",
+      },
+      {
+        name: "Prince Johnson",
+        role: "INPFL faction leader",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Captured and killed Doe while drinking beer on camera; later became a Liberian senator.",
+      },
+    ],
+    infobox: {
+      dates: "1989 - 1996",
+      location: "Liberia, West Africa",
+      result: "Taylor elected president 1997; fragile peace",
+      belligerents: "NPFL and splinter factions vs government forces and ECOMOG",
+      strength: "Multiple militia factions vs Nigerian-led peacekeeping force",
+      casualties: "~200,000 dead; 700,000+ refugees",
+    },
+  },
+
+
+  "Kashmir Insurgency": {
+    theater: "South Asia - **Indian-administered Kashmir**, the **Line of Control**, and cross-border infiltration corridors into **Pakistan-administered Kashmir**",
+    summary: "The **Kashmir Insurgency (1989-present)** erupted when decades of political frustration in the **Kashmir Valley** boiled over into armed revolt against Indian rule. What began as a largely indigenous uprising was progressively shaped by **Pakistani** support for militant groups and the arrival of foreign jihadist fighters. India responded with massive military deployment, emergency laws like the **Armed Forces Special Powers Act**, and a counterinsurgency apparatus that became one of the world's most sustained. The conflict has killed tens of thousands, displaced hundreds of thousands of **Kashmiri Pandits**, and turned the valley into one of the most militarized places on earth. Every few years someone announces a peace process, and every few years the valley reminds everyone that announcements are not the same as outcomes.",
+    background: [
+      "Kashmir's accession to India in **1947** was contested from day one; Pakistan claimed the Muslim-majority territory and fought wars over it in **1947, 1965**, and **1999**.",
+      "Rigged elections, particularly the **1987 state assembly election**, destroyed faith in democratic processes and radicalized a generation.",
+      "The **JKLF** (Jammu and Kashmir Liberation Front) launched the initial armed uprising in 1989, seeking independence rather than merger with Pakistan.",
+      "Pakistan's **ISI** gradually redirected the insurgency toward pro-Pakistan groups like **Hizbul Mujahideen** and later facilitated foreign jihadist organizations.",
+    ],
+    participants: [
+      { name: "Indian security forces", role: "Army, paramilitary (CRPF, BSF), and police conducting sustained counterinsurgency operations under emergency legislation.", side: "belligerent" },
+      { name: "Kashmiri militant groups", role: "Indigenous and Pakistan-backed armed organizations including JKLF, Hizbul Mujahideen, Lashkar-e-Taiba, and Jaish-e-Mohammed.", side: "belligerent" },
+      { name: "Pakistan / ISI", role: "Provided training, arms, funding, and sanctuary to militant groups; denied direct involvement while maintaining infrastructure.", side: "belligerent" },
+      { name: "Kashmiri civilian population", role: "Caught between security forces and militants; subjected to violence, surveillance, and restrictions from all sides.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "1989-1990", title: "Uprising erupts", detail: "Mass protests and armed attacks; JKLF kidnaps Indian official's daughter; Pandit exodus begins; India deploys massive forces." },
+      { period: "1990s", title: "Peak violence", detail: "Foreign fighters arrive; multiple militant factions compete; Indian counterinsurgency intensifies with cordon-and-search operations." },
+      { period: "2000s", title: "Diplomatic thaw attempts", detail: "Ceasefire along LoC (2003); back-channel negotiations; violence decreases but does not end." },
+      { period: "2010s-present", title: "New generation unrest", detail: "Mass protests after militant killings (notably **Burhan Wani**, 2016); India revokes **Article 370** (2019); communication blackouts and political detentions." },
+    ],
+    outcome: "No political resolution. India maintains security control; Pakistan maintains support infrastructure; violence continues at reduced but persistent levels; Article 370 revocation reshaped the legal framework without resolving the underlying dispute.",
+    casualties: {
+      military: "Thousands of Indian security personnel killed over three decades of continuous deployment.",
+      civilian: "Estimated **50,000-100,000** total deaths including militants, security forces, and civilians; figures are politically contested.",
+      displacement: "**150,000-300,000 Kashmiri Pandits** (Hindu minority) fled the valley in 1990; most have never returned. Ongoing displacement of Muslim Kashmiris from conflict zones.",
+      note: "The human rights cost includes not just deaths but decades of enforced disappearances, mass graves, and psychological trauma across the valley.",
+    },
+    orderOfBattle: [
+      { name: "Indian security apparatus", strength: "500,000-700,000 troops including Army, CRPF, BSF, and state police", note: "One of the highest troop-to-civilian ratios of any conflict zone in the world." },
+      { name: "Militant organizations", strength: "Peak strength of 10,000+ in the 1990s; reduced to hundreds of active fighters by 2020s", note: "Shifted from large formations to small cells; recruitment now largely local after foreign fighter pipeline narrowed." },
+    ],
+    aftermath: [
+      "India's **2019 revocation of Article 370** eliminated Kashmir's special constitutional status and split the state into two union territories.",
+      "The conflict created a massive Indian security-industrial complex in Kashmir that has its own institutional momentum.",
+      "Pakistan's support for militancy became a central issue in India-Pakistan relations and global counterterrorism frameworks.",
+      "A generation of Kashmiris has grown up knowing nothing but conflict, checkpoints, and internet shutdowns.",
+    ],
+    maps: {
+      title: "Kashmir insurgency zones",
+      description: "The most militarized real estate on earth, measured in checkpoints per kilometer.",
+      points: [
+        { name: "Srinagar", x: 52, y: 40, year: "1989-present", note: "Valley capital and epicenter of protests, crackdowns, and political contestation." },
+        { name: "Line of Control", x: 50, y: 38, year: "1989-present", note: "De facto border; infiltration corridor and site of continuous military confrontation." },
+        { name: "Pulwama", x: 52, y: 42, year: "2019", note: "Site of devastating suicide bombing that killed 40 CRPF personnel and triggered India-Pakistan air strikes." },
+      ],
+    },
+    technology: [
+      { name: "AFSPA (Armed Forces Special Powers Act)", type: "Legal framework", side: "India", impact: "Grants military broad powers including shoot-to-kill authority; central to human rights criticism of Indian operations." },
+      { name: "Cross-border infiltration networks", type: "Irregular warfare logistics", side: "Pakistan-backed groups", impact: "Training camps and tunnel/mountain routes sustained militant manpower for decades." },
+      { name: "Internet shutdowns", type: "Information control", side: "India", impact: "Kashmir has experienced the longest internet blackouts of any democracy, used to suppress coordination and communication." },
+    ],
+    centralFigures: [
+      {
+        name: "Burhan Wani",
+        role: "Hizbul Mujahideen commander",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His 2016 killing sparked massive protests and a new phase of Kashmiri youth radicalization via social media.",
+      },
+      {
+        name: "Narendra Modi",
+        role: "Indian Prime Minister",
+        side: "belligerent",
+        importance: 88,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Narendra_Modi_2021.jpg",
+        note: "Revoked Article 370 in 2019, fundamentally altering Kashmir's constitutional relationship with India.",
+      },
+      {
+        name: "Yasin Malik",
+        role: "JKLF leader",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the early independence-focused insurgency; later renounced violence; convicted of terrorism charges in 2022.",
+      },
+    ],
+    infobox: {
+      dates: "1989 - present",
+      location: "Indian-administered Kashmir",
+      result: "Ongoing insurgency; no political resolution",
+      belligerents: "Indian security forces vs Kashmiri and Pakistan-backed militant groups",
+      strength: "500,000+ Indian troops vs hundreds of active militants",
+      casualties: "50,000-100,000+ total dead over three decades",
+    },
+  },
+
+  "Algerian Civil War": {
+    theater: "North Africa - **Algeria**, from the **Mitidja Plain** south of Algiers to the **Kabylie** mountains and Saharan fringes",
+    summary: "The **Algerian Civil War (1991-2002)** was triggered when the military cancelled elections that the **Islamic Salvation Front (FIS)** was poised to win, plunging the country into a decade of extraordinary violence. The **Armed Islamic Group (GIA)** and later the **Salafist Group for Preaching and Combat (GSPC)** waged an insurgency marked by massacres of entire villages, car bombings, and assassinations. The Algerian military responded with equally brutal counterinsurgency, including death squads, torture, and alleged false-flag operations. The conflict killed an estimated **100,000-200,000** people, with some of the worst massacres - like **Bentalha** and **Rais** in 1997 - still debated over who actually committed them. It was a war where the question 'who killed whom?' became as dangerous as the killing itself.",
+    background: [
+      "Algeria's single-party **FLN** state faced economic crisis and youth unemployment in the late 1980s, triggering the **1988 October riots**.",
+      "Political liberalization allowed the **FIS** to organize; it won municipal elections in 1990 and was leading the first round of parliamentary elections in December 1991.",
+      "The military cancelled the second round in January **1992** and banned the FIS, arresting thousands of its members.",
+      "Radicalized Islamist factions took up arms; the GIA adopted a strategy of total war against the state and anyone perceived as supporting it.",
+    ],
+    participants: [
+      { name: "Algerian military and security services", role: "Conducted counterinsurgency operations, ran internment camps, and allegedly operated death squads and infiltration programs.", side: "belligerent" },
+      { name: "Armed Islamic Group (GIA)", role: "Most radical insurgent faction; responsible for mass civilian massacres, bombings, and airline hijacking.", side: "belligerent" },
+      { name: "Islamic Salvation Army (AIS)", role: "FIS-linked armed wing; more selective in targeting; declared ceasefire in 1997.", side: "belligerent" },
+      { name: "GSPC (later AQIM)", role: "GIA splinter that rejected indiscriminate civilian targeting; later affiliated with al-Qaeda.", side: "belligerent" },
+    ],
+    timeline: [
+      { period: "Jan 1992", title: "Coup and cancellation", detail: "Military cancels elections; FIS banned; President Boudiaf assassinated months later." },
+      { period: "1992-1996", title: "Escalating insurgency", detail: "GIA campaign of bombings, assassinations, and kidnappings; military counterinsurgency intensifies." },
+      { period: "1997-1998", title: "Massacre years", detail: "GIA commits mass killings at **Bentalha**, **Rais**, and other villages; military's role in some massacres remains disputed." },
+      { period: "1999-2002", title: "Civil Concord and decline", detail: "President **Bouteflika** offers amnesty; AIS disbands; violence decreases sharply though GSPC continues operations." },
+    ],
+    outcome: "Military victory by attrition and amnesty; insurgency degraded but not eliminated; GSPC evolved into AQIM and continued operations in the Sahel.",
+    casualties: {
+      military: "Thousands of security force members killed in ambushes, bombings, and assassinations.",
+      civilian: "Estimated **100,000-200,000** total dead; civilians bore the overwhelming majority of casualties from both insurgent massacres and state violence.",
+      displacement: "Over **1 million** internally displaced, particularly from rural areas targeted by GIA massacres.",
+      note: "The 'who did what' question remains Algeria's most sensitive political issue; the 2005 Charter for Peace and National Reconciliation effectively banned further investigation.",
+    },
+    orderOfBattle: [
+      { name: "Algerian National Army and security services", strength: "Large conventional force with extensive intelligence apparatus and paramilitary units", note: "Counterinsurgency combined conventional operations with infiltration, turning militants, and alleged false-flag tactics." },
+      { name: "GIA and affiliated groups", strength: "Peak strength estimated at 10,000-25,000 fighters across multiple regional commands", note: "Fragmented repeatedly; extreme violence against civilians eventually alienated popular support." },
+    ],
+    aftermath: [
+      "Algeria's **Charter for Peace and National Reconciliation** (2005) granted amnesty to most combatants while prohibiting public discussion of state responsibility.",
+      "The GSPC rebranded as **Al-Qaeda in the Islamic Maghreb (AQIM)** and exported violence across the Sahel.",
+      "The war entrenched military dominance over Algerian politics that persisted until the **2019 Hirak protest movement**.",
+      "An entire generation's trauma remains largely unprocessed due to official suppression of memory and accountability.",
+    ],
+    maps: {
+      title: "Algerian Civil War zones",
+      description: "From the Mitidja killing fields to the mountain maquis and the Saharan fringe.",
+      points: [
+        { name: "Algiers / Mitidja Plain", x: 50, y: 40, year: "1992-1998", note: "Capital region and surrounding plain; epicenter of bombings and nearby village massacres." },
+        { name: "Bentalha", x: 50, y: 42, year: "1997", note: "Site of massacre killing 200-400 civilians; military's failure to intervene remains deeply controversial." },
+        { name: "Kabylie mountains", x: 52, y: 40, year: "1990s-2000s", note: "GIA and GSPC sanctuary terrain; site of prolonged counterinsurgency operations." },
+      ],
+    },
+    technology: [
+      { name: "Village massacre tactics", type: "Terror warfare", side: "GIA", impact: "Mass killings of entire communities designed to punish perceived collaboration and spread terror." },
+      { name: "Infiltration and retournement", type: "Intelligence warfare", side: "Algerian security services", impact: "Turning captured militants into agents created a hall-of-mirrors environment where attribution became impossible." },
+      { name: "Amnesty as counterinsurgency", type: "Political warfare", side: "Algerian state", impact: "Civil Concord and later Charter offered fighters a way out, draining insurgent manpower more effectively than military operations alone." },
+    ],
+    centralFigures: [
+      {
+        name: "Abdelaziz Bouteflika",
+        role: "President of Algeria (1999-2019)",
+        side: "belligerent",
+        importance: 82,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bouteflika_%28Algerian_President%29.jpg",
+        note: "His Civil Concord amnesty program was the primary political tool that ended large-scale fighting.",
+      },
+      {
+        name: "Antar Zouabri",
+        role: "GIA emir (1996-2002)",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Under his leadership the GIA committed its worst massacres and declared virtually all Algerian society legitimate targets.",
+      },
+      {
+        name: "Khaled Nezzar",
+        role: "Algerian Defense Minister",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Key figure in the military decision to cancel elections and prosecute the counterinsurgency campaign.",
+      },
+    ],
+    infobox: {
+      dates: "1991 - 2002",
+      location: "Algeria",
+      result: "Military victory by attrition and amnesty; GSPC evolved into AQIM",
+      belligerents: "Algerian military vs GIA, AIS, GSPC, and affiliated groups",
+      strength: "Large state security apparatus vs fragmented insurgent factions",
+      casualties: "100,000-200,000 dead; 1 million+ displaced",
+    },
+  },
+
+  "Georgian Civil War": {
+    theater: "South Caucasus - **Tbilisi**, western **Georgia**, and the **Abkhazia/South Ossetia** borderlands",
+    summary: "The **Georgian Civil War (1991-1993)** was the violent collapse of post-Soviet Georgia into overlapping conflicts: a coup against President **Zviad Gamsakhurdia**, secessionist wars in **Abkhazia** and **South Ossetia**, and factional fighting between warlord militias. Gamsakhurdia, Georgia's first elected president, was overthrown in a January 1992 coup by the **Mkhedrioni** militia and **National Guard** factions, replaced by **Eduard Shevardnadze**. Gamsakhurdia's supporters fought on in western Georgia while the Abkhaz and South Ossetian conflicts escalated simultaneously. Russia played all sides. By 1993, Georgia had lost control of two territories, suffered a humanitarian catastrophe, and learned that independence without institutional capacity is just a flag over chaos.",
+    background: [
+      "Georgia declared independence from the Soviet Union in **1991** under nationalist president **Zviad Gamsakhurdia**.",
+      "Gamsakhurdia's authoritarian tendencies and ethnic nationalism alienated minorities and political opponents.",
+      "The **Mkhedrioni** paramilitary under **Jaba Ioseliani** and National Guard under **Tengiz Kitovani** launched a coup in December 1991-January 1992.",
+      "**Eduard Shevardnadze**, former Soviet Foreign Minister, was invited back to lead Georgia amid the power vacuum.",
+    ],
+    participants: [
+      { name: "Gamsakhurdia loyalists (Zviadists)", role: "Supporters of the deposed president fighting to restore his government, primarily in western Georgia.", side: "belligerent" },
+      { name: "Mkhedrioni and National Guard", role: "Paramilitary factions that executed the coup and became the de facto military power behind Shevardnadze.", side: "belligerent" },
+      { name: "Eduard Shevardnadze's government", role: "Attempted to consolidate state authority while fighting on multiple fronts simultaneously.", side: "belligerent" },
+      { name: "Russia", role: "Provided covert and overt support to various factions and secessionist movements to maintain leverage over Georgia.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Dec 1991 - Jan 1992", title: "Tbilisi coup", detail: "Mkhedrioni and National Guard forces battle Gamsakhurdia loyalists in central Tbilisi; president flees." },
+      { period: "1992", title: "Multi-front chaos", detail: "Zviadist resistance in western Georgia; South Ossetia conflict; Abkhazia war begins in August." },
+      { period: "1993", title: "Abkhaz offensive and collapse", detail: "Abkhaz forces retake Sukhumi; 250,000 Georgians ethnically cleansed; Gamsakhurdia launches failed comeback." },
+      { period: "Late 1993", title: "Russian-brokered stabilization", detail: "Georgia joins CIS in exchange for Russian help against Zviadists; Gamsakhurdia dies in unclear circumstances." },
+    ],
+    outcome: "Shevardnadze consolidated power but Georgia lost Abkhazia and South Ossetia; the country was left devastated, dependent on Russia, and haunted by unresolved territorial disputes.",
+    casualties: {
+      military: "Thousands of combatants killed across all fronts including the Tbilisi coup, western Georgia fighting, and Abkhazia war.",
+      civilian: "Thousands of civilians killed; the Abkhazia conflict alone produced massive civilian casualties.",
+      displacement: "**250,000+** ethnic Georgians expelled from Abkhazia in one of the largest ethnic cleansing events of the 1990s.",
+      note: "The overlapping nature of civil war, coup, and secessionist conflicts makes disaggregating casualties extremely difficult.",
+    },
+    orderOfBattle: [
+      { name: "Georgian government forces", strength: "Poorly organized mix of National Guard, Mkhedrioni militia, and volunteer units", note: "Lack of professional military structure was a primary reason for defeats on every front." },
+      { name: "Zviadist forces", strength: "Loyalist militias in western Georgia with some popular support in Mingrelia", note: "Capable of disruption but unable to retake Tbilisi or sustain conventional operations." },
+    ],
+    aftermath: [
+      "Georgia's military humiliation drove eventual security sector reform and Western orientation under **Mikheil Saakashvili** after the 2003 Rose Revolution.",
+      "The loss of **Abkhazia** and **South Ossetia** became frozen conflicts that Russia exploited through the 2008 war and beyond.",
+      "The Mkhedrioni were eventually disbanded and Ioseliani imprisoned, but warlord politics left deep institutional scars.",
+      "Shevardnadze's dependence on Russia for survival in 1993 shaped Georgian foreign policy constraints for a decade.",
+    ],
+    maps: {
+      title: "Georgian Civil War zones 1991-1993",
+      description: "A new country fighting itself on every front simultaneously.",
+      points: [
+        { name: "Tbilisi", x: 54, y: 46, year: "1991-1992", note: "Site of the coup against Gamsakhurdia; street fighting in the capital." },
+        { name: "Sukhumi", x: 48, y: 42, year: "1993", note: "Abkhaz capital; fell to separatist forces triggering mass ethnic cleansing of Georgians." },
+        { name: "Western Georgia (Mingrelia)", x: 46, y: 46, year: "1992-1993", note: "Zviadist stronghold and site of continued resistance to the Tbilisi government." },
+      ],
+    },
+    technology: [
+      { name: "Paramilitary coup mechanics", type: "Political violence", side: "Mkhedrioni/National Guard", impact: "Armed factions replaced democratic transition with warlord politics." },
+      { name: "Russian covert intervention", type: "Proxy manipulation", side: "Russia", impact: "Support to multiple sides ensured Georgian dependence and territorial fragmentation." },
+      { name: "Ethnic cleansing operations", type: "Population warfare", side: "Abkhaz forces", impact: "Mass expulsion of 250,000 Georgians created a permanent demographic and political wound." },
+    ],
+    centralFigures: [
+      {
+        name: "Zviad Gamsakhurdia",
+        role: "First President of Georgia",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Elected democratically, overthrown violently, died in exile under mysterious circumstances in 1993.",
+      },
+      {
+        name: "Eduard Shevardnadze",
+        role: "Head of State of Georgia (1992-2003)",
+        side: "belligerent",
+        importance: 85,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Eduard_Shevardnadze.jpg",
+        note: "Former Soviet Foreign Minister brought in to stabilize Georgia; presided over territorial losses and eventual democratic transition.",
+      },
+      {
+        name: "Jaba Ioseliani",
+        role: "Mkhedrioni paramilitary leader",
+        side: "belligerent",
+        importance: 68,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Bank robber turned warlord turned kingmaker; his militia was central to the coup and early post-Soviet Georgian politics.",
+      },
+    ],
+    infobox: {
+      dates: "1991 - 1993",
+      location: "Georgia (South Caucasus)",
+      result: "Shevardnadze consolidation; loss of Abkhazia and South Ossetia",
+      belligerents: "Government factions vs Zviadists vs secessionist movements",
+      strength: "Fragmented militias on all sides; no professional military",
+      casualties: "Thousands killed; 250,000+ displaced from Abkhazia",
+    },
+  },
+
+  "War in Abkhazia": {
+    theater: "Western South Caucasus - **Abkhazia**, from **Sukhumi** to the **Gali district** and the **Kodori Valley**",
+    summary: "The **War in Abkhazia (1992-1993)** was a secessionist conflict in which **Abkhaz** forces, backed by **Russian** military support and **North Caucasian** volunteers, defeated **Georgian** government troops and expelled the ethnic Georgian majority from the territory. Georgia sent forces into Abkhazia in August 1992 ostensibly to secure railways and rescue hostages; the operation quickly became a full-scale war. After months of fighting, Abkhaz forces launched a decisive offensive in September 1993, capturing **Sukhumi** and triggering the ethnic cleansing of **250,000** Georgians. Russia brokered a ceasefire that froze the conflict for fifteen years until the **2008 Russo-Georgian War** formalized the separation. It was a war where the 'peacekeepers' had a very specific idea about which piece they wanted to keep.",
+    background: [
+      "Abkhazia was an autonomous republic within Soviet Georgia; ethnic Abkhaz were a minority (~17%) but held disproportionate political power under Soviet arrangements.",
+      "Georgian independence and nationalist rhetoric under **Gamsakhurdia** alarmed Abkhaz leaders who feared cultural and political marginalization.",
+      "Abkhaz leader **Vladislav Ardzinba** moved toward separation; Georgia's internal chaos (civil war, coup) created an opening.",
+      "Russia maintained military bases in Abkhazia and provided covert support to Abkhaz forces throughout the conflict.",
+    ],
+    participants: [
+      { name: "Georgian government forces", role: "National Guard and volunteer units deployed to reassert control over Abkhazia.", side: "belligerent" },
+      { name: "Abkhaz armed forces", role: "Secessionist military fighting for independence from Georgia with Russian backing.", side: "belligerent" },
+      { name: "North Caucasian volunteers", role: "Chechen, Circassian, and other fighters who joined the Abkhaz side, including forces under **Shamil Basayev**.", side: "belligerent" },
+      { name: "Russia", role: "Provided weapons, air support, and military advisors to Abkhaz forces while officially maintaining neutrality.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Aug 1992", title: "Georgian intervention", detail: "Georgian forces enter Abkhazia, capture Sukhumi, and advance along the coast." },
+      { period: "Sep 1992 - Sep 1993", title: "Attritional warfare", detail: "Front lines stabilize; Abkhaz forces receive Russian weapons and North Caucasian reinforcements." },
+      { period: "Sep 1993", title: "Abkhaz offensive", detail: "Surprise attack recaptures Sukhumi; Georgian forces collapse; mass ethnic cleansing of Georgian population begins." },
+      { period: "Late 1993 - 1994", title: "Ceasefire and frozen conflict", detail: "Russian-brokered ceasefire; CIS peacekeepers (predominantly Russian) deployed along ceasefire line." },
+    ],
+    outcome: "Abkhaz military victory; de facto independence under Russian protection; 250,000 Georgians expelled; conflict frozen until 2008.",
+    casualties: {
+      military: "Estimated **4,000-10,000** combatants killed on both sides during thirteen months of fighting.",
+      civilian: "Thousands of civilians killed in fighting and ethnic cleansing operations, particularly during the fall of Sukhumi.",
+      displacement: "**250,000** ethnic Georgians expelled from Abkhazia - virtually the entire Georgian population of the territory.",
+      note: "The ethnic cleansing was systematic and near-total; three decades later, most displaced Georgians have never returned.",
+    },
+    orderOfBattle: [
+      { name: "Georgian forces", strength: "National Guard units, Mkhedrioni militia, and volunteers; poorly coordinated and supplied", note: "Initial numerical advantage squandered by poor command, political infighting, and multi-front commitments." },
+      { name: "Abkhaz coalition", strength: "Abkhaz militia, Russian military support, and 2,000-3,000 North Caucasian volunteers", note: "Smaller but better coordinated with decisive Russian material support tipping the balance." },
+    ],
+    aftermath: [
+      "Abkhazia became a Russian-protected de facto state, recognized by Russia after the **2008 war** but by almost no one else.",
+      "The displaced Georgian population remains one of the largest unresolved displacement crises in Europe.",
+      "**Shamil Basayev**, who fought as an Abkhaz volunteer, later became Russia's most wanted terrorist as leader of the Chechen insurgency - an irony not lost on anyone.",
+      "The war established the template for Russian-backed separatism that would later be applied in **Transnistria**, **South Ossetia**, **Crimea**, and **Donbas**.",
+    ],
+    maps: {
+      title: "War in Abkhazia 1992-1993",
+      description: "Thirteen months from Georgian advance to Abkhaz victory and mass expulsion.",
+      points: [
+        { name: "Sukhumi", x: 48, y: 44, year: "1992-1993", note: "Abkhaz capital; captured by Georgia in 1992, retaken by Abkhaz forces in September 1993 decisive offensive." },
+        { name: "Gagra", x: 46, y: 42, year: "1992", note: "Coastal town; early Abkhaz victory with Russian support that secured the northwestern corridor." },
+        { name: "Gali district", x: 50, y: 46, year: "1993", note: "Southern Abkhazia; site of continued ethnic cleansing and post-war instability." },
+      ],
+    },
+    technology: [
+      { name: "Russian covert military support", type: "Proxy warfare", side: "Russia/Abkhazia", impact: "Air strikes, heavy weapons transfers, and military advisors transformed Abkhaz capability." },
+      { name: "North Caucasian volunteer networks", type: "Transnational irregular warfare", side: "Abkhazia", impact: "Experienced fighters provided critical combat power during key offensive operations." },
+      { name: "Ethnic cleansing operations", type: "Population warfare", side: "Abkhaz forces", impact: "Systematic expulsion created demographic fait accompli that made territorial reversal politically impossible." },
+    ],
+    centralFigures: [
+      {
+        name: "Vladislav Ardzinba",
+        role: "Leader of Abkhazia",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Soviet-era academic turned wartime leader who guided Abkhazia to de facto independence with Russian backing.",
+      },
+      {
+        name: "Eduard Shevardnadze",
+        role: "Georgian Head of State",
+        side: "belligerent",
+        importance: 80,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Eduard_Shevardnadze.jpg",
+        note: "Personally present in Sukhumi during the final siege; barely escaped the city's fall.",
+      },
+      {
+        name: "Shamil Basayev",
+        role: "North Caucasian volunteer commander",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Commanded Chechen volunteers in Abkhazia; later became Russia's most wanted man as Chechen insurgent leader.",
+      },
+    ],
+    infobox: {
+      dates: "1992 - 1993",
+      location: "Abkhazia, Georgia",
+      result: "Abkhaz victory; de facto independence; mass ethnic cleansing",
+      belligerents: "Georgia vs Abkhaz forces, North Caucasian volunteers, and Russian support",
+      strength: "Georgian militia forces vs Russian-backed Abkhaz coalition",
+      casualties: "4,000-10,000 combatants; 250,000 Georgians displaced",
+    },
+  },
+
+  "Tajikistani Civil War": {
+    theater: "Central Asia - **Tajikistan**, from the capital **Dushanbe** to the **Garm Valley**, **Gorno-Badakhshan**, and the **Afghan border**",
+    summary: "The **Tajikistani Civil War (1992-1997)** was the bloodiest post-Soviet conflict outside the Caucasus, killing **50,000-100,000** people in a country of five million. It pitted the **neo-communist government** backed by **Russia** and **Uzbekistan** against a loose **United Tajik Opposition** coalition of Islamists, democrats, and regional factions. The war was fundamentally about regional clan politics dressed up in ideological clothing: **Kulyabi** and **Leninabadi** factions controlled the government while **Garmi** and **Pamiri** groups were marginalized. After five years of fighting, massacres, and refugee crises, a **1997 peace agreement** created a power-sharing arrangement that was remarkably successful by civil war standards - which is a low bar, but they cleared it.",
+    background: [
+      "Soviet Tajikistan was governed through a balance of regional clans; independence in **1991** disrupted this arrangement.",
+      "President **Rahmon Nabiyev** represented the old Leninabadi/Kulyabi power structure; opposition demanded democratic reform.",
+      "Protests in **1992** escalated into armed conflict when government supporters and opposition factions mobilized militias.",
+      "The opposition coalition was ideologically diverse: the **Islamic Renaissance Party**, democratic reformers, and Pamiri regionalists united against the ruling clans.",
+    ],
+    participants: [
+      { name: "Government of Tajikistan (Popular Front)", role: "Kulyabi-dominated government forces and allied militias fighting to maintain power.", side: "belligerent" },
+      { name: "United Tajik Opposition (UTO)", role: "Coalition of Islamic Renaissance Party, democratic groups, and Pamiri/Garmi regional factions.", side: "belligerent" },
+      { name: "Russia / CIS peacekeepers", role: "Backed the government militarily; Russian 201st Division remained deployed throughout the war.", side: "nonBelligerent" },
+      { name: "Uzbekistan", role: "Supported the government fearing Islamist spillover into its own territory.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Spring 1992", title: "Political crisis", detail: "Mass protests in Dushanbe; coalition government briefly formed then collapses." },
+      { period: "Late 1992", title: "Civil war erupts", detail: "Government forces and Kulyabi militias launch offensive; massacres of Garmi and Pamiri populations; opposition retreats to mountains and Afghanistan." },
+      { period: "1993-1996", title: "Guerrilla war", detail: "UTO conducts cross-border operations from Afghanistan; government controls cities; Russian troops guard the Afghan border." },
+      { period: "1997", title: "Peace agreement", detail: "UN-mediated General Agreement on the Establishment of Peace gives UTO 30% of government positions." },
+    ],
+    outcome: "Negotiated peace with power-sharing; President **Emomali Rahmon** (originally a Kulyabi faction leader) consolidated power and has ruled ever since.",
+    casualties: {
+      military: "Thousands of combatants killed on both sides during conventional and guerrilla phases.",
+      civilian: "Estimated **50,000-100,000** total dead; civilians suffered massively from massacres, starvation, and displacement.",
+      displacement: "Over **1 million** displaced internally and as refugees, primarily to Afghanistan; tens of thousands of Garmi and Pamiri civilians ethnically cleansed.",
+      note: "The war's death toll relative to population was among the highest of any 1990s conflict.",
+    },
+    orderOfBattle: [
+      { name: "Government/Popular Front forces", strength: "Kulyabi militias, remnants of Soviet-era military, Russian 201st Division support", note: "Russian military backing was decisive in preventing government collapse." },
+      { name: "United Tajik Opposition", strength: "Guerrilla forces operating from Afghan sanctuary with diverse ideological composition", note: "Military capability sustained by cross-border logistics and Afghan warlord alliances." },
+    ],
+    aftermath: [
+      "The **1997 peace agreement** was one of the few successful negotiated endings to a post-Soviet civil war.",
+      "President **Rahmon** used the post-war period to systematically eliminate opposition and establish authoritarian rule.",
+      "The **Islamic Renaissance Party** was eventually banned in 2015, ending the power-sharing framework.",
+      "The war's regional dynamics foreshadowed Central Asian security concerns about Islamist militancy that intensified after 9/11.",
+    ],
+    maps: {
+      title: "Tajikistani Civil War zones",
+      description: "Clan geography, mountain sanctuaries, and the Afghan border lifeline.",
+      points: [
+        { name: "Dushanbe", x: 52, y: 44, year: "1992", note: "Capital; site of initial protests, political crisis, and government consolidation." },
+        { name: "Garm Valley", x: 54, y: 42, year: "1992-1997", note: "Opposition heartland and guerrilla base area in the mountains." },
+        { name: "Khorog (Gorno-Badakhshan)", x: 56, y: 44, year: "1992-1997", note: "Pamiri regional center; isolated during the war and site of ethnic targeting." },
+      ],
+    },
+    technology: [
+      { name: "Clan-based militia mobilization", type: "Social warfare", side: "Both", impact: "Regional identity rather than ideology determined combat alignment for most fighters." },
+      { name: "Cross-border sanctuary", type: "Guerrilla logistics", side: "UTO", impact: "Afghan territory provided safe haven and supply routes that sustained opposition military capability." },
+      { name: "Russian military guarantee", type: "External intervention", side: "Government", impact: "201st Division presence and border guard deployment prevented government defeat." },
+    ],
+    centralFigures: [
+      {
+        name: "Emomali Rahmon",
+        role: "President of Tajikistan (1994-present)",
+        side: "belligerent",
+        importance: 88,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Emomali_Rahmon_2022.jpg",
+        note: "Rose from collective farm chairman to wartime leader to authoritarian president; has ruled for three decades.",
+      },
+      {
+        name: "Said Abdullo Nuri",
+        role: "UTO leader / Islamic Renaissance Party chairman",
+        side: "belligerent",
+        importance: 78,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the opposition coalition and negotiated the 1997 peace agreement; died in 2006.",
+      },
+      {
+        name: "Sangak Safarov",
+        role: "Kulyabi militia commander",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Criminal-turned-warlord who led the most effective pro-government militia; killed in 1993 under disputed circumstances.",
+      },
+    ],
+    infobox: {
+      dates: "1992 - 1997",
+      location: "Tajikistan, Central Asia",
+      result: "Negotiated peace; power-sharing agreement; Rahmon consolidation",
+      belligerents: "Government/Popular Front vs United Tajik Opposition",
+      strength: "Russian-backed government forces vs guerrilla opposition with Afghan sanctuary",
+      casualties: "50,000-100,000 dead; 1 million+ displaced",
+    },
+  },
+
+
+  "Chiapas Conflict": {
+    theater: "Southern Mexico - **Chiapas** state, from the **Lacandon Jungle** to **San Cristobal de las Casas** and highland indigenous communities",
+    summary: "The **Chiapas Conflict (1994-present)** began on January 1, 1994 - the day **NAFTA** took effect - when the **Zapatista Army of National Liberation (EZLN)** seized several towns in Chiapas, declaring war on the Mexican government in the name of indigenous rights, land reform, and dignity. The actual shooting lasted about twelve days before a ceasefire, but the political and cultural impact lasted decades. Led by the ski-masked, pipe-smoking **Subcomandante Marcos**, the Zapatistas became the world's first post-modern guerrilla movement: they fought with communiques as much as rifles, built autonomous communities, and turned a jungle rebellion into a global symbol of anti-globalization resistance. The Mexican government responded with military encirclement, paramilitary proxies, and low-intensity warfare. Nobody won the war, but the Zapatistas won the argument - or at least made sure everyone heard it.",
+    background: [
+      "**Chiapas** was Mexico's poorest state despite rich natural resources; indigenous Maya communities faced extreme marginalization.",
+      "The **EZLN** organized secretly in the Lacandon Jungle for a decade before the 1994 uprising.",
+      "**NAFTA's** agricultural provisions threatened to destroy indigenous subsistence farming by flooding Mexico with cheap US corn.",
+      "The 1992 constitutional reform ending communal land protections (**ejido** system) was seen as a final betrayal of revolutionary promises.",
+    ],
+    participants: [
+      { name: "EZLN (Zapatistas)", role: "Indigenous guerrilla movement demanding autonomy, land rights, and democratic reform through armed uprising turned political resistance.", side: "belligerent" },
+      { name: "Mexican federal government and military", role: "Deployed troops for counterinsurgency while pursuing parallel negotiation and low-intensity containment strategies.", side: "belligerent" },
+      { name: "Paramilitary groups", role: "Government-linked armed groups conducting violence against Zapatista-sympathetic communities, notably the **Acteal massacre** perpetrators.", side: "belligerent" },
+      { name: "Mexican and international civil society", role: "Massive solidarity movement that constrained government military options and amplified Zapatista messaging globally.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "1 Jan 1994", title: "Uprising", detail: "EZLN seizes San Cristobal de las Casas and six other municipalities; twelve days of fighting before ceasefire." },
+      { period: "1995-1996", title: "San Andres Accords", detail: "Negotiations produce indigenous rights agreements; government later refuses to implement them fully." },
+      { period: "1997", title: "Acteal massacre", detail: "Paramilitary group kills 45 indigenous people at a prayer meeting in Acteal; international outrage." },
+      { period: "2003-present", title: "Autonomous governance", detail: "Zapatistas build parallel government structures (**Juntas de Buen Gobierno**) in territory they control; reject state engagement." },
+    ],
+    outcome: "Military stalemate; Zapatistas maintain autonomous zones in Chiapas; no formal peace agreement; indigenous rights legislation remains incomplete.",
+    casualties: {
+      military: "Approximately **150** killed during the initial twelve-day uprising in January 1994.",
+      civilian: "Hundreds of civilians killed in subsequent low-intensity conflict and paramilitary violence through the late 1990s.",
+      displacement: "Tens of thousands displaced by military operations and paramilitary attacks in Chiapas highlands.",
+      note: "The conflict's impact is measured less in body counts than in the structural violence of poverty, marginalization, and unresolved land disputes.",
+    },
+    orderOfBattle: [
+      { name: "EZLN", strength: "Estimated 3,000-6,000 armed fighters at peak; much larger civilian support base", note: "Military capability was limited but political and media strategy was extraordinarily effective." },
+      { name: "Mexican military deployment", strength: "Up to 70,000 troops deployed in Chiapas at peak", note: "Massive conventional force constrained by political costs of using it against indigenous communities on camera." },
+    ],
+    aftermath: [
+      "The Zapatistas pioneered a model of armed movement transitioning to autonomous governance without either victory or surrender.",
+      "**Subcomandante Marcos** (later **Galeano**) became one of the most recognizable revolutionary figures of the late 20th century.",
+      "The **San Andres Accords** on indigenous rights were never fully implemented, remaining a source of political contention.",
+      "The conflict influenced global anti-globalization movements and demonstrated the power of internet-era revolutionary communication.",
+    ],
+    maps: {
+      title: "Chiapas conflict zone",
+      description: "Jungle bases, highland communities, and the geography of autonomous resistance.",
+      points: [
+        { name: "San Cristobal de las Casas", x: 48, y: 50, year: "1994", note: "Colonial highland city seized by EZLN on New Year's Day 1994." },
+        { name: "Lacandon Jungle", x: 52, y: 54, year: "1994-present", note: "EZLN base area and heart of Zapatista autonomous territory." },
+        { name: "Acteal", x: 48, y: 48, year: "1997", note: "Site of paramilitary massacre of 45 indigenous people at prayer." },
+      ],
+    },
+    technology: [
+      { name: "Internet communiques", type: "Information warfare", side: "EZLN", impact: "First guerrilla movement to use the internet as a primary weapon; communiques reached global audiences instantly." },
+      { name: "Low-intensity warfare", type: "Counterinsurgency", side: "Mexican government", impact: "Military encirclement, economic pressure, and paramilitary proxies avoided the political cost of direct assault." },
+      { name: "Autonomous governance structures", type: "Political innovation", side: "EZLN", impact: "Built functioning parallel government with health, education, and justice systems independent of the Mexican state." },
+    ],
+    centralFigures: [
+      {
+        name: "Subcomandante Marcos (Galeano)",
+        role: "EZLN spokesperson and military commander",
+        side: "belligerent",
+        importance: 92,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Mestizo intellectual who became the masked voice of indigenous resistance; his literary communiques redefined revolutionary communication.",
+      },
+      {
+        name: "Comandanta Ramona",
+        role: "EZLN indigenous commander",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Tzotzil Maya woman who became a symbol of indigenous women's participation in the movement; died in 2006.",
+      },
+      {
+        name: "Ernesto Zedillo",
+        role: "President of Mexico (1994-2000)",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Managed the government response through military deployment, failed negotiations, and the Acteal massacre crisis.",
+      },
+    ],
+    infobox: {
+      dates: "1994 - present",
+      location: "Chiapas, Mexico",
+      result: "Stalemate; Zapatista autonomous zones persist",
+      belligerents: "EZLN vs Mexican government and paramilitary groups",
+      strength: "~3,000-6,000 EZLN fighters vs up to 70,000 Mexican troops",
+      casualties: "Hundreds killed; tens of thousands displaced",
+    },
+  },
+
+  "Cenepa War": {
+    theater: "South America - the **Cenepa River valley** in the disputed **Cordillera del Condor** border region between **Ecuador** and **Peru**",
+    summary: "The **Cenepa War (1995)** was a brief but intense border conflict between **Ecuador** and **Peru** over a remote stretch of Amazonian jungle that both countries had been arguing about since 1941. In January 1995, Ecuadorian forces ambushed Peruvian patrols in the **Cenepa Valley**, triggering weeks of fighting in terrain so dense that air power was nearly useless and supply lines ran on mule trains and helicopters. Ecuador, the smaller military, had secretly fortified positions and used the jungle terrain to neutralize Peru's conventional advantages. A ceasefire was brokered in March, and the **1998 Brasilia Presidential Act** finally settled the border dispute. It was the last interstate war in South America - a distinction that sounds impressive until you remember the terrain was so awful that neither side particularly wanted to go back.",
+    background: [
+      "The border dispute dated to the **1941 Ecuadorian-Peruvian War** and the **Rio Protocol** that Ecuador later rejected as imposed under duress.",
+      "Periodic skirmishes occurred in **1981** (Paquisha incident) and tensions remained high along the unmarked Cordillera del Condor frontier.",
+      "Ecuador secretly established fortified outposts in the disputed Cenepa headwaters area during the early 1990s.",
+      "Peru discovered the Ecuadorian positions in late 1994, setting the stage for military confrontation.",
+    ],
+    participants: [
+      { name: "Ecuador", role: "Defending prepared positions in the Cenepa Valley; used terrain advantage and fortifications to offset smaller military size.", side: "belligerent" },
+      { name: "Peru", role: "Attempted to dislodge Ecuadorian forces from disputed territory using infantry assaults and air strikes in extremely difficult terrain.", side: "belligerent" },
+      { name: "Guarantor nations (Argentina, Brazil, Chile, US)", role: "Mediated ceasefire and subsequent peace negotiations under the Rio Protocol framework.", side: "nonBelligerent" },
+      { name: "International observers", role: "Military Observer Mission Ecuador-Peru (MOMEP) monitored ceasefire compliance.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Jan 1995", title: "Initial clashes", detail: "Ecuadorian forces ambush Peruvian patrols near Tiwintza and other outposts in the Cenepa headwaters." },
+      { period: "Feb 1995", title: "Escalation", detail: "Peru launches infantry assaults and air strikes; Ecuador shoots down Peruvian aircraft; fighting intensifies." },
+      { period: "Mar 1995", title: "Ceasefire", detail: "Guarantor nations broker ceasefire; both sides claim victory; MOMEP deployed." },
+      { period: "Oct 1998", title: "Brasilia Presidential Act", detail: "Final peace agreement awards most disputed territory to Peru but grants Ecuador symbolic sovereignty over Tiwintza." },
+    ],
+    outcome: "Ceasefire followed by definitive peace settlement in 1998; Peru received most disputed territory; Ecuador received navigation rights and symbolic Tiwintza concession.",
+    casualties: {
+      military: "Ecuador: approximately **30** killed. Peru: approximately **60** killed (Peruvian figures are disputed and may be higher).",
+      civilian: "Minimal civilian casualties given the remote jungle location.",
+      displacement: "Limited; some border communities evacuated during the fighting.",
+      note: "Casualty figures remain politically sensitive; Peru's losses were likely higher than officially acknowledged due to failed assault operations.",
+    },
+    orderOfBattle: [
+      { name: "Ecuadorian defensive positions", strength: "Special forces and infantry in prepared jungle fortifications with anti-aircraft capability", note: "Terrain knowledge and defensive preparation offset Ecuador's overall military disadvantage." },
+      { name: "Peruvian assault forces", strength: "Infantry, helicopter-borne troops, and air force (Sukhoi Su-22, Cessna A-37)", note: "Conventional superiority was negated by jungle terrain, prepared defenses, and Ecuadorian anti-aircraft fire." },
+    ],
+    aftermath: [
+      "The **1998 peace agreement** definitively resolved the oldest border dispute in the Western Hemisphere.",
+      "Ecuador and Peru subsequently developed strong bilateral relations including joint military exercises.",
+      "The war demonstrated that prepared defensive positions in extreme terrain can neutralize significant conventional advantages.",
+      "It remains the last interstate war fought in South America.",
+    ],
+    maps: {
+      title: "Cenepa War 1995",
+      description: "A jungle valley so remote that winning it was almost as hard as finding it.",
+      points: [
+        { name: "Tiwintza", x: 46, y: 52, year: "1995", note: "Most contested outpost; symbolic importance far exceeded its military value." },
+        { name: "Base Sur", x: 46, y: 54, year: "1995", note: "Ecuadorian forward position; site of major Peruvian assault attempts." },
+        { name: "Cenepa River valley", x: 46, y: 53, year: "1995", note: "Entire disputed zone; dense jungle canopy made air operations extremely difficult." },
+      ],
+    },
+    technology: [
+      { name: "Jungle fortification", type: "Defensive engineering", side: "Ecuador", impact: "Pre-prepared bunkers and cleared fire zones in dense jungle created kill zones for attacking infantry." },
+      { name: "MANPADS (Igla missiles)", type: "Anti-aircraft", side: "Ecuador", impact: "Shot down multiple Peruvian aircraft, denying Peru air superiority in the combat zone." },
+      { name: "Helicopter logistics", type: "Supply chain", side: "Both", impact: "The only way to sustain forces in roadless jungle; helicopter vulnerability limited operational tempo." },
+    ],
+    centralFigures: [
+      {
+        name: "Sixto Duran Ballen",
+        role: "President of Ecuador",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Rallied Ecuadorian national unity during the conflict; his government's military preparation proved decisive.",
+      },
+      {
+        name: "Alberto Fujimori",
+        role: "President of Peru",
+        side: "belligerent",
+        importance: 78,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/0/09/Alberto_Fujimori_1998.jpg",
+        note: "Managed Peru's war effort and later negotiated the 1998 peace settlement that resolved the dispute.",
+      },
+      {
+        name: "Paco Moncayo",
+        role: "Ecuadorian military commander in the Cenepa",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Directed Ecuadorian defensive operations; later became a prominent politician and mayor of Quito.",
+      },
+    ],
+    infobox: {
+      dates: "January - March 1995",
+      location: "Cenepa Valley, Cordillera del Condor (Ecuador-Peru border)",
+      result: "Ceasefire; 1998 peace treaty resolved border dispute",
+      belligerents: "Ecuador vs Peru",
+      strength: "Ecuadorian jungle defenses vs Peruvian conventional assault",
+      casualties: "~90+ killed (both sides combined)",
+    },
+  },
+
+  "Second Liberian Civil War": {
+    theater: "West Africa - **Liberia**, from the **Lofa County** border with Guinea to the siege of **Monrovia**",
+    summary: "The **Second Liberian Civil War (1999-2003)** was the sequel nobody wanted but everyone expected. **Liberians United for Reconciliation and Democracy (LURD)**, backed by **Guinea**, invaded from the north to overthrow President **Charles Taylor**, who had won the 1997 election after causing the first civil war. Taylor's government was simultaneously destabilizing **Sierra Leone** through the **RUF** diamond-for-weapons pipeline. A second rebel group, **MODEL**, opened a southern front with **Cote d'Ivoire** backing. By 2003, rebels were shelling **Monrovia** while Taylor was indicted for war crimes by the **Special Court for Sierra Leone**. International pressure and a Nigerian exile deal finally removed Taylor. The war killed another **150,000-300,000** people and proved that electing a warlord president does not, in fact, produce peace.",
+    background: [
+      "**Charles Taylor's** presidency (1997-2003) was characterized by corruption, repression, and regional destabilization.",
+      "Taylor's support for Sierra Leone's **RUF** rebels brought international sanctions and regional hostility.",
+      "**Guinea** backed LURD as retaliation for Taylor-supported attacks on Guinean border communities.",
+      "The war economy of diamonds, timber, and rubber that funded the first war continued under Taylor's government.",
+    ],
+    participants: [
+      { name: "Government of Liberia (Charles Taylor)", role: "Defending regime using government forces, militia, and child soldiers against multi-front rebel advance.", side: "belligerent" },
+      { name: "LURD", role: "Guinea-backed rebel movement advancing from the north toward Monrovia.", side: "belligerent" },
+      { name: "MODEL", role: "Cote d'Ivoire-backed rebel movement opening a second front from the southeast.", side: "belligerent" },
+      { name: "ECOWAS / Nigerian peacekeepers", role: "Deployed to Monrovia in 2003 to facilitate Taylor's departure and stabilize the capital.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "1999-2001", title: "LURD insurgency begins", detail: "Rebels advance from Lofa County; government forces pushed back despite atrocities against civilians." },
+      { period: "2003", title: "Siege of Monrovia", detail: "LURD shells the capital; hundreds of civilians killed; humanitarian catastrophe in the city." },
+      { period: "Jun 2003", title: "Taylor indicted", detail: "Special Court for Sierra Leone unseals war crimes indictment against Taylor while he attends peace talks." },
+      { period: "Aug 2003", title: "Taylor departs", detail: "Nigerian exile deal; ECOWAS peacekeepers deploy; Comprehensive Peace Agreement signed." },
+    ],
+    outcome: "Taylor exiled to Nigeria (later arrested and convicted of war crimes); transitional government established; UN peacekeeping mission (UNMIL) deployed; **Ellen Johnson Sirleaf** elected president in 2005.",
+    casualties: {
+      military: "Thousands of combatants killed across all factions; widespread use of child soldiers by all parties.",
+      civilian: "Estimated **150,000-300,000** total dead; civilians bore the overwhelming burden of violence.",
+      displacement: "Over **1 million** displaced internally and as refugees across West Africa.",
+      note: "Combined with the first civil war, Liberia lost approximately 10% of its population to conflict-related deaths between 1989 and 2003.",
+    },
+    orderOfBattle: [
+      { name: "Taylor government forces", strength: "Army, Anti-Terrorist Unit, and militia including extensive child soldier recruitment", note: "Increasingly degraded by defections, sanctions, and multi-front pressure." },
+      { name: "LURD and MODEL", strength: "Combined rebel strength of 10,000-20,000 fighters with regional state backing", note: "Military pressure from two directions made government defense unsustainable." },
+    ],
+    aftermath: [
+      "**Charles Taylor** was arrested in 2006, tried by the Special Court for Sierra Leone, and sentenced to **50 years** for war crimes and crimes against humanity.",
+      "**Ellen Johnson Sirleaf** became Africa's first elected female head of state in 2005, beginning Liberia's recovery.",
+      "**UNMIL** became one of the UN's largest peacekeeping missions, deploying 15,000 troops at peak.",
+      "Liberia's recovery from two civil wars required decades of international support and remains incomplete.",
+    ],
+    maps: {
+      title: "Second Liberian Civil War",
+      description: "Two rebel movements, one besieged capital, and the end of a warlord presidency.",
+      points: [
+        { name: "Lofa County", x: 48, y: 42, year: "1999-2002", note: "LURD invasion corridor from the Guinean border." },
+        { name: "Monrovia", x: 42, y: 50, year: "2003", note: "Capital besieged and shelled by LURD; site of humanitarian catastrophe." },
+        { name: "Southeast Liberia", x: 50, y: 54, year: "2003", note: "MODEL advance from Cote d'Ivoire opened the second front." },
+      ],
+    },
+    technology: [
+      { name: "Child soldier recruitment", type: "Manpower exploitation", side: "All factions", impact: "Continued the first war's pattern of drugging and brutalizing children into combat roles." },
+      { name: "Diamond-for-weapons networks", type: "War economy", side: "Taylor government", impact: "Sierra Leone conflict diamonds funded Taylor's war machine until international sanctions disrupted the pipeline." },
+      { name: "International criminal indictment", type: "Legal warfare", side: "International community", impact: "Taylor's indictment during peace talks accelerated his removal and demonstrated accountability mechanisms." },
+    ],
+    centralFigures: [
+      {
+        name: "Charles Taylor",
+        role: "President of Liberia",
+        side: "belligerent",
+        importance: 92,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Warlord-turned-president whose regional destabilization ended with war crimes conviction at The Hague.",
+      },
+      {
+        name: "Ellen Johnson Sirleaf",
+        role: "Future President of Liberia",
+        side: "nonBelligerent",
+        importance: 78,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Ellen_Johnson_Sirleaf.jpg",
+        note: "Won 2005 post-war election; became Africa's first elected female head of state; Nobel Peace Prize laureate.",
+      },
+      {
+        name: "Sekou Conneh",
+        role: "LURD chairman",
+        side: "belligerent",
+        importance: 62,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the primary rebel movement that besieged Monrovia and forced Taylor's departure.",
+      },
+    ],
+    infobox: {
+      dates: "1999 - 2003",
+      location: "Liberia, West Africa",
+      result: "Taylor exiled; peace agreement; Sirleaf elected 2005",
+      belligerents: "Taylor government vs LURD and MODEL rebels",
+      strength: "Government forces vs two rebel movements with regional backing",
+      casualties: "150,000-300,000 dead; 1 million+ displaced",
+    },
+  },
+
+  "Al-Qaeda Insurgency in Yemen": {
+    theater: "Arabian Peninsula - **Yemen**, from **Sana'a** to the **Abyan** and **Shabwa** governorates, **Marib**, and the **Hadramawt**",
+    summary: "The **Al-Qaeda Insurgency in Yemen (1998-present)** is the long-running campaign by **Al-Qaeda in the Arabian Peninsula (AQAP)** and its predecessors against the Yemeni state, Western targets, and eventually rival groups. It began with the **1998 kidnapping of Western tourists** and the **2000 USS Cole bombing** in Aden, escalated through AQAP's formation in 2009, and became entangled with Yemen's civil war after 2014. AQAP exploited state collapse to seize territory in southern Yemen, was pushed back by UAE-backed forces, and adapted into a persistent insurgent presence. The US conducted hundreds of drone strikes. Yemen became the place where counterterrorism met state failure and discovered they made each other worse.",
+    background: [
+      "Yemen's weak central government, tribal politics, and poverty created permissive conditions for jihadist organizing.",
+      "**Osama bin Laden's** family roots in Hadramawt gave al-Qaeda cultural and logistical connections to Yemen.",
+      "The **USS Cole bombing** (2000) demonstrated AQAP's predecessor's capability for spectacular attacks.",
+      "Saudi and Yemeni al-Qaeda branches merged in **2009** to form **AQAP**, which became al-Qaeda's most operationally capable affiliate.",
+    ],
+    participants: [
+      { name: "AQAP", role: "Jihadist organization conducting insurgency, territorial control, and international attack planning from Yemeni territory.", side: "belligerent" },
+      { name: "Yemeni government (various)", role: "Conducted counterterrorism operations with varying commitment and capability across multiple regime changes.", side: "belligerent" },
+      { name: "United States", role: "Conducted drone strikes, special operations raids, and intelligence support for Yemeni counterterrorism.", side: "belligerent" },
+      { name: "UAE-backed southern forces", role: "Fought AQAP for territorial control in southern Yemen during the civil war period.", side: "belligerent" },
+    ],
+    timeline: [
+      { period: "1998-2001", title: "Early operations", detail: "Tourist kidnappings, USS Cole bombing, and initial al-Qaeda network development in Yemen." },
+      { period: "2009", title: "AQAP formation", detail: "Saudi and Yemeni branches merge; underwear bomber plot; AQAP becomes al-Qaeda's most dangerous affiliate." },
+      { period: "2011-2014", title: "Arab Spring chaos", detail: "Saleh falls; AQAP seizes territory in Abyan; **Ansar al-Sharia** governs towns; Yemeni military pushes back." },
+      { period: "2015-present", title: "Civil war entanglement", detail: "Houthi takeover creates multi-sided conflict; AQAP exploits chaos; US drone campaign intensifies; UAE operations degrade AQAP territorial control." },
+    ],
+    outcome: "AQAP degraded but not defeated; lost territorial control but maintains insurgent capability; Yemen's civil war continues to provide operational space.",
+    casualties: {
+      military: "Hundreds of Yemeni security forces killed in AQAP attacks; unknown number of AQAP fighters killed in military operations and drone strikes.",
+      civilian: "Civilian casualties from both AQAP attacks and US drone strikes; the latter became a major human rights controversy.",
+      displacement: "AQAP-related violence contributed to broader Yemeni displacement crisis affecting millions.",
+      note: "Disaggregating AQAP-specific casualties from Yemen's broader civil war is increasingly impossible after 2015.",
+    },
+    orderOfBattle: [
+      { name: "AQAP", strength: "Estimated 1,000-4,000 fighters at various points; fluctuates with civil war dynamics", note: "Combines local tribal fighters with ideological jihadists and foreign operatives." },
+      { name: "US counterterrorism apparatus", strength: "Drone fleet, special operations forces, and intelligence networks", note: "Hundreds of strikes conducted; killed senior leaders but generated civilian casualty controversies." },
+    ],
+    aftermath: [
+      "AQAP's **Inspire magazine** and English-language propaganda influenced lone-wolf attacks worldwide.",
+      "The US drone campaign in Yemen became a defining and controversial element of post-9/11 counterterrorism policy.",
+      "Yemen's state collapse after 2014 demonstrated that counterterrorism without governance produces diminishing returns.",
+      "AQAP adapted from territorial control ambitions to a more dispersed insurgent model embedded in tribal networks.",
+    ],
+    maps: {
+      title: "AQAP operational zones in Yemen",
+      description: "From the Cole bombing in Aden harbor to the tribal badlands of the south and east.",
+      points: [
+        { name: "Aden harbor", x: 54, y: 58, year: "2000", note: "Site of the USS Cole bombing that killed 17 US sailors." },
+        { name: "Abyan / Zinjibar", x: 54, y: 56, year: "2011-2012", note: "AQAP territorial control zone; governed through Ansar al-Sharia front." },
+        { name: "Marib / Shabwa", x: 56, y: 50, year: "2009-present", note: "Tribal areas providing AQAP sanctuary and operational depth." },
+      ],
+    },
+    technology: [
+      { name: "US drone strikes (MQ-9 Reaper)", type: "Remote precision strike", side: "US", impact: "Killed senior AQAP leaders but generated civilian casualties and political backlash." },
+      { name: "Inspire magazine", type: "Propaganda / radicalization", side: "AQAP", impact: "English-language publication provided bomb-making instructions and inspired attacks in Western countries." },
+      { name: "Tribal alliance networks", type: "Social infrastructure", side: "AQAP", impact: "Embedding within tribal structures provided protection that military operations alone could not overcome." },
+    ],
+    centralFigures: [
+      {
+        name: "Anwar al-Awlaki",
+        role: "AQAP propagandist and operational planner",
+        side: "belligerent",
+        importance: 85,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "US-born cleric who became AQAP's most effective English-language recruiter; killed by US drone strike in 2011.",
+      },
+      {
+        name: "Nasir al-Wuhayshi",
+        role: "AQAP emir (2009-2015)",
+        side: "belligerent",
+        importance: 80,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Former bin Laden aide who built AQAP into al-Qaeda's most capable affiliate; killed by US strike in 2015.",
+      },
+      {
+        name: "Ali Abdullah Saleh",
+        role: "President of Yemen (1990-2012)",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Played a double game with AQAP - fighting them for US support while tolerating them as leverage; killed by Houthis in 2017.",
+      },
+    ],
+    infobox: {
+      dates: "1998 - present",
+      location: "Yemen",
+      result: "AQAP degraded but persistent; conflict ongoing",
+      belligerents: "AQAP vs Yemeni government, US, and UAE-backed forces",
+      strength: "1,000-4,000 AQAP fighters vs state and international counterterrorism forces",
+      casualties: "Thousands killed across all phases; entangled with broader civil war",
+    },
+  },
+
+  "2001 Insurgency in the Republic of North Macedonia": {
+    theater: "Southeastern Europe - **North Macedonia**, concentrated in the **Tetovo** and **Kumanovo** regions near the **Kosovo** border",
+    summary: "The **2001 Insurgency in the Republic of North Macedonia** was a brief but alarming conflict between ethnic Albanian insurgents of the **National Liberation Army (NLA)** and Macedonian security forces. The NLA, with links to the **Kosovo Liberation Army**, launched attacks in January 2001 demanding greater rights for the ethnic Albanian minority (~25% of the population). Fighting escalated through the spring with the NLA seizing territory near **Tetovo** and **Kumanovo**. Unlike the Kosovo and Bosnia precedents, this one got a diplomatic ending before it became a catastrophe: the **Ohrid Framework Agreement** in August 2001 granted expanded Albanian language rights, decentralization, and proportional representation. NATO deployed to collect NLA weapons. It was the Balkans conflict that actually worked out - which, given the neighborhood's track record, deserves its own category.",
+    background: [
+      "North Macedonia's independence in 1991 left ethnic Albanians feeling marginalized in a state defined as belonging to ethnic Macedonians.",
+      "The **1999 Kosovo War** radicalized some ethnic Albanians and created cross-border militant networks.",
+      "The NLA drew fighters and weapons from Kosovo, using the mountainous border terrain as sanctuary.",
+      "Macedonian security forces were poorly equipped for counterinsurgency and initially struggled to contain the NLA advance.",
+    ],
+    participants: [
+      { name: "National Liberation Army (NLA)", role: "Ethnic Albanian insurgent group demanding constitutional reforms and greater minority rights.", side: "belligerent" },
+      { name: "Macedonian security forces", role: "Army and police attempting to suppress the insurgency and maintain territorial control.", side: "belligerent" },
+      { name: "NATO / EU / US diplomats", role: "Mediated the Ohrid Agreement and deployed forces to oversee NLA disarmament.", side: "nonBelligerent" },
+      { name: "OSCE", role: "Monitored implementation of the Ohrid Agreement and supported confidence-building measures.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Jan-Feb 2001", title: "NLA emerges", detail: "Attacks on police stations and military positions near Tetovo; government declares crisis zone." },
+      { period: "Mar-Jun 2001", title: "Escalation", detail: "NLA expands operations; fighting around Tetovo, Kumanovo, and Aracinovo; civilian displacement." },
+      { period: "Jul-Aug 2001", title: "Ohrid negotiations", detail: "International pressure produces Framework Agreement granting Albanian rights in exchange for NLA disarmament." },
+      { period: "Aug-Sep 2001", title: "NATO Operation Essential Harvest", detail: "NATO deploys 3,500 troops to collect NLA weapons; insurgency formally ends." },
+    ],
+    outcome: "Ohrid Framework Agreement resolved core grievances; NLA disarmed; North Macedonia preserved as a multi-ethnic state with expanded minority rights.",
+    casualties: {
+      military: "Approximately **60-80** security force members killed; NLA losses estimated at **50-70** killed.",
+      civilian: "Dozens of civilians killed; relatively low compared to other Balkan conflicts.",
+      displacement: "Over **100,000** people temporarily displaced from conflict zones.",
+      note: "The relatively low death toll reflects both the conflict's short duration and the speed of diplomatic intervention.",
+    },
+    orderOfBattle: [
+      { name: "NLA", strength: "Estimated 2,000-3,000 fighters with light weapons and Kosovo-sourced equipment", note: "Effective in hit-and-run operations but lacked capability for sustained conventional warfare." },
+      { name: "Macedonian security forces", strength: "Army and police with limited counterinsurgency capability and aging equipment", note: "Struggled with NLA mobility and cross-border sanctuary but maintained control of major population centers." },
+    ],
+    aftermath: [
+      "The **Ohrid Agreement** became a model for resolving ethnic conflicts through constitutional reform rather than partition.",
+      "North Macedonia's EU and NATO aspirations provided powerful incentives for both communities to maintain the agreement.",
+      "The country joined **NATO in 2020** after resolving the name dispute with Greece (Prespa Agreement, 2018).",
+      "Former NLA leader **Ali Ahmeti** became a mainstream politician, leading the ethnic Albanian **DUI** party in coalition governments.",
+    ],
+    maps: {
+      title: "2001 North Macedonia insurgency",
+      description: "The Balkan conflict that got a diplomatic ending before it needed a tribunal.",
+      points: [
+        { name: "Tetovo", x: 48, y: 44, year: "2001", note: "Largest ethnic Albanian city; epicenter of NLA operations and fighting." },
+        { name: "Kumanovo", x: 52, y: 42, year: "2001", note: "Northern city near Kosovo border; site of significant clashes." },
+        { name: "Aracinovo", x: 52, y: 44, year: "2001", note: "Village near Skopje where NLA presence triggered crisis; NATO-brokered evacuation." },
+      ],
+    },
+    technology: [
+      { name: "Cross-border sanctuary", type: "Insurgent logistics", side: "NLA", impact: "Kosovo border provided weapons supply, recruitment, and safe haven that Macedonian forces could not interdict." },
+      { name: "Preventive diplomacy", type: "Conflict resolution", side: "NATO/EU/US", impact: "Rapid international engagement prevented escalation into the kind of catastrophe seen in Bosnia and Kosovo." },
+      { name: "Constitutional reform package", type: "Political settlement", side: "International mediators", impact: "Ohrid Agreement addressed root causes rather than just symptoms, producing durable peace." },
+    ],
+    centralFigures: [
+      {
+        name: "Ali Ahmeti",
+        role: "NLA political leader",
+        side: "belligerent",
+        importance: 78,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Transitioned from insurgent leader to mainstream politician; has led the DUI party in multiple coalition governments.",
+      },
+      {
+        name: "Boris Trajkovski",
+        role: "President of North Macedonia",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Navigated the crisis toward negotiated settlement despite domestic pressure for military escalation; died in plane crash 2004.",
+      },
+      {
+        name: "Javier Solana",
+        role: "EU High Representative",
+        side: "nonBelligerent",
+        importance: 65,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Key international mediator who helped broker the Ohrid Framework Agreement.",
+      },
+    ],
+    infobox: {
+      dates: "January - November 2001",
+      location: "Republic of North Macedonia",
+      result: "Ohrid Framework Agreement; NLA disarmed; expanded minority rights",
+      belligerents: "NLA vs Macedonian security forces",
+      strength: "~2,000-3,000 NLA fighters vs Macedonian army and police",
+      casualties: "~130-150 combatants killed; 100,000+ displaced",
+    },
+  },
+
+
+  "War on Terror": {
+    theater: "Global - **Afghanistan**, **Iraq**, **Pakistan**, **Yemen**, **Somalia**, **Syria**, the **Sahel**, and dozens of other countries touched by US-led counterterrorism operations",
+    summary: "The **War on Terror (2001-present)** is the sprawling, borderless, and arguably indefinite campaign launched by the **United States** after the **September 11 attacks**. It began with the invasion of **Afghanistan** to destroy **al-Qaeda** and topple the **Taliban**, expanded into the invasion of **Iraq** on contested WMD claims, and metastasized into drone campaigns, special operations raids, intelligence programs, and partner-force training across dozens of countries. It produced the deaths of hundreds of thousands, the displacement of millions, the creation of **ISIS**, the normalization of mass surveillance, and a fundamental reshaping of international law around the concept of preemptive self-defense. Twenty-plus years later, the Taliban is back in Kabul, Iraq is struggling, and the phrase 'mission accomplished' has become the most expensive irony in American military history.",
+    background: [
+      "The **September 11, 2001** attacks killed nearly **3,000** people and were planned by **al-Qaeda** from Taliban-controlled Afghanistan.",
+      "The **Bush Doctrine** asserted the right to preemptive war against states harboring terrorists, fundamentally changing US foreign policy.",
+      "The **2003 Iraq invasion** was justified by claims of WMD and links to terrorism that proved largely unfounded.",
+      "The war expanded through the **Authorization for Use of Military Force (AUMF)**, which has been used to justify operations in over a dozen countries.",
+    ],
+    participants: [
+      { name: "United States and NATO allies", role: "Primary military coalition conducting invasions, occupations, drone campaigns, and partner-force operations globally.", side: "belligerent" },
+      { name: "Al-Qaeda and affiliates", role: "Transnational jihadist network that conducted the 9/11 attacks and spawned regional franchises across the Muslim world.", side: "belligerent" },
+      { name: "Taliban", role: "Afghan Islamist movement that hosted al-Qaeda, was overthrown in 2001, fought a 20-year insurgency, and retook power in 2021.", side: "belligerent" },
+      { name: "ISIS / Islamic State", role: "Emerged from the Iraq War's chaos; seized territory across Iraq and Syria; declared a caliphate in 2014.", side: "belligerent" },
+    ],
+    timeline: [
+      { period: "Sep 2001", title: "9/11 attacks", detail: "Al-Qaeda hijackers kill nearly 3,000 people in New York, Washington, and Pennsylvania." },
+      { period: "Oct 2001", title: "Afghanistan invasion", detail: "US and allies topple Taliban; al-Qaeda leadership flees to Pakistan border areas." },
+      { period: "Mar 2003", title: "Iraq invasion", detail: "US-led coalition invades Iraq; Saddam Hussein overthrown; insurgency and sectarian war follow." },
+      { period: "2014-2019", title: "ISIS caliphate", detail: "Islamic State seizes territory across Iraq and Syria; international coalition eventually destroys territorial control." },
+    ],
+    outcome: "Al-Qaeda degraded but not destroyed; Taliban returned to power in Afghanistan (2021); Iraq remains unstable; ISIS territorial caliphate destroyed but insurgency continues; global counterterrorism architecture permanently expanded.",
+    casualties: {
+      military: "Over **7,000** US military killed in Afghanistan and Iraq; coalition allies lost thousands more; Afghan and Iraqi security force deaths in the hundreds of thousands.",
+      civilian: "Estimated **300,000-900,000+** civilians killed directly across all theaters; millions more from indirect effects.",
+      displacement: "**37+ million** people displaced by post-9/11 wars according to Brown University's Costs of War project.",
+      note: "The total cost exceeds **$8 trillion** according to academic estimates. The human cost is still being calculated.",
+    },
+    orderOfBattle: [
+      { name: "US-led coalition", strength: "Peak deployments of 100,000+ in Afghanistan and 170,000+ in Iraq simultaneously", note: "Unprecedented global military footprint spanning conventional war, counterinsurgency, drone warfare, and special operations." },
+      { name: "Insurgent/terrorist networks", strength: "Decentralized networks ranging from al-Qaeda central to ISIS armies to local affiliates", note: "Adapted continuously; military defeats in one theater often produced metastasis to others." },
+    ],
+    aftermath: [
+      "The **2021 Taliban takeover** of Afghanistan after US withdrawal symbolized the limits of military-driven state-building.",
+      "Iraq's post-invasion sectarian fracture created the conditions for ISIS and ongoing instability.",
+      "Mass surveillance programs revealed by **Edward Snowden** showed the domestic civil liberties cost of the war.",
+      "The war fundamentally reshaped international norms around sovereignty, preemption, and the use of force.",
+    ],
+    maps: {
+      title: "War on Terror global footprint",
+      description: "A war with no front lines, no borders, and no agreed definition of victory.",
+      points: [
+        { name: "New York / Pentagon", x: 30, y: 40, year: "2001", note: "Sites of the 9/11 attacks that launched the entire campaign." },
+        { name: "Tora Bora, Afghanistan", x: 62, y: 42, year: "2001", note: "Mountain complex where bin Laden escaped during the initial invasion." },
+        { name: "Baghdad", x: 56, y: 42, year: "2003", note: "Iraqi capital; site of invasion, occupation, sectarian war, and ISIS siege." },
+      ],
+    },
+    technology: [
+      { name: "Armed drones (MQ-1 Predator / MQ-9 Reaper)", type: "Remote warfare", side: "US", impact: "Enabled targeted killing across sovereign borders without ground troop deployment; transformed warfare and international law." },
+      { name: "IEDs (Improvised Explosive Devices)", type: "Asymmetric weapon", side: "Insurgents", impact: "Caused the majority of coalition casualties in Iraq and Afghanistan; drove massive investment in counter-IED technology." },
+      { name: "Mass surveillance (PRISM, etc.)", type: "Intelligence collection", side: "US/Five Eyes", impact: "Global communications monitoring justified by counterterrorism; revealed by Snowden in 2013." },
+    ],
+    centralFigures: [
+      {
+        name: "George W. Bush",
+        role: "US President (2001-2009)",
+        side: "belligerent",
+        importance: 95,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg",
+        note: "Launched the War on Terror, invaded Afghanistan and Iraq, and established the legal and institutional framework for indefinite global counterterrorism.",
+      },
+      {
+        name: "Osama bin Laden",
+        role: "Al-Qaeda founder and leader",
+        side: "belligerent",
+        importance: 95,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Mastermind of 9/11; evaded capture for a decade; killed by US Navy SEALs in Abbottabad, Pakistan in 2011.",
+      },
+      {
+        name: "Abu Bakr al-Baghdadi",
+        role: "ISIS leader / self-declared Caliph",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Declared the ISIS caliphate in 2014; killed in US special operations raid in Syria in 2019.",
+      },
+    ],
+    infobox: {
+      dates: "2001 - present",
+      location: "Global (primary theaters: Afghanistan, Iraq, Syria, Yemen, Somalia, Pakistan)",
+      result: "Ongoing; Taliban retook Afghanistan; ISIS caliphate destroyed; al-Qaeda degraded",
+      belligerents: "US-led coalition vs al-Qaeda, Taliban, ISIS, and affiliates",
+      strength: "Peak 300,000+ coalition troops across theaters vs decentralized insurgent networks",
+      casualties: "Hundreds of thousands killed; 37+ million displaced; $8+ trillion spent",
+    },
+  },
+
+  "Nigerian Sharia Conflict": {
+    theater: "West Africa - northern **Nigeria**, from **Kaduna** and **Jos** to the **Boko Haram** heartland in **Borno**, **Yobe**, and **Adamawa** states",
+    summary: "The **Nigerian Sharia Conflict (2000-present)** encompasses the violent tensions triggered by the adoption of **Sharia law** in twelve northern Nigerian states beginning in 1999-2000, and the subsequent rise of **Boko Haram** as the conflict's most destructive expression. The initial Sharia implementation sparked communal riots between Muslims and Christians, particularly in **Kaduna** and **Jos**, killing thousands. **Boko Haram**, founded by **Mohammed Yusuf** in 2002, evolved from a radical preaching movement into a full-scale insurgency after Yusuf's extrajudicial killing in 2009. The group's campaign of bombings, kidnappings (including the **Chibok schoolgirls**), and territorial seizure made northeastern Nigeria one of the world's worst humanitarian crises. The Nigerian military's response has been characterized by both operational successes and serious human rights violations.",
+    background: [
+      "Nigeria's return to democracy in **1999** enabled northern governors to implement **Sharia criminal law**, inflaming Christian-Muslim tensions.",
+      "The **Kaduna riots** (2000) killed over **2,000** people and established a pattern of communal violence around religious law.",
+      "**Mohammed Yusuf** founded Boko Haram in **Maiduguri** preaching rejection of Western education and secular government.",
+      "Yusuf's **2009 extrajudicial killing** by police radicalized the movement under **Abubakar Shekau** into armed insurgency.",
+    ],
+    participants: [
+      { name: "Boko Haram / ISWAP", role: "Jihadist insurgency conducting bombings, kidnappings, and territorial seizure in northeastern Nigeria and the Lake Chad Basin.", side: "belligerent" },
+      { name: "Nigerian Armed Forces", role: "Conducting counterinsurgency operations with mixed effectiveness and significant human rights concerns.", side: "belligerent" },
+      { name: "Multinational Joint Task Force", role: "Regional coalition of Nigeria, Chad, Niger, and Cameroon forces fighting Boko Haram in the Lake Chad Basin.", side: "belligerent" },
+      { name: "Civilian Joint Task Force", role: "Local vigilante groups formed to assist military operations against Boko Haram in northeastern communities.", side: "belligerent" },
+    ],
+    timeline: [
+      { period: "2000-2002", title: "Sharia riots", detail: "Communal violence in Kaduna, Jos, and other cities over Sharia implementation; thousands killed." },
+      { period: "2009", title: "Boko Haram uprising", detail: "Yusuf killed; Shekau takes over; movement transforms from radical sect to armed insurgency." },
+      { period: "2014-2015", title: "Peak territorial control", detail: "Boko Haram seizes territory the size of Belgium; Chibok kidnapping; declares caliphate allegiance to ISIS." },
+      { period: "2016-present", title: "Degraded but persistent", detail: "Military operations recapture territory; Boko Haram splits into Shekau faction and ISWAP; insurgency continues." },
+    ],
+    outcome: "Boko Haram's territorial control largely reversed but insurgency persists; ISWAP remains active; northeastern Nigeria faces ongoing humanitarian crisis.",
+    casualties: {
+      military: "Thousands of Nigerian soldiers killed; significant losses among regional coalition forces.",
+      civilian: "Over **35,000** killed directly; millions affected by the broader humanitarian crisis.",
+      displacement: "Over **2.4 million** internally displaced in northeastern Nigeria; additional displacement across the Lake Chad Basin.",
+      note: "The conflict has created one of the world's largest humanitarian emergencies, with millions facing food insecurity.",
+    },
+    orderOfBattle: [
+      { name: "Nigerian military", strength: "Large conventional force with armor and air support but persistent logistics and morale challenges", note: "Operational effectiveness improved after 2015 but human rights violations undermine legitimacy." },
+      { name: "Boko Haram / ISWAP", strength: "Peak strength of 15,000-30,000; reduced but still capable of major attacks", note: "ISWAP's more disciplined approach has proven more sustainable than Shekau's indiscriminate violence." },
+    ],
+    aftermath: [
+      "The **Chibok kidnapping** (276 schoolgirls, 2014) generated the global **#BringBackOurGirls** campaign and unprecedented international attention.",
+      "Boko Haram's split into competing factions (Shekau's group vs **ISWAP**) complicated both the insurgency and counterinsurgency.",
+      "Northeastern Nigeria's economy, education system, and social fabric have been devastated by over a decade of conflict.",
+      "The conflict demonstrated how governance failures and security force abuses can fuel the very extremism they claim to fight.",
+    ],
+    maps: {
+      title: "Nigerian Sharia conflict and Boko Haram zones",
+      description: "From communal riots in the Middle Belt to jihadist insurgency in the northeast.",
+      points: [
+        { name: "Maiduguri", x: 56, y: 50, year: "2009-present", note: "Borno state capital; Boko Haram birthplace and primary military operations center." },
+        { name: "Chibok", x: 56, y: 52, year: "2014", note: "Site of the mass schoolgirl kidnapping that drew global attention." },
+        { name: "Kaduna / Jos", x: 52, y: 50, year: "2000-2010s", note: "Middle Belt cities; epicenters of communal religious violence." },
+      ],
+    },
+    technology: [
+      { name: "Suicide bombings", type: "Terror tactic", side: "Boko Haram", impact: "Extensive use of suicide bombers, including women and children, against civilian and military targets." },
+      { name: "Tucano light attack aircraft", type: "Close air support", side: "Nigeria", impact: "US-supplied aircraft improved Nigerian military's ability to strike insurgent positions." },
+      { name: "Social media propaganda", type: "Information warfare", side: "Boko Haram/ISWAP", impact: "Video releases of attacks and kidnappings amplified terror effect and recruitment." },
+    ],
+    centralFigures: [
+      {
+        name: "Abubakar Shekau",
+        role: "Boko Haram leader (2009-2021)",
+        side: "belligerent",
+        importance: 88,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Transformed Boko Haram into a mass-casualty insurgency; killed himself during ISWAP attack in 2021.",
+      },
+      {
+        name: "Muhammadu Buhari",
+        role: "President of Nigeria (2015-2023)",
+        side: "belligerent",
+        importance: 75,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%28cropped3%29.jpg",
+        note: "Won election partly on promise to defeat Boko Haram; achieved territorial gains but not decisive victory.",
+      },
+      {
+        name: "Mohammed Yusuf",
+        role: "Boko Haram founder",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Founded the movement as a radical preaching sect; his extrajudicial killing by police in 2009 triggered the armed insurgency.",
+      },
+    ],
+    infobox: {
+      dates: "2000 - present",
+      location: "Northern Nigeria and Lake Chad Basin",
+      result: "Ongoing; Boko Haram degraded but persistent",
+      belligerents: "Nigerian military and regional coalition vs Boko Haram and ISWAP",
+      strength: "Large state military vs 15,000-30,000 insurgents at peak",
+      casualties: "35,000+ killed; 2.4 million+ displaced",
+    },
+  },
+
+  "Kivu Conflict": {
+    theater: "Central Africa - **North Kivu** and **South Kivu** provinces of the **Democratic Republic of Congo**, bordering **Rwanda**, **Burundi**, and **Uganda**",
+    summary: "The **Kivu Conflict (2004-present)** is the seemingly endless cycle of armed group violence in eastern Congo's **Kivu provinces** - a region cursed with mineral wealth, ethnic complexity, and the unresolved aftermath of the **Rwandan genocide**. Dozens of armed groups - including the **CNDP**, **M23**, **FDLR**, and various Mai-Mai militias - fight over territory, minerals, ethnic grievances, and political power. **Rwanda** has repeatedly backed rebel groups (most notably **M23**) while officially denying involvement. The Congolese army (**FARDC**) is often part of the problem rather than the solution. The UN's **MONUSCO** mission, one of the largest in history, has struggled to protect civilians. The conflict has killed millions when indirect deaths from disease and displacement are counted. It is the world's deadliest ongoing conflict that most people have never heard of.",
+    background: [
+      "The **1994 Rwandan genocide** sent over a million Hutu refugees and genocidaires into eastern Congo, destabilizing the region permanently.",
+      "The **First and Second Congo Wars** (1996-2003) drew in nine African nations and killed millions; the Kivus were the epicenter.",
+      "Post-war peace agreements failed to disarm dozens of armed groups or address underlying ethnic and land disputes.",
+      "**Conflict minerals** (coltan, cassiterite, gold, tungsten) provide economic incentives for continued fighting.",
+    ],
+    participants: [
+      { name: "FARDC (Congolese army)", role: "Government military conducting operations against armed groups; plagued by corruption, fragmentation, and human rights abuses.", side: "belligerent" },
+      { name: "M23 (and predecessors CNDP, RCD)", role: "Tutsi-led rebel movement backed by Rwanda; seized Goma in 2012; resurgent since 2022.", side: "belligerent" },
+      { name: "FDLR", role: "Hutu militia including Rwandan genocide perpetrators; operates in eastern Congo since 1994.", side: "belligerent" },
+      { name: "MONUSCO (UN peacekeeping)", role: "One of the world's largest peacekeeping missions; mandated to protect civilians but limited in effectiveness.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "2004-2008", title: "Post-war instability", detail: "Armed groups proliferate; CNDP under Laurent Nkunda fights FARDC; Rwanda's role becomes increasingly evident." },
+      { period: "2012-2013", title: "M23 rebellion", detail: "M23 captures Goma; international pressure and UN intervention force defeat M23; Rwanda denies backing." },
+      { period: "2017-2021", title: "Continued fragmentation", detail: "Over 100 armed groups active in eastern Congo; ADF (ISIS-linked) conducts massacres; MONUSCO criticized." },
+      { period: "2022-present", title: "M23 resurgence", detail: "M23 returns with renewed Rwandan backing; captures territory; regional diplomatic crisis; MONUSCO begins withdrawal." },
+    ],
+    outcome: "No resolution. Armed group violence continues; M23 resurgent; regional tensions between Congo and Rwanda at crisis levels; MONUSCO withdrawing without peace.",
+    casualties: {
+      military: "Thousands of combatants killed across all armed groups and FARDC operations.",
+      civilian: "Millions of excess deaths when disease and displacement are included; tens of thousands killed directly in violence.",
+      displacement: "Over **6 million** internally displaced in eastern Congo - one of the world's largest displacement crises.",
+      note: "The Kivu conflict is part of a broader eastern Congo crisis that has killed more people than any conflict since World War II.",
+    },
+    orderOfBattle: [
+      { name: "FARDC", strength: "Large on paper but fragmented, poorly paid, and often predatory toward civilians", note: "Integration of former rebels into the army created a force with divided loyalties." },
+      { name: "M23 and allied groups", strength: "Several thousand well-equipped fighters with Rwandan military support", note: "Better trained and equipped than most FARDC units; controls significant territory." },
+    ],
+    aftermath: [
+      "The **conflict minerals** trade has drawn international attention and regulation attempts (Dodd-Frank Act Section 1502) with mixed results.",
+      "Rwanda's repeated denials of M23 support have been contradicted by UN expert reports, straining regional diplomacy.",
+      "MONUSCO's planned withdrawal raises fears of even worse violence without international presence.",
+      "Eastern Congo demonstrates how post-genocide regional dynamics can produce permanent instability across borders.",
+    ],
+    maps: {
+      title: "Kivu conflict zones",
+      description: "The most dangerous place on earth to be a civilian, measured in armed groups per square kilometer.",
+      points: [
+        { name: "Goma", x: 52, y: 52, year: "2012/2022-present", note: "North Kivu capital; captured by M23 in 2012; threatened again in 2022-present resurgence." },
+        { name: "Bukavu", x: 52, y: 54, year: "2004-present", note: "South Kivu capital; surrounded by armed group activity and displacement camps." },
+        { name: "Masisi / Rutshuru", x: 52, y: 50, year: "2004-present", note: "Territories with highest concentration of armed groups and mineral extraction." },
+      ],
+    },
+    technology: [
+      { name: "Conflict mineral extraction", type: "War economy", side: "Multiple armed groups", impact: "Coltan, gold, and cassiterite mining funds armed groups and creates economic incentives for continued conflict." },
+      { name: "Cross-border military support", type: "Proxy warfare", side: "Rwanda", impact: "Rwandan backing transforms local militias into capable conventional forces." },
+      { name: "UN Force Intervention Brigade", type: "Offensive peacekeeping", side: "MONUSCO", impact: "First UN unit authorized to conduct offensive operations; helped defeat M23 in 2013." },
+    ],
+    centralFigures: [
+      {
+        name: "Laurent Nkunda",
+        role: "CNDP rebel leader",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Tutsi general who led the CNDP rebellion; arrested by Rwanda in 2009 in a deal that created M23's predecessor.",
+      },
+      {
+        name: "Sultani Makenga",
+        role: "M23 military commander",
+        side: "belligerent",
+        importance: 68,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led M23's capture of Goma in 2012 and has been associated with the movement's resurgence.",
+      },
+      {
+        name: "Felix Tshisekedi",
+        role: "President of DRC (2019-present)",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Faces the M23 resurgence and MONUSCO withdrawal while trying to assert Congolese sovereignty over eastern provinces.",
+      },
+    ],
+    infobox: {
+      dates: "2004 - present",
+      location: "North and South Kivu, eastern DRC",
+      result: "Ongoing; M23 resurgent; no resolution in sight",
+      belligerents: "FARDC vs M23, FDLR, ADF, and 100+ armed groups",
+      strength: "Large but fragmented state army vs multiple well-armed rebel groups",
+      casualties: "Millions of excess deaths; 6+ million displaced",
+    },
+  },
+
+  "War in North-West Pakistan": {
+    theater: "South Asia - Pakistan's **Federally Administered Tribal Areas (FATA)**, **Khyber Pakhtunkhwa**, and the **Swat Valley**",
+    summary: "The **War in North-West Pakistan (2004-present)** is Pakistan's long, costly campaign against the **Tehrik-i-Taliban Pakistan (TTP)** and affiliated militant groups in its tribal borderlands. The conflict erupted when Pakistan, under US pressure after 9/11, sent troops into the **tribal areas** for the first time in history, provoking a backlash from local militants who formed the TTP in 2007. The TTP conducted devastating suicide bombings across Pakistan, briefly seized the **Swat Valley**, and killed tens of thousands. Pakistan responded with major military operations - **Rah-e-Nijat**, **Zarb-e-Azb**, and **Radd-ul-Fasaad** - that cleared militant strongholds but displaced millions. The war exposed Pakistan's contradictory relationship with militancy: fighting the TTP domestically while elements of the state maintained relationships with Afghan Taliban and other groups. It was counterterrorism and strategic ambiguity conducted simultaneously, which is as sustainable as it sounds.",
+    background: [
+      "Pakistan's **tribal areas** had been semi-autonomous since British colonial times; the state had minimal presence.",
+      "After 9/11, Pakistan deployed military forces into FATA for the first time, disrupting tribal power structures.",
+      "Al-Qaeda and Taliban fighters fleeing Afghanistan established sanctuary in Pakistan's tribal belt.",
+      "Local militants coalesced into the **TTP** in 2007, declaring war on the Pakistani state.",
+    ],
+    participants: [
+      { name: "Pakistan Armed Forces", role: "Conducting large-scale counterinsurgency operations in tribal areas and settled districts.", side: "belligerent" },
+      { name: "Tehrik-i-Taliban Pakistan (TTP)", role: "Umbrella militant organization conducting insurgency and terrorism against the Pakistani state.", side: "belligerent" },
+      { name: "United States", role: "Conducted drone strikes in FATA; provided military aid and intelligence support to Pakistan.", side: "belligerent" },
+      { name: "Tribal communities", role: "Caught between militants and military; suffered displacement, destruction, and loss of traditional governance structures.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "2004-2006", title: "Initial operations", detail: "Pakistan military enters South Waziristan; peace deals with militants fail repeatedly." },
+      { period: "2007-2009", title: "TTP formation and escalation", detail: "TTP formed; Red Mosque siege; Swat Valley seized; suicide bombings devastate Pakistani cities." },
+      { period: "2009-2014", title: "Major offensives", detail: "Operations in Swat, South Waziristan, and eventually North Waziristan clear militant strongholds." },
+      { period: "2014-present", title: "Zarb-e-Azb and aftermath", detail: "Comprehensive North Waziristan operation; FATA merged into KP province; TTP weakened but resurges after Afghan Taliban takeover." },
+    ],
+    outcome: "TTP significantly degraded through military operations but resurged after 2021 Afghan Taliban takeover; FATA merged into Khyber Pakhtunkhwa; violence reduced but not eliminated.",
+    casualties: {
+      military: "Over **8,000** Pakistani security forces killed in the conflict.",
+      civilian: "Over **35,000** Pakistani civilians killed in terrorist attacks and military operations combined.",
+      displacement: "Over **5 million** people displaced by military operations in FATA and Swat, most temporarily.",
+      note: "Pakistan has suffered more terrorism-related deaths than almost any country in the 21st century.",
+    },
+    orderOfBattle: [
+      { name: "Pakistan Army", strength: "Multiple divisions deployed in FATA with air support, artillery, and special forces", note: "Evolved from conventional force to counterinsurgency capability through painful operational learning." },
+      { name: "TTP and affiliates", strength: "Peak strength of 25,000-35,000 fighters across tribal agencies", note: "Fragmented after military operations but reconstituted with Afghan Taliban support post-2021." },
+    ],
+    aftermath: [
+      "The **2014 Peshawar school massacre** (132 children killed) was a turning point that unified Pakistani public opinion against the TTP.",
+      "FATA's merger into **Khyber Pakhtunkhwa** province ended the tribal areas' semi-autonomous status after 70+ years.",
+      "The Afghan Taliban's 2021 return to power gave the TTP renewed sanctuary and operational capability.",
+      "Pakistan's selective approach to militancy - fighting TTP while tolerating other groups - remains a fundamental strategic contradiction.",
+    ],
+    maps: {
+      title: "War in North-West Pakistan",
+      description: "From tribal autonomy to military operations to an unfinished counterinsurgency.",
+      points: [
+        { name: "North Waziristan", x: 58, y: 42, year: "2014", note: "TTP heartland; site of Operation Zarb-e-Azb that cleared the primary militant sanctuary." },
+        { name: "Swat Valley", x: 58, y: 40, year: "2009", note: "Tourist valley seized by TTP; military operation restored government control." },
+        { name: "Peshawar", x: 58, y: 40, year: "2014", note: "Site of Army Public School massacre; 132 children killed by TTP." },
+      ],
+    },
+    technology: [
+      { name: "US drone strikes", type: "Remote precision strike", side: "US", impact: "Hundreds of strikes in FATA killed senior militants but also civilians; deeply controversial in Pakistan." },
+      { name: "Suicide bombing networks", type: "Terror tactic", side: "TTP", impact: "Devastating campaign of suicide attacks across Pakistani cities killed thousands of civilians." },
+      { name: "FATA integration", type: "Governance reform", side: "Pakistan", impact: "Merging tribal areas into provincial governance aimed to replace militant-friendly power vacuums with state institutions." },
+    ],
+    centralFigures: [
+      {
+        name: "Baitullah Mehsud",
+        role: "TTP founder and first emir",
+        side: "belligerent",
+        importance: 80,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "United tribal militants into the TTP; killed by US drone strike in 2009.",
+      },
+      {
+        name: "Raheel Sharif",
+        role: "Pakistan Army Chief (2013-2016)",
+        side: "belligerent",
+        importance: 78,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Launched Operation Zarb-e-Azb and the National Action Plan after the Peshawar school massacre.",
+      },
+      {
+        name: "Noor Wali Mehsud",
+        role: "Current TTP emir",
+        side: "belligerent",
+        importance: 70,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Reunified TTP factions after 2018; leveraged Afghan Taliban takeover to rebuild operational capability.",
+      },
+    ],
+    infobox: {
+      dates: "2004 - present",
+      location: "FATA and Khyber Pakhtunkhwa, Pakistan",
+      result: "TTP degraded but persistent; FATA merged into KP province",
+      belligerents: "Pakistan military vs TTP and affiliated groups",
+      strength: "Multiple army divisions vs 25,000-35,000 militants at peak",
+      casualties: "8,000+ military, 35,000+ civilians killed",
+    },
+  },
+
+  "South Thailand Insurgency": {
+    theater: "Southeast Asia - Thailand's **deep south** provinces of **Pattani**, **Yala**, **Narathiwat**, and parts of **Songkhla**",
+    summary: "The **South Thailand Insurgency (2004-present)** is a separatist conflict in Thailand's Malay-Muslim southern provinces that reignited in January 2004 with coordinated raids on an army depot. The region, historically part of the **Patani Sultanate**, was annexed by **Siam** in 1909 and has never been fully integrated. The **Barisan Revolusi Nasional (BRN)** leads a shadowy insurgency using bombings, shootings, and arson against Thai security forces, government officials, and Buddhist civilians. The Thai military has responded with emergency decrees, martial law, and counterinsurgency operations that have drawn human rights criticism. Over **7,000** people have been killed in two decades of low-intensity but relentless violence. It is one of the world's most persistent insurgencies and one of its least covered - partly because the insurgents don't do press conferences.",
+    background: [
+      "The **Patani** region was a Malay Muslim sultanate forcibly incorporated into Siam in **1909** under an Anglo-Siamese treaty.",
+      "Thai assimilation policies suppressed Malay language, Islamic education, and local identity for decades.",
+      "An earlier insurgency (1960s-1980s) subsided but grievances over cultural marginalization and security force abuses persisted.",
+      "The current insurgency reignited on **January 4, 2004** with simultaneous attacks on military installations.",
+    ],
+    participants: [
+      { name: "BRN (Barisan Revolusi Nasional)", role: "Primary insurgent organization conducting bombings, shootings, and coordinated attacks in the deep south.", side: "belligerent" },
+      { name: "Thai security forces", role: "Army, police, and paramilitary rangers conducting counterinsurgency under emergency decree and martial law.", side: "belligerent" },
+      { name: "Village defense volunteers", role: "Buddhist and some Muslim civilians armed by the government for local defense.", side: "belligerent" },
+      { name: "Malaysian facilitators", role: "Malaysia has facilitated peace talks between Thai government and BRN representatives.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "4 Jan 2004", title: "Insurgency reignites", detail: "Coordinated raids on army depot in Narathiwat; 400+ schools burned in the following months." },
+      { period: "2004-2006", title: "Escalation", detail: "Krue Se mosque siege; Tak Bai massacre (85 killed); emergency decree imposed; violence intensifies." },
+      { period: "2007-2019", title: "Sustained low-intensity war", detail: "Daily bombings and shootings; peace talks begin and stall repeatedly; over 7,000 killed." },
+      { period: "2020-present", title: "Continued violence and talks", detail: "BRN engages in Malaysian-facilitated dialogue; violence decreases slightly but continues." },
+    ],
+    outcome: "No resolution. Insurgency continues at reduced but persistent levels; peace talks ongoing but no agreement; emergency decree remains in effect.",
+    casualties: {
+      military: "Hundreds of Thai security personnel killed over two decades.",
+      civilian: "Over **7,000** total killed including security forces, insurgents, and civilians; civilians are the majority of victims.",
+      displacement: "Limited large-scale displacement but significant Buddhist out-migration from the deep south.",
+      note: "The conflict's daily toll of small-scale attacks rarely makes international headlines but has been relentless for twenty years.",
+    },
+    orderOfBattle: [
+      { name: "Thai security forces", strength: "60,000-70,000 troops and police deployed in three southern provinces", note: "Massive deployment relative to population but counterinsurgency effectiveness limited by cultural disconnect." },
+      { name: "BRN insurgent cells", strength: "Estimated 3,000-9,000 active fighters in decentralized cell structure", note: "Highly secretive organization with no public leadership; operates through small autonomous cells." },
+    ],
+    aftermath: [
+      "The **Tak Bai massacre** (2004) where 85 detainees died in military custody became a defining grievance for the Malay-Muslim community.",
+      "Buddhist population in the deep south has declined significantly as families relocate away from violence.",
+      "The insurgency has resisted resolution despite multiple government approaches from military crackdowns to development programs.",
+      "Malaysia-facilitated peace talks represent the most sustained diplomatic track but have not produced a breakthrough.",
+    ],
+    maps: {
+      title: "South Thailand insurgency zone",
+      description: "Three provinces, two decades, seven thousand dead, and counting.",
+      points: [
+        { name: "Pattani", x: 56, y: 54, year: "2004-present", note: "Historical Patani capital; symbolic and operational center of the insurgency." },
+        { name: "Yala", x: 56, y: 56, year: "2004-present", note: "Province with highest per-capita violence rates in the deep south." },
+        { name: "Narathiwat", x: 58, y: 54, year: "2004-present", note: "Site of the January 2004 army depot raid that reignited the insurgency." },
+      ],
+    },
+    technology: [
+      { name: "Cell-phone triggered IEDs", type: "Asymmetric weapon", side: "BRN", impact: "Primary attack method; cheap, effective, and difficult to attribute to specific individuals." },
+      { name: "Emergency decree powers", type: "Legal framework", side: "Thai government", impact: "Broad detention and search powers; criticized for enabling abuses that fuel further recruitment." },
+      { name: "Decentralized cell structure", type: "Organizational security", side: "BRN", impact: "No public leadership or media presence makes the insurgency extremely difficult to decapitate or negotiate with." },
+    ],
+    centralFigures: [
+      {
+        name: "Sapae-ing Basor",
+        role: "Alleged BRN leader",
+        side: "belligerent",
+        importance: 65,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Believed to lead BRN but the organization's secrecy makes leadership identification uncertain.",
+      },
+      {
+        name: "Thaksin Shinawatra",
+        role: "Thai Prime Minister (2001-2006)",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His hardline policies, including the Tak Bai and Krue Se incidents, are widely seen as having reignited the insurgency.",
+      },
+      {
+        name: "Prayuth Chan-ocha",
+        role: "Thai Prime Minister (2014-2023)",
+        side: "belligerent",
+        importance: 65,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Military-background PM who initiated the Malaysian-facilitated peace dialogue track with BRN.",
+      },
+    ],
+    infobox: {
+      dates: "2004 - present",
+      location: "Pattani, Yala, Narathiwat provinces, southern Thailand",
+      result: "Ongoing; no resolution; peace talks continuing",
+      belligerents: "Thai security forces vs BRN and affiliated groups",
+      strength: "60,000-70,000 Thai forces vs 3,000-9,000 insurgents",
+      casualties: "7,000+ killed over two decades",
+    },
+  },
+
+
+  "Niger Delta Conflict": {
+    theater: "West Africa - **Nigeria's Niger Delta** region, spanning **Rivers**, **Bayelsa**, **Delta**, and adjacent oil-producing states",
+    summary: "The **Niger Delta Conflict (2004-present)** is a resource war in slow motion. Communities in the **Niger Delta** - which produces virtually all of Nigeria's oil wealth - have seen their land and waterways devastated by decades of extraction while receiving almost nothing in return. Militant groups like the **Movement for the Emancipation of the Niger Delta (MEND)** emerged in the mid-2000s, attacking oil infrastructure, kidnapping workers, and cutting Nigeria's oil output by a third. The government responded with military operations and eventually an **amnesty program** in 2009 that paid militants to stop fighting. It worked - sort of. Violence decreased but the underlying grievances of pollution, poverty, and political marginalization remain unresolved. The Delta is the place where the phrase 'resource curse' stopped being an academic concept and became somebody's drinking water.",
+    background: [
+      "The Niger Delta produces **90%** of Nigeria's oil revenue but remains one of the country's poorest and most polluted regions.",
+      "**Shell**, **Chevron**, and other multinationals have operated in the Delta since the 1950s; oil spills have devastated ecosystems and livelihoods.",
+      "The **1995 execution of Ken Saro-Wiwa** and eight Ogoni activists by the Abacha regime internationalized Delta grievances.",
+      "Militant groups formed in the early 2000s, initially as community defense but quickly evolving into armed insurgency targeting oil infrastructure.",
+    ],
+    participants: [
+      { name: "MEND and affiliated militant groups", role: "Armed groups attacking oil infrastructure, kidnapping workers, and demanding resource control for Delta communities.", side: "belligerent" },
+      { name: "Nigerian military (JTF)", role: "Joint Task Force conducting counterinsurgency operations in the Delta with significant human rights concerns.", side: "belligerent" },
+      { name: "International oil companies", role: "Shell, Chevron, and others operating extraction infrastructure that is both the conflict's cause and primary target.", side: "nonBelligerent" },
+      { name: "Niger Delta communities", role: "Civilian populations suffering from both oil pollution and military operations; some support militants, others victimized by them.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "1990s", title: "Ogoni crisis", detail: "Ken Saro-Wiwa's nonviolent movement crushed; execution radicalizes Delta politics." },
+      { period: "2004-2006", title: "Militancy erupts", detail: "Armed groups attack oil facilities; kidnappings of foreign workers; Nigeria's oil output drops by a third." },
+      { period: "2009", title: "Amnesty program", detail: "Government offers militants monthly payments, training, and amnesty in exchange for disarmament; violence decreases significantly." },
+      { period: "2016-present", title: "Niger Delta Avengers and beyond", detail: "New militant groups emerge when amnesty payments falter; sporadic attacks on pipelines continue." },
+    ],
+    outcome: "Amnesty program reduced large-scale violence but underlying grievances persist; environmental devastation continues; periodic militant resurgences when payments or attention lapse.",
+    casualties: {
+      military: "Hundreds of security force members killed in Delta operations over two decades.",
+      civilian: "Thousands killed in militant attacks, military operations, and oil-related environmental disasters.",
+      displacement: "Hundreds of thousands displaced by military operations and environmental degradation.",
+      note: "The slow-motion environmental catastrophe has killed far more people than the shooting - oil pollution, gas flaring, and water contamination affect millions.",
+    },
+    orderOfBattle: [
+      { name: "MEND and affiliates", strength: "Thousands of fighters with speedboats, small arms, and explosives operating in creek and mangrove terrain", note: "Waterway geography makes the Delta extremely difficult to secure militarily." },
+      { name: "Nigerian JTF", strength: "Army, navy, and police joint force with patrol boats and helicopter support", note: "Conventional military approach poorly suited to mangrove insurgency; human rights abuses common." },
+    ],
+    aftermath: [
+      "The **UNEP Ogoniland report** (2011) documented catastrophic environmental contamination requiring a 30-year, one-billion-dollar cleanup.",
+      "The amnesty program became a model for buying peace - effective but morally ambiguous and financially unsustainable.",
+      "Oil theft ('bunkering') evolved from militant funding into a massive criminal economy involving military and political elites.",
+      "The conflict demonstrated how resource extraction without local benefit creates permanent instability.",
+    ],
+    maps: {
+      title: "Niger Delta conflict zone",
+      description: "Mangrove creeks, oil platforms, and the geography of a resource curse.",
+      points: [
+        { name: "Port Harcourt", x: 52, y: 54, year: "2004-present", note: "Rivers State capital; hub of oil industry operations and militant activity." },
+        { name: "Warri", x: 50, y: 52, year: "2004-present", note: "Delta State oil city; site of ethnic and militant violence." },
+        { name: "Ogoniland", x: 52, y: 54, year: "1990s-present", note: "Epicenter of environmental devastation and the Saro-Wiwa movement." },
+      ],
+    },
+    technology: [
+      { name: "Pipeline sabotage", type: "Infrastructure warfare", side: "Militants", impact: "Attacks on oil pipelines cut Nigerian production by up to a third and cost billions in revenue." },
+      { name: "Speedboat swarm tactics", type: "Waterway warfare", side: "Militants", impact: "Fast boats in mangrove creeks enabled hit-and-run attacks that conventional naval forces struggled to counter." },
+      { name: "Amnesty payments", type: "Conflict management", side: "Nigerian government", impact: "Monthly stipends to ex-militants reduced violence but created dependency and moral hazard." },
+    ],
+    centralFigures: [
+      {
+        name: "Ken Saro-Wiwa",
+        role: "Ogoni activist",
+        side: "nonBelligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His 1995 execution by the Nigerian state internationalized Delta grievances and inspired the militant generation.",
+      },
+      {
+        name: "Government Ekpemupolo (Tompolo)",
+        role: "MEND commander",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Most prominent militant leader; accepted amnesty; later received government pipeline surveillance contracts.",
+      },
+      {
+        name: "Umaru Yar'Adua",
+        role: "President of Nigeria (2007-2010)",
+        side: "belligerent",
+        importance: 68,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Launched the amnesty program that became the primary tool for reducing Delta violence.",
+      },
+    ],
+    infobox: {
+      dates: "2004 - present",
+      location: "Niger Delta, Nigeria",
+      result: "Amnesty reduced violence; underlying grievances unresolved",
+      belligerents: "MEND and militant groups vs Nigerian military",
+      strength: "Thousands of militants in mangrove terrain vs military joint task force",
+      casualties: "Thousands killed; environmental catastrophe affecting millions",
+    },
+  },
+
+  "First Ivorian Civil War": {
+    theater: "West Africa - **Cote d'Ivoire**, divided between the government-held south and rebel-controlled north",
+    summary: "The **First Ivorian Civil War (2002-2007)** split Cote d'Ivoire in half along ethnic and political lines. In September 2002, soldiers from the north launched a failed coup against President **Laurent Gbagbo** that evolved into a full rebellion. The **Forces Nouvelles** rebels, drawn largely from the Muslim north, seized the northern half of the country while Gbagbo's government held the south. **France** deployed **Operation Licorne** to enforce a ceasefire line, and the country remained partitioned for five years. The conflict was rooted in the toxic politics of **Ivoirite** - a concept of 'true' Ivorian identity used to exclude northerners and immigrants from political participation. The **2007 Ouagadougou Political Agreement** nominally reunified the country, but the underlying tensions exploded again in 2010.",
+    background: [
+      "Cote d'Ivoire's post-independence stability under **Houphouet-Boigny** masked ethnic tensions between the largely Christian south and Muslim north.",
+      "The concept of **Ivoirite** was weaponized to exclude northern politician **Alassane Ouattara** from presidential elections.",
+      "President **Gbagbo** came to power in disputed 2000 elections after a period of military coups and political instability.",
+      "Northern soldiers facing demobilization launched the September 2002 uprising that split the country.",
+    ],
+    participants: [
+      { name: "Government of Laurent Gbagbo", role: "Southern-based government defending power with military, militia (Young Patriots), and Liberian mercenaries.", side: "belligerent" },
+      { name: "Forces Nouvelles", role: "Northern rebel coalition controlling the upper half of the country and demanding political inclusion.", side: "belligerent" },
+      { name: "France (Operation Licorne)", role: "Former colonial power deploying 4,000 troops to enforce ceasefire and protect French nationals.", side: "nonBelligerent" },
+      { name: "ECOWAS / UN (UNOCI)", role: "Regional and international peacekeeping forces monitoring the ceasefire line.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Sep 2002", title: "Failed coup becomes civil war", detail: "Northern soldiers attack Abidjan; fail to take the capital; seize the north instead." },
+      { period: "2002-2003", title: "Partition", detail: "Country splits along ceasefire line; France deploys; Linas-Marcoussis peace talks produce agreement neither side implements." },
+      { period: "2004", title: "French-Ivorian crisis", detail: "Ivorian air force bombs French position killing 9 soldiers; France destroys Ivorian air force; anti-French riots in Abidjan." },
+      { period: "2007", title: "Ouagadougou Agreement", detail: "Gbagbo and rebel leader **Guillaume Soro** agree to reunification and elections; Soro becomes Prime Minister." },
+    ],
+    outcome: "Nominal reunification through the 2007 Ouagadougou Agreement; elections delayed until 2010, when disputed results triggered the Second Ivorian Civil War.",
+    casualties: {
+      military: "Hundreds of combatants killed on both sides during the initial fighting and subsequent clashes.",
+      civilian: "Estimated **3,000+** killed including victims of ethnic massacres, militia violence, and crossfire.",
+      displacement: "Over **700,000** internally displaced; tens of thousands of refugees in neighboring countries.",
+      note: "The partition itself was relatively stable after 2003; most violence occurred during the initial fighting and sporadic ceasefire violations.",
+    },
+    orderOfBattle: [
+      { name: "Ivorian government forces", strength: "National army plus Young Patriots militia and Liberian mercenaries", note: "Conventional capability limited; relied on militia and foreign fighters for offensive operations." },
+      { name: "Forces Nouvelles", strength: "Several thousand rebel fighters controlling northern half of the country", note: "Effective at territorial control but unable to advance south past the French ceasefire line." },
+    ],
+    aftermath: [
+      "The five-year partition created parallel governance structures and war economies in the north that complicated reunification.",
+      "The **2004 French-Ivorian military confrontation** damaged France's relationship with its former colony and fueled anti-French sentiment.",
+      "The Ouagadougou Agreement's election provisions set the stage for the **2010 electoral crisis** and second civil war.",
+      "The conflict demonstrated how identity politics (Ivoirite) could destroy one of West Africa's most prosperous countries.",
+    ],
+    maps: {
+      title: "First Ivorian Civil War partition",
+      description: "A country cut in half by a ceasefire line and a concept of who counts as a citizen.",
+      points: [
+        { name: "Abidjan", x: 46, y: 54, year: "2002", note: "Economic capital; target of failed coup; site of anti-French riots in 2004." },
+        { name: "Bouake", x: 48, y: 50, year: "2002-2007", note: "Rebel capital and Forces Nouvelles administrative center in the north." },
+        { name: "Ceasefire line (Zone of Confidence)", x: 48, y: 52, year: "2002-2007", note: "French and UN-monitored buffer zone dividing the country east-west." },
+      ],
+    },
+    technology: [
+      { name: "Identity-based exclusion (Ivoirite)", type: "Political weapon", side: "Gbagbo government", impact: "Legal framework for excluding northerners from citizenship and political participation; root cause of the conflict." },
+      { name: "French military intervention", type: "Former colonial power projection", side: "France", impact: "Prevented rebel capture of Abidjan but also prevented government reconquest of the north." },
+      { name: "Mercenary recruitment", type: "Force augmentation", side: "Gbagbo government", impact: "Liberian fighters provided combat capability but committed atrocities that undermined government legitimacy." },
+    ],
+    centralFigures: [
+      {
+        name: "Laurent Gbagbo",
+        role: "President of Cote d'Ivoire",
+        side: "belligerent",
+        importance: 85,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His government's exclusionary politics caused the war; later arrested by ICC for crimes against humanity (acquitted 2019).",
+      },
+      {
+        name: "Guillaume Soro",
+        role: "Forces Nouvelles leader",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the northern rebellion; became Prime Minister under the Ouagadougou Agreement; later fell out with Ouattara.",
+      },
+      {
+        name: "Alassane Ouattara",
+        role: "Opposition leader (later President)",
+        side: "nonBelligerent",
+        importance: 80,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Alassane_Ouattara_2015.jpg",
+        note: "His exclusion from politics via Ivoirite was a core grievance; elected president in 2010; took power after second civil war.",
+      },
+    ],
+    infobox: {
+      dates: "2002 - 2007",
+      location: "Cote d'Ivoire",
+      result: "Country partitioned; 2007 Ouagadougou Agreement for reunification",
+      belligerents: "Gbagbo government vs Forces Nouvelles rebels",
+      strength: "Government forces and militias vs northern rebel coalition",
+      casualties: "3,000+ killed; 700,000+ displaced",
+    },
+  },
+
+  "Operation Cast Lead": {
+    theater: "Middle East - the **Gaza Strip**, from the northern border crossings to **Rafah** in the south",
+    summary: "**Operation Cast Lead (2008-2009)** was Israel's three-week military offensive against **Hamas** in the **Gaza Strip**, launched on December 27, 2008 after the collapse of a ceasefire and escalating rocket fire into southern Israel. The operation began with massive air strikes followed by a ground invasion. Israel stated its objective was to stop Hamas rocket attacks and destroy tunnel infrastructure. The offensive killed approximately **1,400** Palestinians (the majority civilians according to Palestinian and international sources; Israel disputed the ratio) and **13** Israelis. The **Goldstone Report** accused both sides of war crimes. The operation achieved temporary tactical results but did not resolve the underlying conflict, establishing a pattern of periodic escalation that would repeat in 2012, 2014, 2021, and 2023.",
+    background: [
+      "**Hamas** won Palestinian legislative elections in **2006** and took full control of Gaza in **2007** after fighting with Fatah.",
+      "Israel and Egypt imposed a **blockade** on Gaza after the Hamas takeover, restricting movement and imports.",
+      "A six-month ceasefire expired in December 2008; Hamas resumed rocket fire; Israel launched the offensive.",
+      "The operation came during the transition between the **Bush** and **Obama** administrations, limiting US diplomatic intervention.",
+    ],
+    participants: [
+      { name: "Israel Defense Forces", role: "Conducted air, ground, and naval operations against Hamas military infrastructure and personnel in Gaza.", side: "belligerent" },
+      { name: "Hamas and Palestinian militant groups", role: "Defended Gaza using rockets, tunnels, IEDs, and guerrilla tactics against Israeli forces.", side: "belligerent" },
+      { name: "Palestinian civilian population", role: "1.5 million people trapped in a densely populated territory during intensive military operations.", side: "nonBelligerent" },
+      { name: "Egypt", role: "Maintained border closure at Rafah; mediated ceasefire negotiations.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "27 Dec 2008", title: "Air campaign begins", detail: "Massive Israeli air strikes destroy Hamas police stations, government buildings, and military targets." },
+      { period: "3 Jan 2009", title: "Ground invasion", detail: "IDF ground forces enter Gaza from multiple axes; urban combat in Gaza City and refugee camps." },
+      { period: "17 Jan 2009", title: "Israeli ceasefire", detail: "Israel declares unilateral ceasefire; Hamas follows hours later; IDF withdraws over following days." },
+      { period: "Sep 2009", title: "Goldstone Report", detail: "UN fact-finding mission accuses both Israel and Hamas of war crimes and possible crimes against humanity." },
+    ],
+    outcome: "Temporary reduction in rocket fire; Hamas retained control of Gaza; international criticism of both sides; no political resolution.",
+    casualties: {
+      military: "**13** Israelis killed (10 soldiers, 3 civilians). Hamas military losses estimated at **200-700** fighters (figures disputed).",
+      civilian: "Palestinian deaths totaled approximately **1,400**; civilian proportion heavily disputed between Israeli and Palestinian/international sources.",
+      displacement: "Tens of thousands of Gazans displaced during the operation; most returned to damaged or destroyed homes.",
+      note: "The civilian casualty ratio became the central point of international legal and political controversy.",
+    },
+    orderOfBattle: [
+      { name: "IDF", strength: "Multiple brigades with armor, artillery, air force, and naval support", note: "Overwhelming conventional superiority in a confined urban battlespace." },
+      { name: "Hamas military wing (Izz ad-Din al-Qassam Brigades)", strength: "Estimated 15,000-20,000 fighters with rockets, IEDs, tunnels, and small arms", note: "Asymmetric defense strategy using urban terrain and civilian infrastructure." },
+    ],
+    aftermath: [
+      "The **Goldstone Report** generated intense debate about international humanitarian law in asymmetric urban warfare.",
+      "Gaza's blockade continued and tightened, deepening the humanitarian crisis.",
+      "The operation established a pattern of periodic Israeli military operations in Gaza (2012, 2014, 2021, 2023).",
+      "Neither side achieved lasting strategic objectives; the cycle of rocket fire and military response continued.",
+    ],
+    maps: {
+      title: "Operation Cast Lead - Gaza 2008-2009",
+      description: "Three weeks of war in one of the world's most densely populated territories.",
+      points: [
+        { name: "Gaza City", x: 52, y: 46, year: "2009", note: "Primary urban combat zone; site of heaviest destruction and civilian casualties." },
+        { name: "Rafah", x: 52, y: 50, year: "2009", note: "Southern border city; tunnel networks and Egyptian border crossing." },
+        { name: "Jabaliya refugee camp", x: 52, y: 44, year: "2009", note: "Densely populated camp; site of controversial strikes with high civilian casualties." },
+      ],
+    },
+    technology: [
+      { name: "Precision-guided munitions", type: "Air-delivered weapons", side: "Israel", impact: "Enabled targeted strikes but civilian casualties in dense urban environment remained high." },
+      { name: "Qassam and Grad rockets", type: "Indirect fire", side: "Hamas", impact: "Indiscriminate rocket fire into Israeli population centers was both the casus belli and a war crime allegation." },
+      { name: "Tunnel networks", type: "Underground infrastructure", side: "Hamas", impact: "Smuggling and military tunnels provided supply routes and tactical movement corridors." },
+    ],
+    centralFigures: [
+      {
+        name: "Ehud Olmert",
+        role: "Prime Minister of Israel",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Authorized the operation during his final months in office; later convicted of corruption charges.",
+      },
+      {
+        name: "Ismail Haniyeh",
+        role: "Hamas political leader in Gaza",
+        side: "belligerent",
+        importance: 78,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led Hamas's political wing during the operation; survived the conflict and continued leading Hamas governance.",
+      },
+      {
+        name: "Richard Goldstone",
+        role: "Head of UN fact-finding mission",
+        side: "nonBelligerent",
+        importance: 65,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "South African judge whose report accused both sides of war crimes; later partially walked back some findings.",
+      },
+    ],
+    infobox: {
+      dates: "27 December 2008 - 18 January 2009",
+      location: "Gaza Strip",
+      result: "Israeli tactical success; Hamas retained Gaza control; no political resolution",
+      belligerents: "Israel vs Hamas and Palestinian militant groups",
+      strength: "IDF conventional force vs Hamas asymmetric defense",
+      casualties: "~1,400 Palestinians and 13 Israelis killed",
+    },
+  },
+
+  "Second Ivorian Civil War": {
+    theater: "West Africa - **Cote d'Ivoire**, from the northern rebel zones to the battle for **Abidjan**",
+    summary: "The **Second Ivorian Civil War (2010-2011)** erupted when President **Laurent Gbagbo** refused to accept his defeat in the November 2010 presidential election by **Alassane Ouattara**. Despite international recognition of Ouattara's victory, Gbagbo clung to power, triggering a political crisis that escalated into full-scale civil war. **Forces Nouvelles** (now renamed **Republican Forces**) advanced south from their northern stronghold while Gbagbo's security forces and militias conducted atrocities against perceived Ouattara supporters. French forces and **UNOCI** peacekeepers intervened to protect civilians and neutralize Gbagbo's heavy weapons. Gbagbo was captured in his bunker in April 2011 and eventually sent to the **ICC**. It was a war caused by one man's refusal to leave office - which, as democratic stress tests go, is about as expensive as they get.",
+    background: [
+      "The **2007 Ouagadougou Agreement** was supposed to reunify the country and lead to elections; the election finally happened in November 2010.",
+      "**Ouattara** won the runoff with **54.1%** according to the Independent Electoral Commission; Gbagbo's allies on the Constitutional Council reversed the result.",
+      "The **African Union**, **UN**, **EU**, and **US** all recognized Ouattara as the legitimate winner.",
+      "Gbagbo refused to step down, and his security forces began targeting Ouattara supporters, particularly in **Abidjan**.",
+    ],
+    participants: [
+      { name: "Laurent Gbagbo's forces", role: "Incumbent president's military, police, and militia (Young Patriots) refusing to accept election defeat.", side: "belligerent" },
+      { name: "Republican Forces of Cote d'Ivoire (Ouattara)", role: "Former Forces Nouvelles rebels advancing to install the internationally recognized election winner.", side: "belligerent" },
+      { name: "France (Operation Licorne)", role: "French forces neutralized Gbagbo's heavy weapons and protected civilians under UN authorization.", side: "nonBelligerent" },
+      { name: "UNOCI", role: "UN peacekeeping force protecting civilians and supporting the democratic outcome.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "Nov-Dec 2010", title: "Electoral crisis", detail: "Gbagbo refuses to accept defeat; dual governments claim legitimacy; international community backs Ouattara." },
+      { period: "Jan-Mar 2011", title: "Escalating violence", detail: "Pro-Gbagbo forces attack Ouattara supporters; massacres in Abidjan; Republican Forces begin southern advance." },
+      { period: "Mar-Apr 2011", title: "Battle of Abidjan", detail: "Republican Forces enter Abidjan; fierce fighting; French and UN forces strike Gbagbo's heavy weapons." },
+      { period: "11 Apr 2011", title: "Gbagbo captured", detail: "Republican Forces and French special forces capture Gbagbo in his presidential bunker." },
+    ],
+    outcome: "Ouattara installed as president; Gbagbo arrested and sent to ICC; country reunified under new government.",
+    casualties: {
+      military: "Hundreds of combatants killed on both sides during the advance and battle for Abidjan.",
+      civilian: "Estimated **3,000+** killed; atrocities committed by both sides, including the **Duekoue massacre** (hundreds killed by Republican Forces).",
+      displacement: "Over **1 million** displaced; hundreds of thousands fled to Liberia.",
+      note: "Both sides committed serious human rights violations; the Duekoue massacre by pro-Ouattara forces complicated the narrative of democratic restoration.",
+    },
+    orderOfBattle: [
+      { name: "Gbagbo security forces", strength: "Army, police, militia, and Liberian mercenaries defending Abidjan", note: "Heavy weapons and urban defensive positions offset by declining morale and international isolation." },
+      { name: "Republican Forces", strength: "Former rebel army advancing from the north with speed and momentum", note: "Rapid advance but committed atrocities that undermined the legitimacy of the democratic cause." },
+    ],
+    aftermath: [
+      "**Gbagbo** was tried by the **ICC** for crimes against humanity; acquitted in 2019 in a controversial decision; returned to Cote d'Ivoire.",
+      "**Ouattara** consolidated power and oversaw significant economic recovery, but reconciliation remained incomplete.",
+      "The **Duekoue massacre** demonstrated that the 'democratic' side was also capable of mass atrocities.",
+      "The crisis established a precedent for international enforcement of election results in Africa - with all the complications that implies.",
+    ],
+    maps: {
+      title: "Second Ivorian Civil War 2010-2011",
+      description: "From electoral dispute to military resolution in five months.",
+      points: [
+        { name: "Abidjan", x: 46, y: 54, year: "2011", note: "Economic capital; site of the final battle and Gbagbo's capture." },
+        { name: "Duekoue", x: 46, y: 50, year: "2011", note: "Site of massacre by Republican Forces during their southern advance." },
+        { name: "Yamoussoukro", x: 48, y: 52, year: "2011", note: "Political capital; fell to Republican Forces during rapid advance." },
+      ],
+    },
+    technology: [
+      { name: "French military strikes", type: "Precision intervention", side: "France/UN", impact: "Neutralized Gbagbo's heavy weapons (tanks, artillery) that were being used against civilians." },
+      { name: "Rapid rebel advance", type: "Mobile warfare", side: "Republican Forces", impact: "Speed of advance from north to Abidjan prevented prolonged siege and limited total casualties." },
+      { name: "ICC arrest warrant", type: "International justice", side: "International community", impact: "Legal accountability mechanism that removed Gbagbo from the political equation." },
+    ],
+    centralFigures: [
+      {
+        name: "Laurent Gbagbo",
+        role: "Incumbent President refusing to leave office",
+        side: "belligerent",
+        importance: 90,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "His refusal to accept electoral defeat caused the war; captured, sent to ICC, acquitted, returned to Ivorian politics.",
+      },
+      {
+        name: "Alassane Ouattara",
+        role: "Internationally recognized election winner",
+        side: "belligerent",
+        importance: 88,
+        portrait: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Alassane_Ouattara_2015.jpg",
+        note: "Won the election, waited out the crisis, took power with military and international support.",
+      },
+      {
+        name: "Guillaume Soro",
+        role: "Republican Forces commander and Prime Minister",
+        side: "belligerent",
+        importance: 75,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Led the military campaign that installed Ouattara; later fell out with the president and went into exile.",
+      },
+    ],
+    infobox: {
+      dates: "2010 - 2011",
+      location: "Cote d'Ivoire",
+      result: "Ouattara installed; Gbagbo captured and sent to ICC",
+      belligerents: "Gbagbo forces vs Republican Forces (Ouattara)",
+      strength: "Government military and militia vs former rebel army",
+      casualties: "3,000+ killed; 1 million+ displaced",
+    },
+  },
+
+  "Lebanese-Israeli Conflict": {
+    theater: "Middle East - southern **Lebanon**, northern **Israel**, and **Beirut**",
+    summary: "The **Lebanese-Israeli Conflict (2006)** - also known as the **July War** or **Second Lebanon War** - was a 34-day war between **Israel** and **Hezbollah** triggered by a cross-border raid in which Hezbollah killed three IDF soldiers and captured two. Israel responded with a massive air campaign and ground invasion of southern Lebanon, while Hezbollah fired approximately **4,000** rockets into northern Israel. The war killed over **1,000** Lebanese (mostly civilians), **165** Israelis (121 soldiers), and caused billions in infrastructure damage. **UN Security Council Resolution 1701** ended the fighting. Israel failed to achieve its stated objectives of destroying Hezbollah or recovering the soldiers; Hezbollah survived and claimed a 'divine victory.' It was a war where both sides claimed to have won and both sides' publics wondered what exactly had been accomplished.",
+    background: [
+      "**Hezbollah** had been building military capability since Israel's **2000 withdrawal** from southern Lebanon.",
+      "The organization maintained a policy of cross-border provocations including the **Shebaa Farms** dispute.",
+      "Israel's military doctrine assumed air power could defeat a non-state actor; this assumption was tested and found wanting.",
+      "The capture of IDF soldiers was intended by Hezbollah as leverage for a prisoner exchange, not to trigger a full war.",
+    ],
+    participants: [
+      { name: "Israel Defense Forces", role: "Conducted massive air campaign and ground invasion of southern Lebanon to destroy Hezbollah and recover captured soldiers.", side: "belligerent" },
+      { name: "Hezbollah", role: "Defended southern Lebanon with prepared positions, anti-tank missiles, and rocket forces while firing into northern Israel.", side: "belligerent" },
+      { name: "Lebanese government and civilians", role: "Caught between Hezbollah and Israel; government had limited control over Hezbollah's military decisions.", side: "nonBelligerent" },
+      { name: "UNIFIL (expanded post-war)", role: "UN force expanded under Resolution 1701 to monitor ceasefire and support Lebanese army deployment in the south.", side: "nonBelligerent" },
+    ],
+    timeline: [
+      { period: "12 Jul 2006", title: "Hezbollah raid", detail: "Cross-border attack kills 3 IDF soldiers, captures 2; Israel launches immediate air strikes." },
+      { period: "13 Jul - 10 Aug 2006", title: "Air campaign and rocket war", detail: "Israel bombs Lebanese infrastructure including Beirut; Hezbollah fires thousands of rockets into Israel." },
+      { period: "11-14 Aug 2006", title: "Ground offensive", detail: "Israel launches large-scale ground invasion; heavy fighting; Hezbollah anti-tank missiles inflict significant casualties." },
+      { period: "14 Aug 2006", title: "Ceasefire", detail: "UN Resolution 1701 takes effect; expanded UNIFIL deployed; both sides claim victory." },
+    ],
+    outcome: "Military stalemate; Hezbollah survived and rebuilt; Israel failed to achieve stated objectives; UNIFIL expanded; captured soldiers later returned dead in prisoner exchange.",
+    casualties: {
+      military: "**121** IDF soldiers killed; Hezbollah losses estimated at **250-700** fighters (disputed).",
+      civilian: "Over **1,000** Lebanese civilians killed; **44** Israeli civilians killed; massive infrastructure destruction in Lebanon.",
+      displacement: "Over **1 million** Lebanese and **300,000-500,000** Israelis temporarily displaced.",
+      note: "The destruction of Lebanese civilian infrastructure - including Beirut's southern suburbs, bridges, and power stations - was disproportionate to military objectives according to international observers.",
+    },
+    orderOfBattle: [
+      { name: "IDF", strength: "30,000+ troops, extensive air force, and naval blockade", note: "Air superiority did not translate into ground dominance against Hezbollah's prepared defensive positions." },
+      { name: "Hezbollah", strength: "Estimated 3,000-5,000 fighters in southern Lebanon with extensive tunnel and bunker networks", note: "Anti-tank missiles (Kornet) and prepared positions inflicted unexpected casualties on IDF armor." },
+    ],
+    aftermath: [
+      "The **Winograd Commission** criticized Israeli military and political leadership for failures in planning and execution.",
+      "Hezbollah rebuilt and expanded its arsenal to an estimated **150,000+** rockets and missiles by the 2020s.",
+      "The war demonstrated that non-state actors with advanced weapons could fight state militaries to a standstill.",
+      "**Resolution 1701's** requirement for Hezbollah disarmament was never implemented.",
+    ],
+    maps: {
+      title: "2006 Lebanon War",
+      description: "34 days, 4,000 rockets, 1,000+ dead, and two sides both claiming victory.",
+      points: [
+        { name: "Bint Jbeil", x: 52, y: 44, year: "2006", note: "Site of fierce ground combat; Hezbollah's defensive stand became a symbol of resistance." },
+        { name: "Dahieh (Beirut southern suburbs)", x: 50, y: 42, year: "2006", note: "Hezbollah stronghold devastated by Israeli air strikes." },
+        { name: "Haifa", x: 52, y: 42, year: "2006", note: "Major Israeli city hit by Hezbollah rockets; 8 railway workers killed in single attack." },
+      ],
+    },
+    technology: [
+      { name: "Kornet anti-tank missiles", type: "Anti-armor", side: "Hezbollah", impact: "Russian-made missiles destroyed Israeli Merkava tanks, shocking IDF planners who assumed armor dominance." },
+      { name: "Katyusha and Fajr rockets", type: "Indirect fire", side: "Hezbollah", impact: "4,000 rockets fired into Israel; demonstrated ability to sustain fire despite intensive air campaign." },
+      { name: "Precision air strikes", type: "Strategic bombing", side: "Israel", impact: "Destroyed infrastructure but failed to eliminate Hezbollah's rocket capability or command structure." },
+    ],
+    centralFigures: [
+      {
+        name: "Hassan Nasrallah",
+        role: "Hezbollah Secretary-General",
+        side: "belligerent",
+        importance: 92,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Directed Hezbollah's war strategy; later said he would not have ordered the raid had he known Israel's response scale.",
+      },
+      {
+        name: "Ehud Olmert",
+        role: "Israeli Prime Minister",
+        side: "belligerent",
+        importance: 82,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Authorized the military response; criticized by the Winograd Commission for strategic and operational failures.",
+      },
+      {
+        name: "Dan Halutz",
+        role: "IDF Chief of Staff",
+        side: "belligerent",
+        importance: 72,
+        portrait: "/portraits/placeholder-figure.svg",
+        note: "Air force officer whose air-power-centric strategy proved insufficient against Hezbollah's ground defenses; resigned after the war.",
+      },
+    ],
+    infobox: {
+      dates: "12 July - 14 August 2006",
+      location: "Southern Lebanon and northern Israel",
+      result: "Military stalemate; UN Resolution 1701 ceasefire",
+      belligerents: "Israel vs Hezbollah",
+      strength: "30,000+ IDF troops vs 3,000-5,000 Hezbollah fighters",
+      casualties: "1,000+ Lebanese, 165 Israelis killed",
+    },
+  },
+
+
+  "Lebanon Conflict": {
+    "theater": "Middle East - southern **Lebanon**, the **Bekaa Valley**, and **Beirut**",
+    "summary": "The **Lebanon Conflict (2006)** is the same war as the **Lebanese-Israeli Conflict** entry, viewed from the Lebanese domestic perspective. For Lebanon, the 34-day war was not just about **Hezbollah** versus **Israel** - it was about a sovereign state being devastated because a non-state actor within its borders made a decision the government could not control. Israeli air strikes destroyed bridges, power stations, fuel depots, and residential neighborhoods across the country, not just in the south. The **Dahieh doctrine** - named after the Beirut suburb Israel flattened - became shorthand for disproportionate destruction aimed at pressuring civilian populations to turn against militants. Lebanon's government, military, and civilian infrastructure paid the price for a war it did not start and could not stop.",
+    "background": [
+      "Lebanon's post-civil-war political system gave **Hezbollah** a unique dual role: political party and independent military force.",
+      "The **Taif Agreement** and subsequent arrangements left Hezbollah's weapons outside state control, creating a 'state within a state.'",
+      "Lebanon's fragile sectarian balance meant the government could neither disarm Hezbollah nor endorse its military actions.",
+      "The 2006 war exposed the fundamental contradiction of Lebanese sovereignty: a government that does not control all armed forces on its territory."
+    ],
+    "participants": [
+      {
+        "name": "Hezbollah",
+        "role": "Non-state military force that triggered the war and conducted the defense of southern Lebanon.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Israel Defense Forces",
+        "role": "Conducted air campaign across all of Lebanon and ground invasion of the south.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Lebanese government",
+        "role": "Unable to prevent or control the conflict; bore the cost of infrastructure destruction.",
+        "side": "nonBelligerent"
+      },
+      {
+        "name": "Lebanese Armed Forces",
+        "role": "Remained largely on the sidelines during the fighting; deployed to the south after the ceasefire.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "12 Jul 2006",
+        "title": "War begins",
+        "detail": "Hezbollah cross-border raid triggers Israeli military response across Lebanon."
+      },
+      {
+        "period": "13-30 Jul 2006",
+        "title": "Air campaign",
+        "detail": "Israel bombs infrastructure nationwide; Beirut airport, bridges, power plants destroyed."
+      },
+      {
+        "period": "30 Jul 2006",
+        "title": "Qana strike",
+        "detail": "Israeli air strike kills 28 civilians including 16 children in Qana; international outrage."
+      },
+      {
+        "period": "14 Aug 2006",
+        "title": "Ceasefire",
+        "detail": "Resolution 1701; Lebanese army deploys south for first time in decades; reconstruction begins."
+      }
+    ],
+    "outcome": "Massive infrastructure destruction; Hezbollah survived and claimed victory; Lebanese army deployed to the south; reconstruction funded largely by Gulf states and Iran.",
+    "casualties": {
+      "military": "Lebanese Armed Forces suffered minimal casualties as they were not primary combatants.",
+      "civilian": "Over **1,000** Lebanese killed, the vast majority civilians; entire neighborhoods destroyed.",
+      "displacement": "Over **1 million** Lebanese displaced, approximately 25% of the population.",
+      "note": "The economic cost exceeded 3.6 billion dollars in infrastructure damage alone."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Hezbollah military wing",
+        "strength": "3,000-5,000 fighters with rockets, anti-tank missiles, and fortified positions",
+        "note": "Operated independently of the Lebanese state military."
+      },
+      {
+        "name": "Lebanese Armed Forces",
+        "strength": "70,000 troops who largely stayed out of the fighting",
+        "note": "Post-war deployment to the south was the first in decades."
+      }
+    ],
+    "aftermath": [
+      "Reconstruction of southern Beirut was funded largely by **Iran**, deepening Hezbollah's domestic legitimacy and Iranian influence.",
+      "The war intensified Lebanon's internal political crisis, contributing to the **2008 Doha Agreement** after Hezbollah briefly seized west Beirut.",
+      "Lebanon's infrastructure vulnerability demonstrated the cost of hosting non-state military actors.",
+      "The **Dahieh doctrine** entered military vocabulary as a strategy of disproportionate destruction to deter future attacks."
+    ],
+    "maps": {
+      "title": "Lebanon Conflict 2006 - Lebanese perspective",
+      "description": "A country paying for a war it did not choose.",
+      "points": [
+        {
+          "name": "Dahieh (south Beirut)",
+          "x": 50,
+          "y": 42,
+          "year": "2006",
+          "note": "Hezbollah stronghold systematically destroyed by Israeli air strikes."
+        },
+        {
+          "name": "Qana",
+          "x": 50,
+          "y": 46,
+          "year": "2006",
+          "note": "Site of air strike killing 28 civilians; echoed a similar 1996 massacre at the same location."
+        },
+        {
+          "name": "Beirut-Damascus highway",
+          "x": 50,
+          "y": 42,
+          "year": "2006",
+          "note": "Bridges destroyed to cut supply lines; isolated Lebanon from its eastern neighbor."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Infrastructure targeting (Dahieh doctrine)",
+        "type": "Strategic bombing",
+        "side": "Israel",
+        "impact": "Systematic destruction of civilian infrastructure to pressure the population against Hezbollah."
+      },
+      {
+        "name": "Cluster munitions",
+        "type": "Area denial weapon",
+        "side": "Israel",
+        "impact": "Up to 4 million submunitions dropped, primarily in final 72 hours; continued killing civilians for years."
+      },
+      {
+        "name": "Iranian reconstruction funding",
+        "type": "Post-war influence",
+        "side": "Iran/Hezbollah",
+        "impact": "Rapid rebuilding of destroyed areas cemented Hezbollah's domestic support and Iranian strategic investment."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Fouad Siniora",
+        "role": "Prime Minister of Lebanon",
+        "side": "nonBelligerent",
+        "importance": 72,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Led the government through the crisis; famously wept at an Arab League meeting while pleading for a ceasefire."
+      },
+      {
+        "name": "Hassan Nasrallah",
+        "role": "Hezbollah Secretary-General",
+        "side": "belligerent",
+        "importance": 90,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Directed the war from hiding; emerged as the most powerful political figure in Lebanon."
+      },
+      {
+        "name": "Emile Lahoud",
+        "role": "President of Lebanon",
+        "side": "nonBelligerent",
+        "importance": 55,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Syrian-aligned president with limited power during the crisis; presidency was largely ceremonial."
+      }
+    ],
+    "infobox": {
+      "dates": "12 July - 14 August 2006",
+      "location": "Lebanon",
+      "result": "Ceasefire; massive destruction; Hezbollah survived",
+      "belligerents": "Hezbollah vs Israel (Lebanon caught between)",
+      "strength": "Hezbollah militia vs IDF conventional force",
+      "casualties": "1,000+ Lebanese killed; 1 million displaced"
+    }
+  },
+
+  "Operation Protective Edge": {
+    "theater": "Middle East - the **Gaza Strip** and southern **Israel**",
+    "summary": "**Operation Protective Edge (2014)** was Israel's third major military operation in Gaza in six years, lasting 50 days and becoming the deadliest of the Gaza wars to that point. Triggered by the kidnapping and murder of three Israeli teenagers (by Hamas-linked operatives) and subsequent escalation, Israel launched air strikes followed by a ground invasion focused on destroying **Hamas tunnel networks** that extended under the border into Israeli territory. Hamas and other groups fired over **4,500** rockets into Israel. The operation killed over **2,200** Palestinians (the majority civilians according to UN figures) and **73** Israelis (67 soldiers). The tunnel threat drove the ground operation, but the civilian toll drove the international response. The war ended with a ceasefire that changed nothing structurally - setting the stage for future rounds.",
+    "background": [
+      "The kidnapping and murder of three Israeli teenagers in June 2014 triggered a crackdown in the West Bank and escalating tensions.",
+      "Hamas rocket fire from Gaza intensified; Israel launched Operation Protective Edge on July 8, 2014.",
+      "The discovery of **cross-border attack tunnels** from Gaza into Israel became the primary justification for the ground invasion.",
+      "Previous operations (**Cast Lead** 2008-09, **Pillar of Defense** 2012) had failed to stop Hamas military buildup."
+    ],
+    "participants": [
+      {
+        "name": "Israel Defense Forces",
+        "role": "Conducted 50-day air, ground, and naval operation against Hamas infrastructure and tunnel networks.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Hamas (Izz ad-Din al-Qassam Brigades)",
+        "role": "Defended Gaza using rockets, tunnels, and guerrilla tactics; attempted cross-border attacks through tunnels.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Palestinian Islamic Jihad and other groups",
+        "role": "Participated in rocket fire and combat alongside Hamas.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Palestinian civilians",
+        "role": "1.8 million people in one of the world's most densely populated areas during intensive military operations.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "8 Jul 2014",
+        "title": "Operation begins",
+        "detail": "Israeli air strikes target Hamas military infrastructure; Hamas escalates rocket fire."
+      },
+      {
+        "period": "17 Jul 2014",
+        "title": "Ground invasion",
+        "detail": "IDF enters Gaza focused on tunnel destruction; intense urban combat in Shejaiya and other neighborhoods."
+      },
+      {
+        "period": "20 Jul 2014",
+        "title": "Shejaiya battle",
+        "detail": "Fierce fighting in Shejaiya neighborhood; over 60 Palestinians killed in single day; 13 IDF soldiers killed."
+      },
+      {
+        "period": "26 Aug 2014",
+        "title": "Ceasefire",
+        "detail": "Open-ended ceasefire after 50 days; tunnels destroyed; no political resolution."
+      }
+    ],
+    "outcome": "Hamas tunnel network largely destroyed; rocket fire temporarily halted; massive civilian casualties and destruction in Gaza; no political resolution.",
+    "casualties": {
+      "military": "**67** IDF soldiers and **6** Israeli civilians killed. Hamas military losses estimated at **600-1,000** fighters.",
+      "civilian": "Over **2,200** Palestinians killed; UN estimated **1,462** were civilians including **551** children.",
+      "displacement": "**500,000** Gazans displaced at peak; **100,000** homes damaged or destroyed.",
+      "note": "The Shejaiya battle alone killed more Palestinians in one day than most entire military operations."
+    },
+    "orderOfBattle": [
+      {
+        "name": "IDF",
+        "strength": "Multiple brigades including Golani, Givati, and paratroopers with armor, artillery, and air support",
+        "note": "Ground forces focused on tunnel destruction rather than territorial control."
+      },
+      {
+        "name": "Hamas military wing",
+        "strength": "Estimated 15,000-25,000 fighters with rockets, tunnels, IEDs, and anti-tank missiles",
+        "note": "Tunnel network represented years of investment and Hamas's primary strategic innovation."
+      }
+    ],
+    "aftermath": [
+      "Gaza reconstruction was extremely slow due to the blockade restricting building materials.",
+      "The tunnel threat drove Israeli investment in underground barrier technology completed in 2021.",
+      "International criticism of civilian casualties intensified pressure on Israel but produced no policy changes.",
+      "Hamas rebuilt its military capability, setting the stage for future escalations."
+    ],
+    "maps": {
+      "title": "Operation Protective Edge - Gaza 2014",
+      "description": "50 days, 4,500 rockets, 2,200 dead, and a tunnel network.",
+      "points": [
+        {
+          "name": "Shejaiya",
+          "x": 52,
+          "y": 46,
+          "year": "2014",
+          "note": "Neighborhood east of Gaza City; site of the war's deadliest single battle."
+        },
+        {
+          "name": "Rafah",
+          "x": 52,
+          "y": 50,
+          "year": "2014",
+          "note": "Southern Gaza; tunnel networks and site of controversial 'Black Friday' bombardment."
+        },
+        {
+          "name": "Cross-border tunnels",
+          "x": 52,
+          "y": 46,
+          "year": "2014",
+          "note": "Network of attack tunnels extending into Israeli territory; primary ground operation objective."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Cross-border attack tunnels",
+        "type": "Underground warfare",
+        "side": "Hamas",
+        "impact": "Concrete-lined tunnels extending kilometers into Israel for infiltration attacks; drove the entire ground operation."
+      },
+      {
+        "name": "Iron Dome",
+        "type": "Missile defense",
+        "side": "Israel",
+        "impact": "Intercepted approximately 90% of rockets targeting populated areas; dramatically reduced Israeli civilian casualties."
+      },
+      {
+        "name": "Roof-knocking warnings",
+        "type": "Precautionary measure",
+        "side": "Israel",
+        "impact": "Small munitions dropped as warnings before strikes; debated as genuine precaution vs insufficient protection."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister of Israel",
+        "side": "belligerent",
+        "importance": 88,
+        "portrait": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Portrait_of_Benjamin_Netanyahu.jpg",
+        "note": "Authorized the operation and ground invasion; faced domestic pressure to achieve decisive results."
+      },
+      {
+        "name": "Mohammed Deif",
+        "role": "Commander of Izz ad-Din al-Qassam Brigades",
+        "side": "belligerent",
+        "importance": 80,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Hamas's elusive military commander who built the tunnel network; survived multiple assassination attempts."
+      },
+      {
+        "name": "Ban Ki-moon",
+        "role": "UN Secretary-General",
+        "side": "nonBelligerent",
+        "importance": 55,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Called the destruction of UN schools sheltering civilians 'a moral outrage and a criminal act.'"
+      }
+    ],
+    "infobox": {
+      "dates": "8 July - 26 August 2014",
+      "location": "Gaza Strip and southern Israel",
+      "result": "Tunnels destroyed; ceasefire; no political resolution",
+      "belligerents": "Israel vs Hamas and Palestinian militant groups",
+      "strength": "IDF conventional force vs Hamas asymmetric defense with tunnels",
+      "casualties": "2,200+ Palestinians and 73 Israelis killed"
+    }
+  },
+
+  "Central African Republic Civil War": {
+    "theater": "Central Africa - the **Central African Republic**, from **Bangui** to the northern and eastern provinces",
+    "summary": "The **Central African Republic Civil War (2012-present)** is the latest chapter in the CAR's seemingly permanent crisis. In December 2012, the **Seleka** coalition - a loose alliance of mostly Muslim rebel groups from the northeast - marched on **Bangui** and overthrew President **Francois Bozize**. Seleka leader **Michel Djotodia** became president but could not control his own forces, who committed widespread atrocities. Christian and animist **Anti-balaka** militias formed in response, and the country descended into sectarian violence between Muslim and Christian communities that had previously coexisted. **France** intervened with **Operation Sangaris**, the **AU** deployed **MISCA**, and the **UN** established **MINUSCA**. The conflict has displaced over a million people in a country of five million. More recently, **Russian Wagner Group** mercenaries have become the government's primary security partner, adding another layer to an already complicated disaster.",
+    "background": [
+      "The CAR has experienced chronic instability since independence in 1960, with repeated coups and foreign interventions.",
+      "President **Bozize** came to power in a 2003 coup and failed to integrate northeastern communities into governance.",
+      "The **Seleka** coalition formed from marginalized northeastern armed groups demanding political inclusion and resources.",
+      "The CAR's weak state institutions meant that any armed group with a few hundred fighters could threaten the capital."
+    ],
+    "participants": [
+      {
+        "name": "Seleka coalition",
+        "role": "Muslim-majority rebel alliance that overthrew Bozize and briefly held power before fragmenting.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Anti-balaka militias",
+        "role": "Christian and animist self-defense groups that became perpetrators of sectarian violence against Muslim communities.",
+        "side": "belligerent"
+      },
+      {
+        "name": "France (Operation Sangaris)",
+        "role": "Former colonial power intervening to prevent genocide and stabilize the capital.",
+        "side": "nonBelligerent"
+      },
+      {
+        "name": "MINUSCA (UN peacekeeping)",
+        "role": "Large UN mission mandated to protect civilians and support political transition.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "Dec 2012 - Mar 2013",
+        "title": "Seleka advance",
+        "detail": "Rebel coalition marches on Bangui; Bozize flees; Djotodia takes power."
+      },
+      {
+        "period": "2013-2014",
+        "title": "Sectarian collapse",
+        "detail": "Seleka atrocities trigger Anti-balaka formation; tit-for-tat massacres; Muslim communities ethnically cleansed from western CAR."
+      },
+      {
+        "period": "2014-2016",
+        "title": "International intervention",
+        "detail": "French and AU forces deploy; UN takes over with MINUSCA; transitional government established."
+      },
+      {
+        "period": "2020-present",
+        "title": "Wagner era",
+        "detail": "Russian Wagner Group mercenaries become primary security force; accused of widespread human rights abuses."
+      }
+    ],
+    "outcome": "Ongoing instability; elected government dependent on Wagner mercenaries; armed groups control much of the countryside; sectarian divisions entrenched.",
+    "casualties": {
+      "military": "Hundreds of combatants killed across all factions; peacekeepers also suffered casualties.",
+      "civilian": "Thousands killed in sectarian massacres; exact figures difficult to establish in a country with minimal infrastructure.",
+      "displacement": "Over **1.4 million** displaced internally and as refugees - roughly a quarter of the population.",
+      "note": "The CAR consistently ranks among the world's worst humanitarian crises despite receiving minimal international attention."
+    },
+    "orderOfBattle": [
+      {
+        "name": "FACA (CAR armed forces) + Wagner",
+        "strength": "Small national army supplemented by Russian mercenaries and Rwandan forces",
+        "note": "Wagner Group has become the most capable fighting force available to the government."
+      },
+      {
+        "name": "Armed groups (Seleka factions, Anti-balaka, others)",
+        "strength": "Dozens of armed groups controlling territory across the country",
+        "note": "Fragmentation makes negotiation nearly impossible; groups split and reform constantly."
+      }
+    ],
+    "aftermath": [
+      "The **Wagner Group's** presence has made the CAR a test case for Russian mercenary influence in Africa.",
+      "Muslim communities in western CAR were largely ethnically cleansed; the country's religious geography has been permanently altered.",
+      "MINUSCA remains one of the UN's most dangerous peacekeeping missions with regular peacekeeper casualties.",
+      "The 2019 peace agreement included most armed groups but has been repeatedly violated."
+    ],
+    "maps": {
+      "title": "Central African Republic Civil War",
+      "description": "A country where the state barely exists and armed groups fill the vacuum.",
+      "points": [
+        {
+          "name": "Bangui",
+          "x": 50,
+          "y": 52,
+          "year": "2013",
+          "note": "Capital seized by Seleka; site of worst sectarian violence and international intervention."
+        },
+        {
+          "name": "Bambari",
+          "x": 52,
+          "y": 50,
+          "year": "2014-present",
+          "note": "Central town; flashpoint for Seleka-Anti-balaka clashes and peacekeeping operations."
+        },
+        {
+          "name": "Northeastern provinces",
+          "x": 54,
+          "y": 48,
+          "year": "2012-present",
+          "note": "Seleka heartland and site of ongoing armed group activity."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Wagner Group mercenaries",
+        "type": "Private military",
+        "side": "CAR government/Russia",
+        "impact": "Russian mercenaries provide combat capability but commit widespread abuses and extract mining concessions."
+      },
+      {
+        "name": "Sectarian mobilization",
+        "type": "Identity warfare",
+        "side": "Both",
+        "impact": "Religious identity weaponized to mobilize communities that had previously coexisted peacefully."
+      },
+      {
+        "name": "UN peacekeeping (MINUSCA)",
+        "type": "International intervention",
+        "side": "UN",
+        "impact": "12,000+ troops deployed but unable to protect civilians across a country the size of Texas with almost no roads."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Michel Djotodia",
+        "role": "Seleka leader / transitional president",
+        "side": "belligerent",
+        "importance": 72,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Led the Seleka takeover; became CAR's first Muslim head of state; forced to resign after failing to control violence."
+      },
+      {
+        "name": "Faustin-Archange Touadera",
+        "role": "President of CAR (2016-present)",
+        "side": "belligerent",
+        "importance": 70,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Elected president who turned to Wagner Group mercenaries when Western support proved insufficient."
+      },
+      {
+        "name": "Francois Bozize",
+        "role": "Overthrown President",
+        "side": "belligerent",
+        "importance": 65,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "His exclusionary governance created the conditions for Seleka rebellion; later backed Anti-balaka groups from exile."
+      }
+    ],
+    "infobox": {
+      "dates": "2012 - present",
+      "location": "Central African Republic",
+      "result": "Ongoing; government dependent on Wagner mercenaries; armed groups control countryside",
+      "belligerents": "Government + Wagner vs Seleka factions, Anti-balaka, and other armed groups",
+      "strength": "Weak state army + mercenaries vs dozens of armed groups",
+      "casualties": "Thousands killed; 1.4 million displaced"
+    }
+  },
+
+  "Northern Mali Conflict": {
+    "theater": "West Africa / Sahel - northern **Mali**, from **Timbuktu** and **Gao** to the **Kidal** region and the Saharan fringe",
+    "summary": "The **Northern Mali Conflict (2012-present)** began when **Tuareg** separatists and jihadist groups seized northern Mali in early 2012, exploiting a military coup in **Bamako** and the influx of weapons from **Libya's** collapse. The **MNLA** (Tuareg separatists) declared independence for **Azawad**, but were quickly sidelined by jihadist groups - **AQIM**, **Ansar Dine**, and **MUJAO** - who imposed harsh Sharia law and destroyed **Timbuktu's** ancient manuscripts and shrines. When jihadists advanced south toward Bamako in January 2013, **France** intervened with **Operation Serval**, rapidly pushing them back. But military victory did not produce peace: the conflict evolved into a sprawling Sahel insurgency involving jihadists, ethnic militias, and state forces across Mali, Burkina Faso, and Niger. France eventually withdrew in 2022 after a military junta took power and invited **Wagner Group** mercenaries instead.",
+    "background": [
+      "The **Tuareg** people of northern Mali have launched multiple rebellions since independence (1963, 1990, 2006, 2012) over marginalization.",
+      "The **2011 Libyan civil war** flooded the Sahel with weapons and returning Tuareg fighters who had served in Gaddafi's forces.",
+      "A **March 2012 military coup** in Bamako created a power vacuum that rebels exploited to seize the entire north.",
+      "Jihadist groups allied with Tuareg separatists initially but quickly dominated, imposing their own agenda."
+    ],
+    "participants": [
+      {
+        "name": "French military (Serval/Barkhane)",
+        "role": "Intervened to prevent jihadist advance on Bamako; conducted counterterrorism operations across the Sahel until 2022.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Malian Armed Forces",
+        "role": "Government military weakened by coups and corruption; increasingly reliant on external support.",
+        "side": "belligerent"
+      },
+      {
+        "name": "AQIM, Ansar Dine, JNIM",
+        "role": "Jihadist groups controlling territory, imposing Sharia, and conducting insurgency across the Sahel.",
+        "side": "belligerent"
+      },
+      {
+        "name": "MNLA (Tuareg separatists)",
+        "role": "Secular separatist movement seeking Azawad independence; alternately allied with and fighting against jihadists.",
+        "side": "belligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "Jan-Apr 2012",
+        "title": "Northern seizure",
+        "detail": "Tuareg and jihadist forces capture Timbuktu, Gao, and Kidal; MNLA declares Azawad independence; jihadists take over."
+      },
+      {
+        "period": "Jan 2013",
+        "title": "French intervention",
+        "detail": "Operation Serval launched as jihadists advance south; rapid French victory recaptures northern cities."
+      },
+      {
+        "period": "2014-2022",
+        "title": "Operation Barkhane",
+        "detail": "France maintains 5,000-troop Sahel counterterrorism force; violence spreads to Burkina Faso and Niger."
+      },
+      {
+        "period": "2021-present",
+        "title": "Junta and Wagner",
+        "detail": "Military coups in Mali; France expelled; Wagner mercenaries deployed; violence continues to escalate."
+      }
+    ],
+    "outcome": "Jihadist territorial control reversed but insurgency expanded across the Sahel; French withdrawal; military junta in power; Wagner mercenaries operating with documented abuses.",
+    "casualties": {
+      "military": "Hundreds of French, Malian, and UN peacekeepers killed. Thousands of Malian soldiers killed.",
+      "civilian": "Thousands of civilians killed by jihadists, state forces, ethnic militias, and Wagner mercenaries.",
+      "displacement": "Over **400,000** displaced in Mali; millions affected across the broader Sahel crisis.",
+      "note": "The conflict has metastasized from a Malian crisis into a regional Sahel emergency affecting multiple countries."
+    },
+    "orderOfBattle": [
+      {
+        "name": "French forces (Serval/Barkhane)",
+        "strength": "4,500-5,000 troops with air power, special forces, and intelligence assets",
+        "note": "Militarily effective at counterterrorism but unable to address underlying governance failures."
+      },
+      {
+        "name": "Jihadist coalition (JNIM/ISGS)",
+        "strength": "Several thousand fighters across the Sahel with growing recruitment",
+        "note": "Exploited ethnic grievances and governance vacuums to expand far beyond northern Mali."
+      }
+    ],
+    "aftermath": [
+      "The destruction of **Timbuktu's** ancient manuscripts and Sufi shrines was prosecuted as a war crime by the **ICC**.",
+      "France's Sahel intervention became its longest overseas military operation and ended in strategic frustration.",
+      "Military coups in **Mali** (2020, 2021), **Burkina Faso** (2022), and **Niger** (2023) reflected public frustration with both democratic governments and French presence.",
+      "The Wagner Group's arrival marked a broader shift in African security partnerships from Western to Russian providers."
+    ],
+    "maps": {
+      "title": "Northern Mali and Sahel conflict",
+      "description": "From Tuareg rebellion to jihadist insurgency to Wagner mercenaries.",
+      "points": [
+        {
+          "name": "Timbuktu",
+          "x": 46,
+          "y": 48,
+          "year": "2012-2013",
+          "note": "Ancient city seized by jihadists who destroyed cultural heritage; recaptured by French forces."
+        },
+        {
+          "name": "Gao",
+          "x": 48,
+          "y": 48,
+          "year": "2012-2013",
+          "note": "Largest northern city; MUJAO stronghold; site of French airborne assault."
+        },
+        {
+          "name": "Kidal",
+          "x": 50,
+          "y": 46,
+          "year": "2012-present",
+          "note": "Tuareg stronghold; contested between separatists, jihadists, and government forces."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "French rapid deployment",
+        "type": "Expeditionary warfare",
+        "side": "France",
+        "impact": "Operation Serval demonstrated France's ability to project force rapidly across the Sahel."
+      },
+      {
+        "name": "IED warfare",
+        "type": "Asymmetric weapon",
+        "side": "Jihadists",
+        "impact": "Roadside bombs became the primary killer of Malian, French, and UN forces."
+      },
+      {
+        "name": "Cultural heritage destruction",
+        "type": "Ideological warfare",
+        "side": "Jihadists",
+        "impact": "Destruction of Timbuktu shrines was both ideological statement and war crime prosecuted by the ICC."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Iyad Ag Ghaly",
+        "role": "Ansar Dine / JNIM leader",
+        "side": "belligerent",
+        "importance": 82,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Tuareg leader turned jihadist who became the most powerful insurgent commander in the Sahel."
+      },
+      {
+        "name": "Assimi Goita",
+        "role": "Malian junta leader (2021-present)",
+        "side": "belligerent",
+        "importance": 72,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Military officer who led two coups; expelled French forces and invited Wagner mercenaries."
+      },
+      {
+        "name": "Francois Hollande",
+        "role": "President of France (2012-2017)",
+        "side": "belligerent",
+        "importance": 75,
+        "portrait": "https://upload.wikimedia.org/wikipedia/commons/0/05/Fran%C3%A7ois_Hollande_-_2017_%2827869823159%29_%28cropped%29.jpg",
+        "note": "Ordered Operation Serval; the intervention was initially popular but became France's longest overseas deployment."
+      }
+    ],
+    "infobox": {
+      "dates": "2012 - present",
+      "location": "Northern Mali and the broader Sahel",
+      "result": "Jihadist territorial control reversed but insurgency expanded; French withdrawal; Wagner era",
+      "belligerents": "Malian government + France/Wagner vs jihadist groups and Tuareg separatists",
+      "strength": "State forces + external military support vs several thousand jihadist fighters",
+      "casualties": "Thousands killed; 400,000+ displaced in Mali alone"
+    }
+  },
+
+  "Second Libyan Civil War": {
+    "theater": "North Africa - **Libya**, from **Tripoli** in the west to **Benghazi** and **Tobruk** in the east, and the southern **Fezzan**",
+    "summary": "The **Second Libyan Civil War (2014-2020)** was the collapse of post-Gaddafi Libya into competing governments and armed factions. After the 2011 revolution, Libya failed to build functional state institutions, and by 2014 two rival governments claimed legitimacy: the **Government of National Accord (GNA)** in Tripoli (UN-recognized) and the **House of Representatives** in Tobruk, backed by **Khalifa Haftar's Libyan National Army (LNA)**. Haftar launched a military campaign to capture Tripoli in April 2019, nearly succeeding before **Turkish** military intervention saved the GNA. The war drew in a remarkable cast of foreign actors: **Turkey** and **Qatar** backed the GNA; **UAE**, **Egypt**, **Russia** (Wagner), and **France** (quietly) backed Haftar. A ceasefire in October 2020 ended major fighting but Libya remains divided. It was the war that proved regime change is the easy part - the hard part is everything that comes after.",
+    "background": [
+      "The **2011 NATO intervention** toppled Gaddafi but left no functioning state institutions or unified military.",
+      "Militias that fought Gaddafi refused to disarm and became the primary power brokers in post-revolution Libya.",
+      "**Khalifa Haftar**, a former Gaddafi general turned CIA asset turned warlord, built the LNA in eastern Libya.",
+      "The 2014 split between Tripoli and Tobruk governments formalized Libya's east-west division."
+    ],
+    "participants": [
+      {
+        "name": "Government of National Accord (GNA)",
+        "role": "UN-recognized government in Tripoli backed by western Libyan militias, Turkey, and Qatar.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Libyan National Army (Haftar)",
+        "role": "Eastern-based military force backed by UAE, Egypt, Russia/Wagner, and France attempting to unify Libya by force.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Turkey",
+        "role": "Deployed troops, drones, and Syrian mercenaries to defend Tripoli against Haftar's 2019 offensive.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Russia (Wagner Group)",
+        "role": "Deployed mercenaries and military equipment to support Haftar's forces.",
+        "side": "belligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "2014-2018",
+        "title": "Dual government period",
+        "detail": "Libya splits between Tripoli and Tobruk; Haftar consolidates eastern control; battles for Benghazi."
+      },
+      {
+        "period": "Apr 2019",
+        "title": "Tripoli offensive",
+        "detail": "Haftar launches assault on Tripoli; LNA advances to city outskirts; GNA defends with militia coalition."
+      },
+      {
+        "period": "Jan 2020",
+        "title": "Turkish intervention",
+        "detail": "Turkey deploys military forces and drones; LNA offensive stalls and reverses."
+      },
+      {
+        "period": "Oct 2020",
+        "title": "Ceasefire",
+        "detail": "UN-brokered ceasefire; unity government negotiations; foreign fighters remain."
+      }
+    ],
+    "outcome": "Ceasefire ended major fighting; unity government attempted but elections repeatedly postponed; Libya remains effectively divided; foreign forces still present.",
+    "casualties": {
+      "military": "Thousands of combatants killed across all factions including foreign fighters and mercenaries.",
+      "civilian": "Hundreds of civilians killed in air strikes, shelling, and crossfire, particularly during the Tripoli battle.",
+      "displacement": "Over **400,000** displaced during the Tripoli offensive alone.",
+      "note": "The presence of unmarked mass graves and Wagner-planted landmines continues to produce casualties years after the ceasefire."
+    },
+    "orderOfBattle": [
+      {
+        "name": "GNA forces + Turkish support",
+        "strength": "Western Libyan militias plus Turkish troops, drones, and Syrian mercenary fighters",
+        "note": "Turkish Bayraktar TB2 drones proved decisive in breaking the Tripoli siege."
+      },
+      {
+        "name": "LNA + foreign backers",
+        "strength": "Eastern military forces plus Wagner mercenaries, UAE drones, and Egyptian support",
+        "note": "Conventional military capability undermined by militia indiscipline and overextended supply lines."
+      }
+    ],
+    "aftermath": [
+      "**Turkish Bayraktar TB2 drones** proved their combat effectiveness, launching Turkey's drone export industry.",
+      "Libya became a showcase for **proxy warfare** with at least eight foreign countries directly involved militarily.",
+      "Planned elections have been repeatedly postponed; political unification remains elusive.",
+      "The war demonstrated that the 2011 intervention's failure to plan for post-Gaddafi governance had catastrophic long-term consequences."
+    ],
+    "maps": {
+      "title": "Second Libyan Civil War",
+      "description": "Two governments, eight foreign backers, and a country that cannot hold an election.",
+      "points": [
+        {
+          "name": "Tripoli",
+          "x": 48,
+          "y": 42,
+          "year": "2019-2020",
+          "note": "Capital besieged by Haftar; saved by Turkish intervention; GNA seat of power."
+        },
+        {
+          "name": "Benghazi",
+          "x": 54,
+          "y": 42,
+          "year": "2014-2017",
+          "note": "Eastern city; site of prolonged battle between Haftar's forces and Islamist militias."
+        },
+        {
+          "name": "Sirte",
+          "x": 52,
+          "y": 42,
+          "year": "2020",
+          "note": "Central city; front line between GNA and LNA; Wagner Group forward position."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Bayraktar TB2 drones",
+        "type": "UCAV",
+        "side": "Turkey/GNA",
+        "impact": "Destroyed LNA air defenses and supply lines; proved decisive in breaking the Tripoli siege; launched global drone arms race."
+      },
+      {
+        "name": "Wagner Group mercenaries",
+        "type": "Private military",
+        "side": "Russia/LNA",
+        "impact": "Provided snipers, artillery, and mine-laying capability; left behind booby-trapped areas after withdrawal."
+      },
+      {
+        "name": "UAE Wing Loong drones",
+        "type": "UCAV",
+        "side": "UAE/LNA",
+        "impact": "Chinese-made drones conducted strikes supporting Haftar; part of broader UAE military projection."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Khalifa Haftar",
+        "role": "LNA commander",
+        "side": "belligerent",
+        "importance": 88,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Former Gaddafi general turned CIA asset turned eastern Libyan strongman; his Tripoli offensive nearly succeeded before Turkish intervention."
+      },
+      {
+        "name": "Fayez al-Sarraj",
+        "role": "GNA Prime Minister",
+        "side": "belligerent",
+        "importance": 70,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Led the UN-recognized government through the Tripoli siege; resigned in 2021."
+      },
+      {
+        "name": "Recep Tayyip Erdogan",
+        "role": "President of Turkey",
+        "side": "belligerent",
+        "importance": 80,
+        "portrait": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Recep_Tayyip_Erdo%C4%9Fan_2023.jpg",
+        "note": "Ordered Turkish military intervention that saved Tripoli and established Turkey as a major Libyan power broker."
+      }
+    ],
+    "infobox": {
+      "dates": "2014 - 2020",
+      "location": "Libya",
+      "result": "Ceasefire; country remains divided; elections postponed indefinitely",
+      "belligerents": "GNA + Turkey vs LNA + UAE/Egypt/Russia",
+      "strength": "Western militias + Turkish forces vs eastern military + Wagner mercenaries",
+      "casualties": "Thousands killed; 400,000+ displaced during Tripoli battle"
+    }
+  },
+
+
+  "Syrian-Turkish Border Clashes": {
+    "theater": "Middle East - the **Syrian-Turkish border** zone, from **Afrin** and **Kobani** in the west to **Ras al-Ayn** and **Tel Abyad** in the east",
+    "summary": "The **Syrian-Turkish Border Clashes (2012-present)** encompass Turkey's series of military operations into northern Syria targeting **Kurdish** forces that Ankara considers terrorists and Washington considers allies. Turkey launched **Operation Euphrates Shield** (2016), **Operation Olive Branch** (2018), and **Operation Peace Spring** (2019) to push **YPG/SDF** Kurdish forces away from its border and create a 'safe zone' for resettling Syrian refugees. The operations displaced hundreds of thousands of Kurds and created Turkish-controlled buffer zones administered by Turkish-backed Syrian rebel factions. The clashes put NATO ally Turkey in direct conflict with US-backed Kurdish forces who were simultaneously fighting **ISIS**. It was the conflict where America's allies were fighting America's other allies, and everyone pretended this was fine.",
+    "background": [
+      "The **Syrian Civil War** created a power vacuum along Turkey's southern border that Kurdish forces filled.",
+      "The **YPG** (People's Protection Units) established autonomous governance in northern Syria (**Rojava**), alarming Turkey.",
+      "Turkey considers the YPG an extension of the **PKK**, which has fought a decades-long insurgency inside Turkey.",
+      "The US armed and supported the **SDF** (YPG-led coalition) as its primary ground force against ISIS, infuriating Ankara."
+    ],
+    "participants": [
+      {
+        "name": "Turkey (Turkish Armed Forces)",
+        "role": "Conducted multiple cross-border operations to push Kurdish forces from the border and establish buffer zones.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Turkish-backed Syrian rebels (SNA)",
+        "role": "Syrian opposition factions allied with Turkey serving as ground forces in Turkish operations.",
+        "side": "belligerent"
+      },
+      {
+        "name": "YPG / SDF (Kurdish forces)",
+        "role": "Kurdish-led forces defending autonomous territory in northern Syria; US-backed in the anti-ISIS campaign.",
+        "side": "belligerent"
+      },
+      {
+        "name": "United States",
+        "role": "Backed SDF against ISIS while trying to manage Turkish ally's hostility toward the same force.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "2012-2015",
+        "title": "Border tensions build",
+        "detail": "Syrian war spillover; Kurdish autonomy grows; Turkey shells YPG positions; ISIS attacks on Turkish border."
+      },
+      {
+        "period": "Aug 2016",
+        "title": "Operation Euphrates Shield",
+        "detail": "Turkey invades to clear ISIS and prevent Kurdish territorial contiguity along the border."
+      },
+      {
+        "period": "Jan 2018",
+        "title": "Operation Olive Branch",
+        "detail": "Turkey attacks Afrin canton; Kurdish forces expelled; area occupied by Turkish-backed rebels."
+      },
+      {
+        "period": "Oct 2019",
+        "title": "Operation Peace Spring",
+        "detail": "Turkey invades after US withdrawal announcement; captures Ras al-Ayn and Tel Abyad; international condemnation."
+      }
+    ],
+    "outcome": "Turkey controls buffer zones in northern Syria through proxy forces; Kurdish autonomous project fragmented; US-Turkey relations strained; no permanent settlement.",
+    "casualties": {
+      "military": "Hundreds of Turkish soldiers and Turkish-backed fighters killed; hundreds of SDF/YPG fighters killed across operations.",
+      "civilian": "Hundreds of civilians killed in Turkish operations and subsequent occupation; documented abuses by Turkish-backed factions.",
+      "displacement": "Over **300,000** displaced by Operation Peace Spring alone; Afrin's Kurdish population largely displaced.",
+      "note": "Demographic engineering through displacement and resettlement of Arab refugees into formerly Kurdish areas is a central concern."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Turkish Armed Forces + SNA",
+        "strength": "Conventional military with air power, armor, and artillery plus thousands of Syrian rebel fighters",
+        "note": "NATO's second-largest army deployed against a US-backed partner force."
+      },
+      {
+        "name": "YPG/SDF",
+        "strength": "60,000-100,000 fighters experienced from anti-ISIS campaign but lacking air power and heavy weapons",
+        "note": "Effective light infantry but unable to defend against Turkish conventional superiority without US air cover."
+      }
+    ],
+    "aftermath": [
+      "The **Afrin** operation displaced most of the canton's Kurdish population and installed Turkish-backed governance.",
+      "US credibility with Kurdish allies was severely damaged by the 2019 withdrawal that enabled Operation Peace Spring.",
+      "Turkey's operations created a model of using Syrian rebel proxies for cross-border operations.",
+      "The Kurdish autonomous project in northern Syria was fragmented but not destroyed."
+    ],
+    "maps": {
+      "title": "Syrian-Turkish border operations",
+      "description": "NATO's second-largest army vs America's favorite Kurdish allies.",
+      "points": [
+        {
+          "name": "Afrin",
+          "x": 50,
+          "y": 44,
+          "year": "2018",
+          "note": "Kurdish canton captured by Turkey in Operation Olive Branch; Kurdish population largely displaced."
+        },
+        {
+          "name": "Kobani",
+          "x": 52,
+          "y": 44,
+          "year": "2014-present",
+          "note": "Symbolic Kurdish city; site of famous anti-ISIS battle; threatened by Turkish operations."
+        },
+        {
+          "name": "Ras al-Ayn / Tel Abyad",
+          "x": 54,
+          "y": 44,
+          "year": "2019",
+          "note": "Border towns captured in Operation Peace Spring after US withdrawal."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Turkish drone warfare",
+        "type": "UCAV",
+        "side": "Turkey",
+        "impact": "Bayraktar and Anka drones provided persistent surveillance and strike capability against Kurdish positions."
+      },
+      {
+        "name": "US withdrawal as enabler",
+        "type": "Strategic decision",
+        "side": "US",
+        "impact": "Removal of US forces from the border area gave Turkey the green light for Operation Peace Spring."
+      },
+      {
+        "name": "Demographic engineering",
+        "type": "Population manipulation",
+        "side": "Turkey/SNA",
+        "impact": "Resettlement of Arab refugees into Kurdish areas aimed to permanently alter the border zone's ethnic composition."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Recep Tayyip Erdogan",
+        "role": "President of Turkey",
+        "side": "belligerent",
+        "importance": 90,
+        "portrait": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Recep_Tayyip_Erdo%C4%9Fan_2023.jpg",
+        "note": "Ordered all three major operations; made Kurdish containment a central pillar of Turkish foreign policy."
+      },
+      {
+        "name": "Mazloum Abdi",
+        "role": "SDF commander-in-chief",
+        "side": "belligerent",
+        "importance": 78,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Led Kurdish forces through the ISIS war and Turkish operations; navigated between US alliance and Turkish hostility."
+      },
+      {
+        "name": "Donald Trump",
+        "role": "US President (2017-2021)",
+        "side": "nonBelligerent",
+        "importance": 75,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "His abrupt withdrawal announcement enabled Operation Peace Spring and drew bipartisan criticism."
+      }
+    ],
+    "infobox": {
+      "dates": "2012 - present",
+      "location": "Northern Syria / Turkish border zone",
+      "result": "Turkish buffer zones established; Kurdish autonomy fragmented",
+      "belligerents": "Turkey + Syrian rebels vs YPG/SDF Kurdish forces",
+      "strength": "Turkish conventional military vs experienced Kurdish light infantry",
+      "casualties": "Hundreds killed on all sides; 300,000+ displaced"
+    }
+  },
+
+  "Crisis in Venezuela": {
+    "theater": "South America - **Venezuela**, centered on **Caracas** with unrest across the country",
+    "summary": "The **Crisis in Venezuela (2010s-present)** is the slow-motion collapse of what was once South America's wealthiest country. Under **Hugo Chavez** and his successor **Nicolas Maduro**, Venezuela's oil-dependent economy imploded due to mismanagement, corruption, falling oil prices, and US sanctions. By the late 2010s, hyperinflation had destroyed the currency, hospitals lacked medicine, and millions were fleeing. The political crisis peaked in 2019 when **Juan Guaido** declared himself interim president with US backing, but Maduro retained military loyalty and power. The crisis has produced over **7 million** refugees - the largest displacement in Western Hemisphere history. While not a conventional war, the crisis involves state violence against protesters, armed colectivos, military defections, and a failed mercenary invasion attempt. It is the conflict where the bullets are hunger, hyperinflation, and the world's largest proven oil reserves somehow producing poverty.",
+    "background": [
+      "**Hugo Chavez** (1999-2013) built a socialist state funded by oil revenues; when prices crashed, the model collapsed.",
+      "**Maduro** inherited a deteriorating economy and responded with authoritarian consolidation rather than reform.",
+      "US and EU sanctions targeted the Maduro government but also worsened economic conditions for ordinary Venezuelans.",
+      "The military's loyalty to Maduro - maintained through corruption and patronage - prevented regime change despite mass protests."
+    ],
+    "participants": [
+      {
+        "name": "Maduro government",
+        "role": "Authoritarian regime maintaining power through military loyalty, security forces, and armed civilian groups (colectivos).",
+        "side": "belligerent"
+      },
+      {
+        "name": "Venezuelan opposition",
+        "role": "Political opposition including Guaido's interim government claim; organized mass protests; largely unable to dislodge Maduro.",
+        "side": "belligerent"
+      },
+      {
+        "name": "United States",
+        "role": "Recognized Guaido; imposed sanctions; supported regime change diplomatically and economically.",
+        "side": "nonBelligerent"
+      },
+      {
+        "name": "Russia and Cuba",
+        "role": "Provided military advisors, intelligence support, and economic lifelines to the Maduro government.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "2014-2016",
+        "title": "Economic collapse begins",
+        "detail": "Oil prices crash; hyperinflation begins; shortages of food and medicine become severe."
+      },
+      {
+        "period": "2017",
+        "title": "Mass protests",
+        "detail": "Months of anti-government protests; over 160 killed; Maduro creates constituent assembly to bypass opposition-held legislature."
+      },
+      {
+        "period": "Jan 2019",
+        "title": "Guaido challenge",
+        "detail": "Juan Guaido declares himself interim president; recognized by 50+ countries; Maduro retains military and power."
+      },
+      {
+        "period": "2020-present",
+        "title": "Stalemate and exodus",
+        "detail": "Failed mercenary invasion (Operation Gideon); Guaido's support fades; refugee crisis continues; Maduro consolidates."
+      }
+    ],
+    "outcome": "Maduro remains in power; opposition fragmented; economy partially stabilized at much lower level; refugee crisis ongoing with 7+ million displaced.",
+    "casualties": {
+      "military": "Limited conventional military casualties; security force defections mostly individual rather than unit-level.",
+      "civilian": "Hundreds killed in protests and security force crackdowns; thousands of extrajudicial killings by security forces (FAES).",
+      "displacement": "Over **7.7 million** Venezuelans have fled the country - the largest refugee crisis in Western Hemisphere history.",
+      "note": "The indirect death toll from healthcare collapse, malnutrition, and preventable disease dwarfs direct political violence."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Venezuelan Armed Forces (FANB)",
+        "strength": "350,000 active military plus armed colectivo civilian groups",
+        "note": "Military loyalty maintained through corruption networks and Cuban intelligence support."
+      },
+      {
+        "name": "Opposition forces",
+        "strength": "Mass civilian protest movement with no significant armed capability",
+        "note": "Failed to attract military defections at scale needed for regime change."
+      }
+    ],
+    "aftermath": [
+      "Venezuela's refugee crisis has strained neighboring countries, particularly **Colombia**, **Peru**, **Ecuador**, and **Brazil**.",
+      "The **Operation Gideon** mercenary fiasco (2020) - a botched invasion by ex-US special forces - became an international embarrassment.",
+      "Maduro has partially reopened the oil sector to foreign investment, stabilizing the economy at a fraction of its former level.",
+      "The crisis demonstrated that even catastrophic economic collapse does not automatically produce regime change when the military stays loyal."
+    ],
+    "maps": {
+      "title": "Crisis in Venezuela",
+      "description": "The world's largest oil reserves producing the Western Hemisphere's largest refugee crisis.",
+      "points": [
+        {
+          "name": "Caracas",
+          "x": 38,
+          "y": 50,
+          "year": "2017-2019",
+          "note": "Capital; epicenter of mass protests, government crackdowns, and political confrontation."
+        },
+        {
+          "name": "Colombian border",
+          "x": 36,
+          "y": 52,
+          "year": "2015-present",
+          "note": "Primary refugee exodus route; millions have crossed into Colombia."
+        },
+        {
+          "name": "Maracaibo",
+          "x": 36,
+          "y": 50,
+          "year": "2018-present",
+          "note": "Oil capital experiencing some of the worst infrastructure collapse and power outages."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Colectivos (armed civilian groups)",
+        "type": "Paramilitary control",
+        "side": "Maduro government",
+        "impact": "Armed pro-government groups used for intimidation and violence against protesters."
+      },
+      {
+        "name": "Sanctions regime",
+        "type": "Economic warfare",
+        "side": "US",
+        "impact": "Targeted sanctions aimed at regime change but also worsened humanitarian conditions."
+      },
+      {
+        "name": "Cuban intelligence support",
+        "type": "Security assistance",
+        "side": "Cuba",
+        "impact": "Cuban advisors helped structure Venezuelan intelligence and security apparatus to prevent military coups."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Nicolas Maduro",
+        "role": "President of Venezuela",
+        "side": "belligerent",
+        "importance": 90,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Chavez's successor who maintained power through military loyalty and authoritarian consolidation despite economic catastrophe."
+      },
+      {
+        "name": "Juan Guaido",
+        "role": "Self-declared interim president",
+        "side": "belligerent",
+        "importance": 72,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Recognized by 50+ countries but unable to translate international support into actual power; sidelined by 2023."
+      },
+      {
+        "name": "Hugo Chavez",
+        "role": "President of Venezuela (1999-2013)",
+        "side": "belligerent",
+        "importance": 85,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Built the Bolivarian system whose collapse produced the crisis; died of cancer in 2013 before the worst consequences materialized."
+      }
+    ],
+    "infobox": {
+      "dates": "2010s - present",
+      "location": "Venezuela",
+      "result": "Maduro retains power; economic collapse; 7.7 million refugees",
+      "belligerents": "Maduro government vs opposition movement",
+      "strength": "State security forces + colectivos vs unarmed civilian protest movement",
+      "casualties": "Hundreds killed in political violence; millions displaced by economic collapse"
+    }
+  },
+
+  "Armenian-Azerbaijani Clashes": {
+    "theater": "South Caucasus - the **Armenia-Azerbaijan border** and **Nagorno-Karabakh** contact line",
+    "summary": "The **Armenian-Azerbaijani Clashes (2020-2023)** refer to the decisive military confrontations that ended the frozen Nagorno-Karabakh conflict in Azerbaijan's favor. The **2020 Second Nagorno-Karabakh War** (44 days) saw Azerbaijan, armed with **Turkish Bayraktar TB2 drones** and Israeli loitering munitions, recapture most of the territory Armenia had held since the 1990s. A Russian-brokered ceasefire left a reduced Armenian enclave under Russian peacekeeping. Then in September 2023, Azerbaijan launched a lightning offensive that conquered the remaining enclave in 24 hours, triggering the exodus of virtually the entire **120,000** ethnic Armenian population. The clashes demonstrated how drone technology could transform a frozen conflict into a decisive military outcome, and how a Russian security guarantee could evaporate when Moscow was distracted by Ukraine.",
+    "background": [
+      "The **Nagorno-Karabakh** conflict dates to the late Soviet period; Armenia won the 1990s war and controlled the enclave plus surrounding Azerbaijani territory.",
+      "Azerbaijan spent two decades using oil wealth to build a modern military while Armenia's forces stagnated.",
+      "**Turkey** provided decisive military support to Azerbaijan including drone technology, training, and Syrian mercenaries.",
+      "Russia's role as Armenia's security guarantor was complicated by its desire to maintain relationships with both sides."
+    ],
+    "participants": [
+      {
+        "name": "Azerbaijan",
+        "role": "Launched military offensives in 2020 and 2023 to recapture Nagorno-Karabakh and surrounding territories.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Armenia / Nagorno-Karabakh forces",
+        "role": "Defended the Armenian-populated enclave; suffered decisive defeats in both 2020 and 2023.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Turkey",
+        "role": "Provided drones, military advisors, and Syrian mercenary fighters to Azerbaijan.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Russia",
+        "role": "Brokered 2020 ceasefire; deployed peacekeepers; failed to prevent 2023 Azerbaijani offensive.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "Jul 2020",
+        "title": "Border clashes",
+        "detail": "Fighting along the Armenia-Azerbaijan international border (not Karabakh); several soldiers killed."
+      },
+      {
+        "period": "Sep-Nov 2020",
+        "title": "44-Day War",
+        "detail": "Azerbaijan launches full offensive; drones devastate Armenian positions; Russia brokers ceasefire after Shusha falls."
+      },
+      {
+        "period": "2021-2023",
+        "title": "Blockade and pressure",
+        "detail": "Azerbaijan blockades Lachin corridor; Armenian enclave increasingly isolated; Russian peacekeepers passive."
+      },
+      {
+        "period": "Sep 2023",
+        "title": "Final offensive",
+        "detail": "Azerbaijan conquers remaining enclave in 24 hours; 120,000 Armenians flee; Nagorno-Karabakh ceases to exist."
+      }
+    ],
+    "outcome": "Complete Azerbaijani victory; Nagorno-Karabakh's entire Armenian population displaced; the enclave that existed for three decades was erased in 24 hours.",
+    "casualties": {
+      "military": "2020 war: approximately **4,000** Azerbaijani and **4,000** Armenian soldiers killed. 2023: minimal military casualties due to rapid capitulation.",
+      "civilian": "Hundreds of civilians killed in the 2020 war from shelling and cluster munitions on both sides.",
+      "displacement": "**120,000** ethnic Armenians - virtually the entire population - fled Nagorno-Karabakh in September 2023.",
+      "note": "The 2023 displacement effectively ended a 3,000-year Armenian presence in the region."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Azerbaijani Armed Forces",
+        "strength": "Modern military with Turkish drones, Israeli loitering munitions, and conventional superiority",
+        "note": "Two decades of oil-funded modernization created decisive technological advantage."
+      },
+      {
+        "name": "Armenian / Karabakh forces",
+        "strength": "Outdated Soviet-era equipment; static defensive positions vulnerable to drone warfare",
+        "note": "1990s-era defensive doctrine was catastrophically unsuited to modern drone and precision warfare."
+      }
+    ],
+    "aftermath": [
+      "The **2020 war** was studied worldwide as a demonstration of how drones transform conventional warfare.",
+      "Russia's failure to protect Armenia despite a mutual defense treaty damaged Moscow's credibility as a security guarantor.",
+      "Armenia's **Velvet Revolution** leader **Nikol Pashinyan** faced massive domestic backlash for the military defeats.",
+      "The complete depopulation of Nagorno-Karabakh in 2023 ended one of the world's longest-running ethnic conflicts through demographic elimination."
+    ],
+    "maps": {
+      "title": "Armenian-Azerbaijani clashes 2020-2023",
+      "description": "From frozen conflict to decisive resolution in three years.",
+      "points": [
+        {
+          "name": "Shusha/Shushi",
+          "x": 56,
+          "y": 46,
+          "year": "2020",
+          "note": "Strategic hilltop city; its capture by Azerbaijan in November 2020 forced the ceasefire."
+        },
+        {
+          "name": "Lachin corridor",
+          "x": 56,
+          "y": 46,
+          "year": "2022-2023",
+          "note": "Only road connecting Karabakh to Armenia; Azerbaijani blockade isolated the enclave."
+        },
+        {
+          "name": "Stepanakert/Khankendi",
+          "x": 56,
+          "y": 46,
+          "year": "2023",
+          "note": "Karabakh capital; fell in 24 hours in September 2023; population fled entirely."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Bayraktar TB2 drones",
+        "type": "UCAV",
+        "side": "Azerbaijan/Turkey",
+        "impact": "Destroyed Armenian air defenses, armor, and artillery positions with devastating effectiveness."
+      },
+      {
+        "name": "IAI Harop loitering munitions",
+        "type": "Kamikaze drone",
+        "side": "Azerbaijan/Israel",
+        "impact": "Israeli-made suicide drones targeted Armenian radar and air defense systems."
+      },
+      {
+        "name": "Soviet-era static defenses",
+        "type": "Fortification",
+        "side": "Armenia",
+        "impact": "Trench lines and bunkers designed for 1990s warfare were death traps against precision drone strikes."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Ilham Aliyev",
+        "role": "President of Azerbaijan",
+        "side": "belligerent",
+        "importance": 90,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Spent two decades building military capability for reconquest; achieved complete victory in 2023."
+      },
+      {
+        "name": "Nikol Pashinyan",
+        "role": "Prime Minister of Armenia",
+        "side": "belligerent",
+        "importance": 82,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Democratic reformer who inherited a military unprepared for modern warfare; blamed for the defeats."
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "President of Russia (mediator/guarantor)",
+        "side": "nonBelligerent",
+        "importance": 78,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Brokered the 2020 ceasefire and deployed peacekeepers; distracted by Ukraine, failed to prevent 2023 conquest."
+      }
+    ],
+    "infobox": {
+      "dates": "2020 - 2023",
+      "location": "Nagorno-Karabakh and Armenia-Azerbaijan border",
+      "result": "Complete Azerbaijani victory; 120,000 Armenians displaced; Karabakh ceases to exist",
+      "belligerents": "Azerbaijan + Turkey vs Armenia / Nagorno-Karabakh",
+      "strength": "Modern drone-equipped military vs outdated Soviet-era defenses",
+      "casualties": "~8,000 soldiers killed (2020); 120,000 displaced (2023)"
+    }
+  },
+
+  "Border Skirmishes between India and China": {
+    "theater": "South and Central Asia - the **Line of Actual Control (LAC)** between **India** and **China**, from **Ladakh** to **Arunachal Pradesh**",
+    "summary": "The **Border Skirmishes between India and China (2020-present)** erupted in June 2020 when Indian and Chinese troops clashed in the **Galwan Valley** of **Ladakh**, killing **20 Indian** and at least **4 Chinese** soldiers in the first deadly confrontation between the two nuclear powers in 45 years. The soldiers fought with rocks, iron bars, and clubs wrapped in barbed wire - because both sides maintain a protocol against using firearms at the border. China simultaneously occupied positions across the LAC that India considered its territory. The crisis triggered a massive military buildup on both sides, with tens of thousands of troops deployed to the high-altitude frontier. Partial disengagement has occurred at some friction points, but the fundamental border dispute remains unresolved. It was a reminder that two nuclear-armed nations with 1.4 billion people each can still get into a medieval-style brawl at 14,000 feet.",
+    "background": [
+      "The **India-China border** has been disputed since the **1962 Sino-Indian War**; the LAC is not formally demarcated.",
+      "Both sides built infrastructure (roads, airfields) in border areas during the 2010s, increasing friction.",
+      "China's construction of a road in the **Galwan Valley** area triggered Indian objections and the June 2020 confrontation.",
+      "The no-firearms protocol along the LAC meant the deadliest clash in decades was fought with improvised melee weapons."
+    ],
+    "participants": [
+      {
+        "name": "Indian Armed Forces",
+        "role": "Deployed tens of thousands of troops to the LAC after the Galwan clash; conducted defensive buildup.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Chinese People's Liberation Army",
+        "role": "Occupied forward positions across the LAC; conducted parallel military buildup in Tibet and Xinjiang.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Diplomatic channels",
+        "role": "Multiple rounds of military commander and diplomatic talks to manage disengagement at friction points.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "May 2020",
+        "title": "Initial standoffs",
+        "detail": "Chinese troops move into positions at multiple points along the LAC in Ladakh; face-offs with Indian patrols."
+      },
+      {
+        "period": "15 Jun 2020",
+        "title": "Galwan Valley clash",
+        "detail": "Hand-to-hand combat kills 20 Indian and at least 4 Chinese soldiers; worst violence since 1967."
+      },
+      {
+        "period": "2020-2022",
+        "title": "Military buildup",
+        "detail": "Both sides deploy tens of thousands of troops; infrastructure construction accelerates; partial disengagement at some points."
+      },
+      {
+        "period": "2023-present",
+        "title": "Managed tension",
+        "detail": "Continued diplomatic engagement; some buffer zones created; fundamental dispute unresolved."
+      }
+    ],
+    "outcome": "Partial disengagement at some friction points; massive permanent military deployments on both sides; border dispute unresolved; India-China relations significantly damaged.",
+    "casualties": {
+      "military": "**20** Indian soldiers killed at Galwan; China acknowledged **4** killed (Indian sources suggest higher). Additional casualties in subsequent minor clashes.",
+      "civilian": "No civilian casualties; the border area is extremely remote and sparsely populated.",
+      "displacement": "No civilian displacement; military deployments in uninhabited high-altitude terrain.",
+      "note": "The use of melee weapons rather than firearms kept casualties lower than they might have been but made the violence more visceral."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Indian forces",
+        "strength": "50,000+ troops deployed to Ladakh sector with armor, artillery, and air assets",
+        "note": "India reoriented significant military resources from the Pakistan border to the China frontier."
+      },
+      {
+        "name": "PLA Western Theater Command",
+        "strength": "Comparable deployment with infrastructure advantages from Tibetan plateau road and rail network",
+        "note": "China's logistics advantage in Tibet offset by India's experience operating at extreme altitude."
+      }
+    ],
+    "aftermath": [
+      "India accelerated border infrastructure construction and shifted strategic focus from Pakistan to China.",
+      "The clash drove India closer to the **Quad** (US, Japan, Australia) and away from strategic neutrality toward China.",
+      "Both sides have invested billions in permanent high-altitude military infrastructure along the LAC.",
+      "The Galwan clash demonstrated that even nuclear-armed great powers can stumble into deadly confrontations over disputed territory."
+    ],
+    "maps": {
+      "title": "India-China border skirmishes",
+      "description": "Nuclear powers fighting with rocks at 14,000 feet.",
+      "points": [
+        {
+          "name": "Galwan Valley",
+          "x": 60,
+          "y": 42,
+          "year": "2020",
+          "note": "Site of the deadly June 2020 clash; melee combat with improvised weapons."
+        },
+        {
+          "name": "Pangong Tso (lake)",
+          "x": 60,
+          "y": 42,
+          "year": "2020",
+          "note": "High-altitude lake where Chinese forces occupied positions on the Indian-claimed side."
+        },
+        {
+          "name": "Depsang Plains",
+          "x": 60,
+          "y": 40,
+          "year": "2020-present",
+          "note": "Strategic plateau where Chinese presence blocks Indian patrol access."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Melee weapons (no-firearms protocol)",
+        "type": "Rules of engagement",
+        "side": "Both",
+        "impact": "Border protocols against firearms meant soldiers fought with clubs, rocks, and barbed-wire-wrapped iron bars."
+      },
+      {
+        "name": "High-altitude infrastructure",
+        "type": "Military engineering",
+        "side": "Both",
+        "impact": "Roads, tunnels, and airfields at extreme altitude enable permanent military presence in previously inaccessible terrain."
+      },
+      {
+        "name": "Satellite surveillance",
+        "type": "Intelligence",
+        "side": "Both",
+        "impact": "Commercial and military satellite imagery tracked troop movements and construction on both sides of the LAC."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Narendra Modi",
+        "role": "Prime Minister of India",
+        "side": "belligerent",
+        "importance": 88,
+        "portrait": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Narendra_Modi_2021.jpg",
+        "note": "Managed the crisis while balancing military response with diplomatic engagement; shifted India's strategic orientation."
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "President of China",
+        "side": "belligerent",
+        "importance": 90,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "PLA forward positioning reflected broader assertiveness under Xi's leadership across multiple territorial disputes."
+      },
+      {
+        "name": "Bipin Rawat",
+        "role": "Indian Chief of Defence Staff",
+        "side": "belligerent",
+        "importance": 65,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Oversaw India's military response and buildup along the LAC; died in helicopter crash in 2021."
+      }
+    ],
+    "infobox": {
+      "dates": "2020 - present",
+      "location": "Line of Actual Control, India-China border (primarily Ladakh)",
+      "result": "Partial disengagement; massive military buildup; dispute unresolved",
+      "belligerents": "India vs China",
+      "strength": "50,000+ troops on each side along the LAC",
+      "casualties": "20 Indian, 4+ Chinese soldiers killed at Galwan"
+    }
+  },
+
+  "Nagorno-Karabakh Conflict": {
+    "theater": "South Caucasus - **Nagorno-Karabakh** (Artsakh) and surrounding territories in **Azerbaijan**, bordering **Armenia**",
+    "summary": "The **Nagorno-Karabakh Conflict (1988-2023)** was one of the longest-running territorial disputes of the post-Soviet era, ending with the complete elimination of the Armenian enclave in September 2023. It began in 1988 when the Armenian-majority **Nagorno-Karabakh Autonomous Oblast** within Soviet Azerbaijan voted to join Armenia. The ensuing war (1991-1994) saw Armenian forces capture the enclave and seven surrounding Azerbaijani districts, displacing **600,000** Azerbaijanis. The conflict froze for 26 years under an uneasy ceasefire. Azerbaijan's oil-funded military modernization and Turkish drone technology enabled the decisive **2020 Second Karabakh War**, which recaptured most lost territory. In September 2023, Azerbaijan conquered the remaining enclave in 24 hours, and **120,000** Armenians fled, ending a presence dating back millennia. It was a conflict that proved frozen does not mean permanent, and that three decades of diplomatic process can be undone in a single day.",
+    "background": [
+      "Nagorno-Karabakh was an Armenian-majority enclave placed within Azerbaijan by **Stalin** in 1921 as part of Soviet nationality policy.",
+      "The **1988 Karabakh movement** was one of the first nationalist mobilizations of the Soviet collapse.",
+      "The **1991-1994 war** killed approximately **30,000** and displaced over **1 million** people on both sides.",
+      "The **OSCE Minsk Group** (co-chaired by Russia, France, and the US) mediated for 26 years without producing a settlement."
+    ],
+    "participants": [
+      {
+        "name": "Azerbaijan",
+        "role": "Sought to recapture Nagorno-Karabakh and surrounding territories through diplomacy and ultimately military force.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Armenia / Republic of Artsakh",
+        "role": "Defended the Armenian-populated enclave and surrounding buffer zone; suffered decisive defeats in 2020 and 2023.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Turkey",
+        "role": "Provided decisive military support to Azerbaijan in 2020 including drones, advisors, and Syrian mercenaries.",
+        "side": "belligerent"
+      },
+      {
+        "name": "Russia",
+        "role": "Maintained relationships with both sides; brokered 2020 ceasefire; deployed peacekeepers; failed to prevent 2023 conquest.",
+        "side": "nonBelligerent"
+      }
+    ],
+    "timeline": [
+      {
+        "period": "1988-1991",
+        "title": "Soviet-era conflict",
+        "detail": "Karabakh Armenians demand unification with Armenia; pogroms in Sumgait and Baku; Soviet Union unable to resolve."
+      },
+      {
+        "period": "1991-1994",
+        "title": "First Karabakh War",
+        "detail": "Armenian forces capture Karabakh and seven surrounding districts; 30,000 killed; 1 million displaced; ceasefire."
+      },
+      {
+        "period": "1994-2020",
+        "title": "Frozen conflict",
+        "detail": "OSCE Minsk Group mediates without result; Azerbaijan builds military; periodic escalation (2016 Four-Day War)."
+      },
+      {
+        "period": "2020-2023",
+        "title": "Resolution by force",
+        "detail": "44-Day War recaptures most territory; 2023 offensive conquers remainder; 120,000 Armenians flee; conflict ends."
+      }
+    ],
+    "outcome": "Complete Azerbaijani reconquest; Nagorno-Karabakh's Armenian population entirely displaced; the conflict that lasted 35 years ended with demographic elimination.",
+    "casualties": {
+      "military": "First war: ~**30,000** killed. 2020 war: ~**8,000** killed. 2023: minimal due to rapid capitulation.",
+      "civilian": "Thousands of civilians killed across all phases; both sides committed atrocities during the 1990s war.",
+      "displacement": "**600,000** Azerbaijanis displaced in 1990s; **120,000** Armenians displaced in 2023. Over **1 million** total displaced across the conflict's history.",
+      "note": "The conflict produced two waves of ethnic cleansing: Azerbaijanis in the 1990s and Armenians in 2023."
+    },
+    "orderOfBattle": [
+      {
+        "name": "Azerbaijani Armed Forces (2020)",
+        "strength": "Modern military with Turkish drones, Israeli munitions, and two decades of oil-funded modernization",
+        "note": "Technological transformation from 1990s defeat to 2020s decisive victory."
+      },
+      {
+        "name": "Armenian / Artsakh forces",
+        "strength": "Soviet-era equipment and static defensive doctrine unchanged since the 1990s",
+        "note": "Failed to modernize during the frozen conflict period; catastrophically outmatched by 2020."
+      }
+    ],
+    "aftermath": [
+      "The conflict's resolution through force rather than diplomacy discredited 26 years of **OSCE Minsk Group** mediation.",
+      "The **2020 war** became a global case study in drone warfare's transformation of conventional conflict.",
+      "Armenia's strategic relationship with Russia was severely damaged by Moscow's failure to fulfill security guarantees.",
+      "The complete depopulation of Karabakh ended one of the world's oldest Armenian communities through demographic elimination rather than negotiated settlement."
+    ],
+    "maps": {
+      "title": "Nagorno-Karabakh Conflict 1988-2023",
+      "description": "35 years from Soviet petition to complete reconquest.",
+      "points": [
+        {
+          "name": "Stepanakert/Khankendi",
+          "x": 56,
+          "y": 46,
+          "year": "1991-2023",
+          "note": "Karabakh capital; shelled in 1990s war; fell in 24 hours in 2023; population fled entirely."
+        },
+        {
+          "name": "Shusha/Shushi",
+          "x": 56,
+          "y": 46,
+          "year": "2020",
+          "note": "Strategic hilltop fortress; its capture by Azerbaijan decided the 2020 war."
+        },
+        {
+          "name": "Lachin corridor",
+          "x": 56,
+          "y": 46,
+          "year": "2020-2023",
+          "note": "Only road connecting Karabakh to Armenia; its blockade preceded the final offensive."
+        }
+      ]
+    },
+    "technology": [
+      {
+        "name": "Bayraktar TB2 and Harop drones",
+        "type": "UCAV / loitering munition",
+        "side": "Azerbaijan",
+        "impact": "Destroyed Armenian air defenses, armor, and artillery; transformed the military balance decisively."
+      },
+      {
+        "name": "Trench warfare (1990s)",
+        "type": "Static defense",
+        "side": "Armenia",
+        "impact": "Defensive lines that held for 26 years became death traps against precision drone strikes in 2020."
+      },
+      {
+        "name": "Corridor blockade",
+        "type": "Siege warfare",
+        "side": "Azerbaijan",
+        "impact": "Blocking the Lachin corridor starved the enclave before the final assault."
+      }
+    ],
+    "centralFigures": [
+      {
+        "name": "Ilham Aliyev",
+        "role": "President of Azerbaijan",
+        "side": "belligerent",
+        "importance": 92,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Inherited the conflict from his father; spent two decades preparing for reconquest; achieved complete victory."
+      },
+      {
+        "name": "Nikol Pashinyan",
+        "role": "Prime Minister of Armenia",
+        "side": "belligerent",
+        "importance": 82,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Democratic reformer who inherited a military unprepared for modern warfare; signed the painful 2020 ceasefire."
+      },
+      {
+        "name": "Robert Kocharyan",
+        "role": "Former President of Armenia (1998-2008)",
+        "side": "belligerent",
+        "importance": 68,
+        "portrait": "/portraits/placeholder-figure.svg",
+        "note": "Karabakh-born leader who presided over the frozen conflict period; critics blame his era for failing to modernize defenses."
+      }
+    ],
+    "infobox": {
+      "dates": "1988 - 2023",
+      "location": "Nagorno-Karabakh and surrounding territories, South Caucasus",
+      "result": "Complete Azerbaijani reconquest; Armenian population entirely displaced",
+      "belligerents": "Azerbaijan + Turkey vs Armenia / Artsakh",
+      "strength": "Modern drone-equipped military vs outdated Soviet-era defenses",
+      "casualties": "~38,000+ killed across all phases; 1 million+ total displaced"
+    }
+  },
+
 };
