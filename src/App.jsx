@@ -711,44 +711,55 @@ function TechnologyPanel({ warId, technology }) {
   );
 }
 
-function CentralFigures({ figures }) {
+function CinematicFigures({ figures }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
   const ordered = [...(figures || [])].sort((a, b) => b.importance - a.importance);
 
   return (
-    <section className="card figures-card">
-      <header className="card-head">
-        <h3>Central Figures</h3>
-        <p>
-          Importance bar runs green (contextual participant) to yellow (strong contributor) to red
-          (single most central figures).
-        </p>
-      </header>
+    <section className="cin-section cin-figures" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Central Figures</h2>
+        <p>Key leaders, commanders, and influential actors of the conflict</p>
+        <div className="cin-header-rule" />
+      </motion.header>
 
-      <div className="figures-grid">
-        {ordered.map((figure) => {
+      <div className="cin-figures-grid">
+        {ordered.map((figure, i) => {
           const band = importanceBand(figure.importance);
           return (
-            <article key={figure.name} className="figure-card">
-              <img
-                src={figure.portrait}
-                alt={`${figure.name} portrait`}
-                loading="lazy"
-                onError={(event) => {
-                  event.currentTarget.src = "/portraits/placeholder-figure.svg";
-                }}
-              />
-
-              <div className="figure-meta">
+            <motion.article
+              key={figure.name}
+              className="cin-figure-card"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.12, ease: "easeOut" }}
+            >
+              <div className="cin-figure-portrait">
+                <img
+                  src={figure.portrait}
+                  alt={`${figure.name} portrait`}
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.src = "/portraits/placeholder-figure.svg";
+                  }}
+                />
+              </div>
+              <div className="cin-figure-info">
                 <h4>{figure.name}</h4>
-                <p>{figure.role}</p>
-                <p className={`side-tag ${figure.side || "debated"}`}>
+                <p className="cin-figure-role">{figure.role}</p>
+                <p className={`cin-figure-side ${figure.side || "debated"}`}>
                   {sideLabels[figure.side] || sideLabels.debated}
                 </p>
-
-                <div className="importance-wrap">
-                  <div className="importance-track">
+                <div className="cin-importance-wrap">
+                  <div className="cin-importance-track">
                     <span
-                      className={`importance-fill ${band}`}
+                      className={`cin-importance-fill ${band}`}
                       style={{ width: `${figure.importance}%` }}
                     />
                   </div>
@@ -756,9 +767,167 @@ function CentralFigures({ figures }) {
                 </div>
                 <small>{renderBold(figure.note)}</small>
               </div>
-            </article>
+            </motion.article>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+function CinematicInfobox({ warId, infobox }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+  const rows = [
+    { label: "Dates", value: infobox.dates },
+    { label: "Location", value: infobox.location },
+    { label: "Result", value: infobox.result },
+    { label: "Belligerents", value: infobox.belligerents },
+    { label: "Strength", value: infobox.strength },
+    { label: "Casualties", value: infobox.casualties },
+  ];
+
+  return (
+    <section className="cin-section cin-infobox" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Infobox</h2>
+        <p>Fast facts snapshot</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-infobox-grid">
+        {rows.map((row, i) => (
+          <motion.div
+            key={`${warId}-info-${i}`}
+            className="cin-info-row"
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.45, delay: 0.25 + i * 0.1, ease: "easeOut" }}
+          >
+            <dt>{row.label}</dt>
+            <dd>{renderBold(row.value)}</dd>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CinematicMap({ warId, mapData }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+  const points = mapData.points || [];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [warId]);
+
+  const activePoint = points[activeIndex] || null;
+
+  return (
+    <section className="cin-section cin-map" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Theater of Operations</h2>
+        <p>{mapData.description}</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <motion.div
+        className="cin-map-canvas"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+        role="img"
+        aria-label={mapData.title}
+      >
+        <div className="cin-map-grid-line cin-map-h1" />
+        <div className="cin-map-grid-line cin-map-h2" />
+        <div className="cin-map-grid-line cin-map-h3" />
+        <div className="cin-map-grid-line cin-map-v1" />
+        <div className="cin-map-grid-line cin-map-v2" />
+        <div className="cin-map-grid-line cin-map-v3" />
+
+        {points.map((point, index) => {
+          const isActive = index === activeIndex;
+          return (
+            <motion.button
+              key={`${point.name}-${index}`}
+              type="button"
+              className={`cin-map-marker ${isActive ? "active" : ""}`}
+              style={{ left: `${point.x}%`, top: `${point.y}%` }}
+              onMouseEnter={() => setActiveIndex(index)}
+              onFocus={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(index)}
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>{point.name}</span>
+            </motion.button>
+          );
+        })}
+      </motion.div>
+
+      <AnimatePresence mode="wait">
+        {activePoint && (
+          <motion.div
+            key={`${warId}-mp-${activeIndex}`}
+            className="cin-map-detail"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <h4>{activePoint.name}</h4>
+            <span className="cin-map-year">{activePoint.year}</span>
+            <p>{renderBold(activePoint.note)}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
+
+function CinematicAftermath({ warId, aftermath }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+
+  return (
+    <section className="cin-section cin-aftermath" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Consequences &amp; Legacy</h2>
+        <p>The lasting impact and aftermath of the conflict</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-aftermath-list">
+        {aftermath.map((item, i) => (
+          <motion.div
+            key={`${warId}-aft-${i}`}
+            className="cin-aftermath-item"
+            initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+            transition={{ duration: 0.5, delay: 0.25 + i * 0.15, ease: "easeOut" }}
+          >
+            <span className="cin-aftermath-num">{String(i + 1).padStart(2, "0")}</span>
+            <p>{renderBold(item)}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
@@ -778,6 +947,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [showDetailedOnly, setShowDetailedOnly] = useState(false);
   const [selectedWarId, setSelectedWarId] = useState(defaultWar.id);
+  const [railOpen, setRailOpen] = useState(false);
 
   const filteredWars = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -971,6 +1141,8 @@ export default function App() {
         timeline={profile.timeline}
       />
 
+      <CinematicFigures figures={profile.centralFigures} />
+
       <CinematicBackground
         warId={selectedEntry.id}
         background={profile.background}
@@ -996,36 +1168,37 @@ export default function App() {
         technology={profile.technology}
       />
 
-      {/* Triangular index tab fixed to right screen edge */}
-      <div
-        className="index-tab-flag"
-        onClick={() => {
-          const rail = document.querySelector('.tab-rail');
-          if (rail) {
-            const zone = document.querySelector('.rail-hover-zone');
-            if (zone) {
-              zone.style.width = '280px';
-              setTimeout(() => { zone.style.width = ''; }, 3000);
-            }
-          }
-        }}
-      >
-        <span>INDEX</span>
-      </div>
+      <CinematicInfobox
+        warId={selectedEntry.id}
+        infobox={profile.infobox}
+      />
 
-      <div className="book-layout">
-        <div className="rail-hover-zone">
-        <aside
-          className="tab-rail"
-          aria-label="Sequential war tabs"
-        >
+      <CinematicMap
+        warId={selectedEntry.id}
+        mapData={profile.maps}
+      />
+
+      <CinematicAftermath
+        warId={selectedEntry.id}
+        aftermath={profile.aftermath}
+      />
+
+      {/* Fixed index tab + overlay rail */}
+      <div
+        className={`index-rail-overlay ${railOpen ? "open" : ""}`}
+        onMouseEnter={() => setRailOpen(true)}
+        onMouseLeave={() => setRailOpen(false)}
+      >
+        <div className="index-tab-flag">
+          <span>INDEX</span>
+        </div>
+        <aside className="index-rail-panel" aria-label="Sequential war tabs">
           <div className="tab-rail-head">
             <h2>Index</h2>
             <p>
               {filteredWars.length}/{baseWarEntries.length}
             </p>
           </div>
-
           <div className="tab-list">
             {filteredWars.length === 0 ? (
               <p className="empty-state">No wars match your filter.</p>
@@ -1052,52 +1225,6 @@ export default function App() {
             )}
           </div>
         </aside>
-        </div>
-
-        <main className="book-stage" aria-live="polite">
-          <AnimatePresence mode="wait">
-            <motion.article
-              key={selectedEntry.id}
-              className="book-page"
-              initial={{ opacity: 0, rotateY: -7, x: 32 }}
-              animate={{ opacity: 1, rotateY: 0, x: 0 }}
-              exit={{ opacity: 0, rotateY: 7, x: -28 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-            >
-              <section className="content-grid">
-                <aside className="card infobox">
-                  <header className="card-head">
-                    <h3>Infobox</h3>
-                    <p>Fast facts snapshot</p>
-                  </header>
-                  <dl>
-                    <InfoRow label="Dates" value={profile.infobox.dates} />
-                    <InfoRow label="Location" value={profile.infobox.location} />
-                    <InfoRow label="Result" value={profile.infobox.result} />
-                    <InfoRow label="Belligerents" value={profile.infobox.belligerents} />
-                    <InfoRow label="Strength" value={profile.infobox.strength} />
-                    <InfoRow label="Casualties" value={profile.infobox.casualties} />
-                  </dl>
-                </aside>
-
-                <InteractiveMap warId={selectedEntry.id} mapData={profile.maps} />
-
-                <CentralFigures figures={profile.centralFigures} />
-
-                <section className="card span-two aftermath-card">
-                  <header className="card-head">
-                    <h3>Consequences / Aftermath / Legacy</h3>
-                  </header>
-                  <ul className="bullet-list">
-                    {profile.aftermath.map((item, index) => (
-                      <li key={`${selectedEntry.id}-aftermath-${index}`}>{renderBold(item)}</li>
-                    ))}
-                  </ul>
-                </section>
-              </section>
-            </motion.article>
-          </AnimatePresence>
-        </main>
       </div>
     </div>
   );
