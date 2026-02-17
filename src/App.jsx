@@ -54,14 +54,7 @@ function ParticipantsCarousel({ warId, participants, scrollPhase = 1 }) {
 
   return (
     <section className="participants-card-v2 participants-civ-stage" ref={sectionRef}>
-      <header className="card-head participants-civ-header">
-        <h3>Belligerents &amp; Key Participants</h3>
-        <p>
-          Belligerents in <span className="glow-label-red">red</span>, non-belligerent actors in{" "}
-          <span className="glow-label-blue">blue</span>, and debated attribution in{" "}
-          <span className="glow-label-yellow">yellow</span>.
-        </p>
-      </header>
+      <h3 className="section-outline-title">Belligerents &amp; Key Participants</h3>
 
       {/* Civ7-style tile grid */}
       <div className="civ-grid">
@@ -471,9 +464,9 @@ function CinematicCasualties({ warId, casualties }) {
   const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
 
   const stats = [
-    { label: "Military", value: casualties.military, icon: "⚔" },
-    { label: "Civilian", value: casualties.civilian, icon: "🏠" },
-    { label: "Displacement", value: casualties.displacement, icon: "🚶" },
+    { label: "Military", value: casualties.military },
+    { label: "Civilian", value: casualties.civilian },
+    { label: "Displacement", value: casualties.displacement },
   ];
 
   return (
@@ -498,7 +491,6 @@ function CinematicCasualties({ warId, casualties }) {
             animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.85, y: 30 }}
             transition={{ duration: 0.55, delay: 0.3 + i * 0.18, ease: "easeOut" }}
           >
-            <span className="cin-cas-icon">{stat.icon}</span>
             <h4>{stat.label}</h4>
             <p>{renderBold(stat.value)}</p>
           </motion.div>
@@ -718,16 +710,14 @@ function CinematicFigures({ figures }) {
 
   return (
     <section className="cin-section cin-figures" ref={sectionRef}>
-      <motion.header
-        className="cin-section-header"
+      <motion.h2
+        className="section-outline-title"
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <h2>Central Figures</h2>
-        <p>Key leaders, commanders, and influential actors of the conflict</p>
-        <div className="cin-header-rule" />
-      </motion.header>
+        Central Figures
+      </motion.h2>
 
       <div className="cin-figures-grid">
         {ordered.map((figure, i) => {
@@ -751,20 +741,8 @@ function CinematicFigures({ figures }) {
                 />
               </div>
               <div className="cin-figure-info">
-                <h4>{figure.name}</h4>
+                <h4>{figure.name} <span className="golden-key">&#x1F511;</span></h4>
                 <p className="cin-figure-role">{figure.role}</p>
-                <p className={`cin-figure-side ${figure.side || "debated"}`}>
-                  {sideLabels[figure.side] || sideLabels.debated}
-                </p>
-                <div className="cin-importance-wrap">
-                  <div className="cin-importance-track">
-                    <span
-                      className={`cin-importance-fill ${band}`}
-                      style={{ width: `${figure.importance}%` }}
-                    />
-                  </div>
-                  <strong>{figure.importance}/100</strong>
-                </div>
                 <small>{renderBold(figure.note)}</small>
               </div>
             </motion.article>
@@ -1086,41 +1064,15 @@ export default function App() {
         <span className="cinema-scroll-hint">scroll to explore</span>
       </div>
 
-      <div className="topbar-hover-zone">
-        <header className="topbar">
-          <div>
-            <p className="eyebrow">Interactive conflict atlas</p>
-            <h1>The Moving Century: War Atlas</h1>
-            <p>
-              Physical-book tab navigation, sequential war index, and historian-focused conflict
-              pages for the 20th and 21st centuries.
-            </p>
-          </div>
-
-          <div className="search-controls">
-            <label className="search-box">
-              <span>Find war / year / index</span>
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Try: 1945, Korean, 102"
-              />
-            </label>
-
-            <button
-              type="button"
-              className={`filter-toggle ${showDetailedOnly ? "active" : ""}`}
-              aria-pressed={showDetailedOnly}
-              onClick={() => setShowDetailedOnly((current) => !current)}
-            >
-              {showDetailedOnly ? "Showing detailed dossiers only" : "Show detailed dossiers only"}
-            </button>
-
-            <p className="coverage-line">
-              Detailed dossiers: <strong>{detailedCount}</strong> / {baseWarEntries.length}
-            </p>
-          </div>
-        </header>
+      <div className="search-float">
+        <label className="search-box">
+          <span>Find war / year / index</span>
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Try: 1945, Korean, 102"
+          />
+        </label>
       </div>
 
       <ParticipantsCarousel
@@ -1168,6 +1120,11 @@ export default function App() {
         technology={profile.technology}
       />
 
+      <CinematicAftermath
+        warId={selectedEntry.id}
+        aftermath={profile.aftermath}
+      />
+
       <CinematicInfobox
         warId={selectedEntry.id}
         infobox={profile.infobox}
@@ -1178,18 +1135,14 @@ export default function App() {
         mapData={profile.maps}
       />
 
-      <CinematicAftermath
-        warId={selectedEntry.id}
-        aftermath={profile.aftermath}
-      />
-
-      {/* Fixed index tab + overlay rail */}
+      {/* Fixed index tab + overlay rail — click to toggle, click outside to close */}
+      {railOpen && (
+        <div className="index-rail-backdrop" onClick={() => setRailOpen(false)} />
+      )}
       <div
         className={`index-rail-overlay ${railOpen ? "open" : ""}`}
-        onMouseEnter={() => setRailOpen(true)}
-        onMouseLeave={() => setRailOpen(false)}
       >
-        <div className="index-tab-flag">
+        <div className="index-tab-flag" onClick={() => setRailOpen((v) => !v)}>
           <span>INDEX</span>
         </div>
         <aside className="index-rail-panel" aria-label="Sequential war tabs">
