@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { baseWarEntries } from "./data/warList";
 import { featuredWarsByName } from "./data/featuredWars";
 import { buildWarProfile } from "./utils/buildWarProfile";
@@ -23,6 +23,280 @@ const InfoRow = ({ label, value }) => (
     <dd>{value}</dd>
   </div>
 );
+
+const glowClass = {
+  belligerent: "glow-red",
+  nonBelligerent: "glow-blue",
+  debated: "glow-yellow",
+};
+
+// Deterministic pseudo-random from seed
+const seededRand = (seed) => {
+  let x = Math.sin(seed * 9301 + 49297) * 49297;
+  return x - Math.floor(x);
+};
+
+// Pre-compute fly-in origins (edges/corners of the screen)
+const flyOrigins = [
+  { x: -600, y: -300 },  // top-left
+  { x: 600, y: -300 },   // top-right
+  { x: -700, y: 200 },   // left
+  { x: 700, y: 200 },    // right
+  { x: -500, y: 500 },   // bottom-left
+  { x: 500, y: 500 },    // bottom-right
+  { x: 0, y: -500 },     // top-center
+  { x: 0, y: 600 },      // bottom-center
+  { x: -800, y: 0 },     // far left
+  { x: 800, y: 0 },      // far right
+];
+
+function ParticipantsCarousel({ warId, participants, scrollPhase = 1 }) {
+  const sectionRef = useRef(null);
+  const ringRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+  const phase = Math.min(Math.max(scrollPhase, 0), 1);
+  const [hasLanded, setHasLanded] = useState(false);
+  const [focusedIndex, setFocusedIndex] = useState(null);
+  const [detailOpen, setDetailOpen] = useState(false);
+
+  // Measure ring size to compute radius
+  const [radius, setRadius] = useState(300);
+  useEffect(() => {
+    const measure = () => {
+      if (ringRef.current) {
+        const w = ringRef.current.offsetWidth;
+        const h = ringRef.current.offsetHeight;
+        setRadius(Math.min(w, h) * 0.34);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [warId]);
+
+  // Mark when fly-in is done so orbit can begin
+  useEffect(() => {
+    if (isInView && !hasLanded) {
+      const t = setTimeout(() => setHasLanded(true), participants.length * 140 + 800);
+      return () => clearTimeout(t);
+    }
+    if (!isInView) setHasLanded(false);
+  }, [isInView, participants.length, hasLanded]);
+
+  // Orbit angle driven by requestAnimationFrame — pauses when any card is focused
+  const [orbitAngle, setOrbitAngle] = useState(0);
+  useEffect(() => {
+    if (!hasLanded || focusedIndex !== null) return;
+    let raf;
+    let lastTime = performance.now();
+    const speed = 0.12;
+    const tick = (now) => {
+      const dt = Math.min(now - lastTime, 50);
+      lastTime = now;
+      setOrbitAngle((prev) => (prev + speed * (dt / 16.67)) % 360);
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [hasLanded, focusedIndex]);
+
+  // Compute fly-in origins per card (static)
+  const flyData = useMemo(() => {
+    return participants.map((_, i) => {
+      const seed = i + 1;
+      const origin = flyOrigins[i % flyOrigins.length];
+      const flyRotate = (seededRand(seed * 17) - 0.5) * 80;
+      return { originX: origin.x, originY: origin.y, flyRotate };
+    });
+  }, [participants]);
+
+  const count = participants.length;
+
+  return (
+    <section
+      className="participants-card-v2 participants-card-stage"
+      ref={sectionRef}
+      style={{
+        "--participants-height": `max(${Math.round(300 + (1 - phase) * 500)}px, ${(96 - phase * 60).toFixed(2)}vh)`,
+      }}
+    >
+      <header className="card-head participants-scatter-header">
+        <h3 style={{ fontSize: `${Math.max(1.1, 2.7 - phase * 1.6)}rem` }}>
+          Belligerents &amp; Key Participants
+        </h3>
+        <p>
+          Belligerents in <span className="glow-label-red">red</span>, non-belligerent actors in{" "}
+          <span className="glow-label-blue">blue</span>, and debated attribution in{" "}
+          <span className="glow-label-yellow">yellow</span>.
+        </p>
+      </header>
+
+      <div className="participants-orbit-ring" ref={ringRef}>
+        {participants.map((participant, index) => {
+          const glow = glowClass[participant.side] || "glow-yellow";
+          const fly = flyData[index];
+          const isFocused = focusedIndex === index;
+          const hasFocus = focusedIndex !== null;
+
+          // Compute position
+          let cx, cy, targetScale, targetZIndex;
+          const seed = index + 1;
+
+          if (isFocused) {
+            // Focused card → center, bigger
+            cx = 0;
+            cy = 0;
+            targetScale = 1.5;
+            targetZIndex = 200;
+          } else if (hasFocus) {
+            // Displaced cards → line up vertically on the right side, spread enough to click each
+            const othersCount = count - 1;
+            const reIndex = index < focusedIndex ? index : index - 1;
+            const spacing = Math.min(120, (radius * 3) / Math.max(othersCount, 1));
+            const totalHeight = (othersCount - 1) * spacing;
+            cx = radius * 1.25;
+            cy = -totalHeight / 2 + reIndex * spacing;
+            targetScale = 0.55;
+            targetZIndex = 20 + reIndex;
+          } else {
+            // Circular orbit
+            const angleDeg = (index / count) * 360 - 90 + (hasLanded ? orbitAngle : 0);
+            const angleRad = (angleDeg * Math.PI) / 180;
+            cx = Math.cos(angleRad) * radius;
+            cy = Math.sin(angleRad) * radius;
+            targetScale = 1;
+            targetZIndex = count - index;
+          }
+
+          return (
+            <motion.article
+              key={`${warId}-participant-${index}`}
+              className={`participant-card-v2 participant-card-orbit ${glow} ${isFocused ? "card-focused" : ""}`}
+              style={{ zIndex: targetZIndex }}
+              onClick={() => {
+                setDetailOpen(false);
+                setFocusedIndex(isFocused ? null : index);
+              }}
+              initial={{
+                opacity: 0,
+                scale: 0.2,
+                x: fly.originX,
+                y: fly.originY,
+                rotate: fly.flyRotate,
+              }}
+              animate={isInView ? {
+                opacity: hasFocus && !isFocused ? 0.7 : 1,
+                scale: targetScale,
+                x: cx,
+                y: cy,
+                rotate: 0,
+              } : {
+                opacity: 0,
+                scale: 0.2,
+                x: fly.originX,
+                y: fly.originY,
+                rotate: fly.flyRotate,
+              }}
+              transition={hasLanded ? {
+                type: "spring",
+                stiffness: 120,
+                damping: 18,
+                mass: 0.8,
+              } : {
+                type: "spring",
+                stiffness: 45,
+                damping: 13,
+                mass: 1,
+                delay: index * 0.14,
+              }}
+            >
+              <div className="participant-portrait-wrap">
+                <img
+                  src="/portraits/placeholder-figure.svg"
+                  alt={`${participant.name} portrait`}
+                  className="participant-portrait"
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.src = "/portraits/placeholder-figure.svg";
+                  }}
+                />
+                <div className={`portrait-glow-ring ${glow}`} />
+              </div>
+              <h4 className={`participant-name ${glow}`}>{participant.name}</h4>
+              {isFocused && (
+                <div
+                  className={`participant-hover-detail detail-visible ${detailOpen ? "detail-expanded" : "detail-collapsed"}`}
+                  onMouseEnter={() => setDetailOpen(true)}
+                  onMouseLeave={() => setDetailOpen(false)}
+                >
+                  <p className={`side-tag ${participant.side}`}>
+                    {participant.side === "belligerent" ? "Belligerent" : participant.side === "nonBelligerent" ? "Non-belligerent" : "Debated"}
+                  </p>
+                  <p className="participant-role">{renderBold(participant.role)}</p>
+                </div>
+              )}
+            </motion.article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function CinematicIntro({ theater, summary, warId }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-80px" });
+
+  // Split summary into sentences for line-by-line reveal
+  const sentences = useMemo(() => {
+    if (!summary) return [];
+    return summary
+      .replace(/([.!?])\s+/g, "$1|||")
+      .split("|||")
+      .filter((s) => s.trim().length > 0);
+  }, [summary]);
+
+  return (
+    <section className="cinematic-intro" ref={sectionRef} key={warId}>
+      {/* Theater / Setting line — fades in big */}
+      <motion.p
+        className="cinematic-theater"
+        initial={{ opacity: 0, scale: 0.92, y: 30 }}
+        animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.92, y: 30 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        {renderBold(theater)}
+      </motion.p>
+
+      {/* Divider line */}
+      <motion.div
+        className="cinematic-divider"
+        initial={{ scaleX: 0 }}
+        animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+      />
+
+      {/* Summary sentences — fly in one by one */}
+      <div className="cinematic-summary">
+        {sentences.map((sentence, i) => (
+          <motion.span
+            key={`${warId}-sentence-${i}`}
+            className="cinematic-sentence"
+            initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60, y: 20 }}
+            animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: i % 2 === 0 ? -60 : 60, y: 20 }}
+            transition={{
+              duration: 0.7,
+              delay: 1.0 + i * 0.45,
+              ease: "easeOut",
+            }}
+          >
+            {renderBold(sentence)}{" "}
+          </motion.span>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function InteractiveMap({ warId, mapData }) {
   const points = mapData.points || [];
@@ -242,6 +516,9 @@ export default function App() {
 
   const shellRef = useRef(null);
   const [scrollPx, setScrollPx] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(
+    typeof window !== "undefined" ? window.innerHeight : 900,
+  );
 
   const handleShellScroll = useCallback(() => {
     const el = shellRef.current;
@@ -254,6 +531,12 @@ export default function App() {
     if (shellRef.current) shellRef.current.scrollTop = 0;
   }, [selectedEntry.id]);
 
+  useEffect(() => {
+    const handleResize = () => setViewportHeight(window.innerHeight);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
   // Title shrinks in first 400px of scroll
   const titlePhase = clamp01(scrollPx / 400);
@@ -263,6 +546,11 @@ export default function App() {
   const contentPhase = clamp01((scrollPx - 350) / 350);
   // Index (tab-rail) only at ~30% content revealed: 500px → 900px
   const indexPhase = clamp01((scrollPx - 500) / 400);
+  const participantsStart = viewportHeight * 0.95;
+  const participantsEnd = participantsStart + viewportHeight * 1.15;
+  const participantsPhase = clamp01(
+    (scrollPx - participantsStart) / (participantsEnd - participantsStart),
+  );
   const selectedFilteredIndex = filteredWars.findIndex((entry) => entry.id === selectedEntry.id);
   const hasPrev = selectedFilteredIndex > 0;
   const hasNext = selectedFilteredIndex >= 0 && selectedFilteredIndex < filteredWars.length - 1;
@@ -319,53 +607,68 @@ export default function App() {
     >
       {/* ── Fullscreen title slide (100vh, first thing you see) ── */}
       <div className="cinema-slide" key={`slide-${selectedEntry.id}`}>
+        <div className="cinema-nav" aria-label="Navigate wars in current filter">
+          <button type="button" onClick={() => goToNeighbor(-1)} disabled={!hasPrev}>← Previous</button>
+          <button type="button" onClick={() => goToNeighbor(1)} disabled={!hasNext}>Next →</button>
+        </div>
         <span className="cinema-number">#{String(selectedEntry.sequence).padStart(3, '0')}</span>
         <h2 className="cinema-name">{selectedEntry.name}</h2>
         <span className="cinema-years">{selectedEntry.years}</span>
         <span className="cinema-scroll-hint">scroll to explore</span>
       </div>
 
-      <motion.header
-        className="topbar"
-        initial={{ opacity: 0, y: -18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
-      >
-        <div>
-          <p className="eyebrow">Interactive conflict atlas</p>
-          <h1>The Moving Century: War Atlas</h1>
-          <p>
-            Physical-book tab navigation, sequential war index, and historian-focused conflict pages
-            for the 20th and 21st centuries.
-          </p>
-        </div>
+      <div className="topbar-hover-zone">
+        <header className="topbar">
+          <div>
+            <p className="eyebrow">Interactive conflict atlas</p>
+            <h1>The Moving Century: War Atlas</h1>
+            <p>
+              Physical-book tab navigation, sequential war index, and historian-focused conflict
+              pages for the 20th and 21st centuries.
+            </p>
+          </div>
 
-        <div className="search-controls">
-          <label className="search-box">
-            <span>Find war / year / index</span>
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Try: 1945, Korean, 102"
-            />
-          </label>
+          <div className="search-controls">
+            <label className="search-box">
+              <span>Find war / year / index</span>
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Try: 1945, Korean, 102"
+              />
+            </label>
 
-          <button
-            type="button"
-            className={`filter-toggle ${showDetailedOnly ? "active" : ""}`}
-            aria-pressed={showDetailedOnly}
-            onClick={() => setShowDetailedOnly((current) => !current)}
-          >
-            {showDetailedOnly ? "Showing detailed dossiers only" : "Show detailed dossiers only"}
-          </button>
+            <button
+              type="button"
+              className={`filter-toggle ${showDetailedOnly ? "active" : ""}`}
+              aria-pressed={showDetailedOnly}
+              onClick={() => setShowDetailedOnly((current) => !current)}
+            >
+              {showDetailedOnly ? "Showing detailed dossiers only" : "Show detailed dossiers only"}
+            </button>
 
-          <p className="coverage-line">
-            Detailed dossiers: <strong>{detailedCount}</strong> / {baseWarEntries.length}
-          </p>
-        </div>
-      </motion.header>
+            <p className="coverage-line">
+              Detailed dossiers: <strong>{detailedCount}</strong> / {baseWarEntries.length}
+            </p>
+          </div>
+        </header>
+      </div>
+
+      <ParticipantsCarousel
+        warId={selectedEntry.id}
+        participants={profile.participants}
+        scrollPhase={participantsPhase}
+      />
+
+      <CinematicIntro
+        key={`cinematic-${selectedEntry.id}`}
+        theater={profile.theater}
+        summary={profile.summary}
+        warId={selectedEntry.id}
+      />
 
       <div className="book-layout">
+        <div className="rail-hover-zone">
         <aside
           className="tab-rail"
           aria-label="Sequential war tabs"
@@ -403,6 +706,7 @@ export default function App() {
             )}
           </div>
         </aside>
+        </div>
 
         <main className="book-stage" aria-live="polite">
           <AnimatePresence mode="wait">
@@ -414,30 +718,6 @@ export default function App() {
               exit={{ opacity: 0, rotateY: 7, x: -28 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
-              <header className="lead-card">
-                <div className="lead-top">
-                  <div>
-                    <p className="eyebrow">#{String(selectedEntry.sequence).padStart(3, "0")}</p>
-                    <h2>{selectedEntry.name}</h2>
-                    <p className="war-years">{selectedEntry.years}</p>
-                    <p className={`profile-badge ${profile.isFeatured ? "featured" : "fallback"}`}>
-                      {profile.isFeatured ? "Researched dossier" : "Auto-generated overview"}
-                    </p>
-                  </div>
-
-                  <div className="war-nav" aria-label="Navigate wars in current filter">
-                    <button type="button" onClick={() => goToNeighbor(-1)} disabled={!hasPrev}>
-                      Previous
-                    </button>
-                    <button type="button" onClick={() => goToNeighbor(1)} disabled={!hasNext}>
-                      Next
-                    </button>
-                  </div>
-                </div>
-                <p className="theater">{renderBold(profile.theater)}</p>
-                <p>{renderBold(profile.summary)}</p>
-              </header>
-
               <section className="content-grid">
                 <section className="card span-two">
                   <header className="card-head">
@@ -465,25 +745,6 @@ export default function App() {
                     <InfoRow label="Casualties" value={profile.infobox.casualties} />
                   </dl>
                 </aside>
-
-                <section className="card participants-card">
-                  <header className="card-head">
-                    <h3>Belligerents and Key Participants</h3>
-                    <p>
-                      Belligerents in red, non-belligerent/intervening actors in blue, and debated
-                      attribution in yellow.
-                    </p>
-                  </header>
-
-                  <div className="participants-list">
-                    {profile.participants.map((participant) => (
-                      <article key={`${selectedEntry.id}-${participant.name}`}>
-                        <h4 className={`side-tag ${participant.side}`}>{participant.name}</h4>
-                        <p>{renderBold(participant.role)}</p>
-                      </article>
-                    ))}
-                  </div>
-                </section>
 
                 <section className="card timeline-card">
                   <header className="card-head">
