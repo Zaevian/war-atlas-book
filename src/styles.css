@@ -193,6 +193,42 @@ body {
   width: 280px;
 }
 
+/* Always-visible triangular index tab — fixed to right screen edge */
+.index-tab-flag {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 85;
+  width: 38px;
+  height: 90px;
+  background:
+    linear-gradient(180deg, rgba(238, 220, 193, 0.94), rgba(200, 164, 118, 0.92));
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  cursor: pointer;
+  box-shadow: -3px 0 14px rgba(20, 17, 24, 0.3);
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.index-tab-flag span {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-family: "Cinzel", serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #5a3a1e;
+  pointer-events: none;
+}
+
+.index-tab-flag:hover {
+  width: 48px;
+}
+
 .tab-rail {
   max-height: calc(100vh - 2.8rem);
   border-radius: 18px;
@@ -412,15 +448,15 @@ body {
 
 .cinema-nav button {
   font-family: "Cinzel", serif;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   letter-spacing: 0.08em;
-  padding: 0.55rem 1.6rem;
-  border: 1px solid rgba(248, 224, 181, 0.25);
-  border-radius: 4px;
-  background: rgba(10, 10, 14, 0.5);
+  padding: 0.85rem 2.6rem;
+  border: 1px solid rgba(248, 224, 181, 0.3);
+  border-radius: 6px;
+  background: rgba(10, 10, 14, 0.55);
   color: var(--bronze-soft);
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s ease;
   backdrop-filter: blur(6px);
 }
 
@@ -428,6 +464,7 @@ body {
   background: rgba(185, 139, 97, 0.15);
   border-color: var(--bronze-soft);
   color: #f8e0b5;
+  transform: scale(1.06);
 }
 
 .cinema-nav button:disabled {
@@ -618,13 +655,38 @@ body {
   font-size: 0.82rem;
 }
 
-/* ── Participants Carousel V2 ── */
+/* ── Participants Civ7 Stage ── */
 .participants-card-v2 {
-  overflow: hidden;
+  overflow: visible;
   padding: 0 0 1.2rem;
   background: transparent;
   border: none;
   border-radius: 0;
+}
+
+.participants-civ-stage {
+  position: relative;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.participants-civ-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.participants-civ-header h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f8ead0;
+  margin: 0;
+}
+
+.participants-civ-header p {
+  color: rgba(248, 234, 208, 0.65);
+  font-size: 0.88rem;
+  margin: 0.4rem 0 0;
 }
 
 .participants-card-v2 .card-head h3 {
@@ -633,6 +695,396 @@ body {
 
 .participants-card-v2 .card-head p {
   color: rgba(248, 234, 208, 0.7);
+}
+
+/* ── Civ7 Tile Grid ── */
+.civ-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.civ-tile {
+  width: 155px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(20, 30, 42, 0.7) 0%, rgba(14, 22, 32, 0.92) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.12);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.civ-tile:hover {
+  border-color: rgba(248, 224, 181, 0.35);
+}
+
+.civ-tile.glow-red:hover {
+  border-color: rgba(182, 58, 46, 0.55);
+  box-shadow: 0 0 18px rgba(182, 58, 46, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.civ-tile.glow-blue:hover {
+  border-color: rgba(45, 100, 180, 0.55);
+  box-shadow: 0 0 18px rgba(45, 100, 180, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.civ-tile.glow-yellow:hover {
+  border-color: rgba(200, 156, 45, 0.55);
+  box-shadow: 0 0 18px rgba(200, 156, 45, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Tile portrait area */
+.civ-tile-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 30%, rgba(60, 70, 90, 0.5) 0%, rgba(14, 22, 32, 0.9) 80%);
+}
+
+.civ-tile-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.85) contrast(1.05);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.civ-tile:hover .civ-tile-portrait img {
+  filter: brightness(1) contrast(1.08);
+  transform: scale(1.04);
+}
+
+/* Subtle coloured glow at bottom edge of portrait */
+.civ-tile-glow-edge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  pointer-events: none;
+}
+
+.civ-tile-glow-edge.glow-red {
+  background: linear-gradient(to top, rgba(182, 58, 46, 0.28) 0%, transparent 100%);
+}
+
+.civ-tile-glow-edge.glow-blue {
+  background: linear-gradient(to top, rgba(45, 100, 180, 0.28) 0%, transparent 100%);
+}
+
+.civ-tile-glow-edge.glow-yellow {
+  background: linear-gradient(to top, rgba(200, 156, 45, 0.28) 0%, transparent 100%);
+}
+
+/* Tile footer (diamond + name) */
+.civ-tile-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.4rem 0.7rem;
+  width: 100%;
+  position: relative;
+}
+
+.civ-tile-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(248, 224, 181, 0.25), transparent);
+}
+
+/* Diamond icon */
+.civ-tile-diamond {
+  display: block;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  border: 1.5px solid rgba(248, 224, 181, 0.4);
+  background: rgba(248, 224, 181, 0.08);
+  margin-top: -7px;
+  position: relative;
+  z-index: 2;
+}
+
+.civ-tile-diamond.glow-red {
+  border-color: rgba(182, 58, 46, 0.6);
+  background: rgba(182, 58, 46, 0.15);
+  box-shadow: 0 0 8px rgba(182, 58, 46, 0.3);
+}
+
+.civ-tile-diamond.glow-blue {
+  border-color: rgba(45, 100, 180, 0.6);
+  background: rgba(45, 100, 180, 0.15);
+  box-shadow: 0 0 8px rgba(45, 100, 180, 0.3);
+}
+
+.civ-tile-diamond.glow-yellow {
+  border-color: rgba(200, 156, 45, 0.6);
+  background: rgba(200, 156, 45, 0.15);
+  box-shadow: 0 0 8px rgba(200, 156, 45, 0.3);
+}
+
+.civ-tile-footer h4 {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(248, 234, 208, 0.9);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* ── Civ7 Fullscreen Detail Overlay ── */
+.civ-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 10, 16, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+}
+
+.civ-detail-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38% 62%;
+  width: 100%;
+  max-width: 1100px;
+  height: min(82vh, 700px);
+  border-radius: 8px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(14, 22, 32, 0.97) 0%, rgba(26, 18, 14, 0.95) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.15);
+  box-shadow:
+    0 0 60px rgba(0, 0, 0, 0.5),
+    0 0 120px rgba(0, 0, 0, 0.25);
+}
+
+/* Back button */
+.civ-detail-back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  font-family: "Cinzel", serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: rgba(248, 224, 181, 0.7);
+  background: rgba(10, 10, 14, 0.55);
+  border: 1px solid rgba(248, 224, 181, 0.2);
+  border-radius: 4px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.civ-detail-back:hover {
+  background: rgba(185, 139, 97, 0.18);
+  border-color: rgba(248, 224, 181, 0.45);
+  color: #f8e0b5;
+}
+
+/* Left info panel */
+.civ-detail-info {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 2rem 2rem;
+  overflow-y: auto;
+  color: #f8ead0;
+}
+
+.civ-detail-info::-webkit-scrollbar {
+  width: 5px;
+}
+
+.civ-detail-info::-webkit-scrollbar-thumb {
+  background: rgba(248, 224, 181, 0.25);
+  border-radius: 10px;
+}
+
+/* Decorative icon placeholder */
+.civ-detail-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  margin-bottom: 1.2rem;
+  border: 2px solid rgba(248, 224, 181, 0.3);
+  background: rgba(248, 224, 181, 0.06);
+}
+
+.civ-detail-icon.glow-red {
+  border-color: rgba(182, 58, 46, 0.6);
+  background: rgba(182, 58, 46, 0.12);
+  box-shadow: 0 0 16px rgba(182, 58, 46, 0.25);
+}
+
+.civ-detail-icon.glow-blue {
+  border-color: rgba(45, 100, 180, 0.6);
+  background: rgba(45, 100, 180, 0.12);
+  box-shadow: 0 0 16px rgba(45, 100, 180, 0.25);
+}
+
+.civ-detail-icon.glow-yellow {
+  border-color: rgba(200, 156, 45, 0.6);
+  background: rgba(200, 156, 45, 0.12);
+  box-shadow: 0 0 16px rgba(200, 156, 45, 0.25);
+}
+
+.civ-detail-name {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.civ-detail-name.glow-red {
+  color: #e06050;
+  text-shadow: 0 0 20px rgba(182, 58, 46, 0.35);
+}
+
+.civ-detail-name.glow-blue {
+  color: #6aa0e0;
+  text-shadow: 0 0 20px rgba(45, 100, 180, 0.35);
+}
+
+.civ-detail-name.glow-yellow {
+  color: #e0c050;
+  text-shadow: 0 0 20px rgba(200, 156, 45, 0.35);
+}
+
+.civ-detail-divider {
+  width: 80%;
+  height: 1px;
+  margin: 1rem 0;
+  background: linear-gradient(90deg, rgba(248, 224, 181, 0.3) 0%, transparent 100%);
+}
+
+.civ-detail-role {
+  flex: 1;
+}
+
+.civ-detail-role h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(248, 224, 181, 0.55);
+  margin: 0 0 0.6rem;
+}
+
+.civ-detail-role p {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(248, 234, 208, 0.85);
+  margin: 0;
+}
+
+.civ-detail-role p strong {
+  color: var(--bronze-soft);
+}
+
+/* Prev / Next nav */
+.civ-detail-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(248, 224, 181, 0.1);
+}
+
+.civ-detail-nav button {
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(248, 224, 181, 0.65);
+  background: rgba(248, 224, 181, 0.06);
+  border: 1px solid rgba(248, 224, 181, 0.15);
+  border-radius: 4px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.civ-detail-nav button:hover:not(:disabled) {
+  background: rgba(248, 224, 181, 0.12);
+  color: #f8e0b5;
+  border-color: rgba(248, 224, 181, 0.35);
+}
+
+.civ-detail-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.civ-detail-counter {
+  font-family: "Cardo", serif;
+  font-size: 0.88rem;
+  color: rgba(248, 224, 181, 0.5);
+  letter-spacing: 0.1em;
+}
+
+/* Right portrait panel */
+.civ-detail-portrait {
+  position: relative;
+  overflow: hidden;
+}
+
+.civ-detail-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Vignette + coloured edge glow */
+.civ-detail-portrait-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(14, 22, 32, 0.65) 0%, transparent 35%),
+    linear-gradient(180deg, transparent 60%, rgba(14, 22, 32, 0.5) 100%);
+}
+
+.civ-detail-portrait-vignette.glow-red {
+  box-shadow: inset 0 0 80px rgba(182, 58, 46, 0.12);
+}
+
+.civ-detail-portrait-vignette.glow-blue {
+  box-shadow: inset 0 0 80px rgba(45, 100, 180, 0.12);
+}
+
+.civ-detail-portrait-vignette.glow-yellow {
+  box-shadow: inset 0 0 80px rgba(200, 156, 45, 0.12);
 }
 
 /* ── Cinematic Intro (theater + summary) ── */
@@ -704,264 +1156,7 @@ body {
   color: rgba(248, 224, 181, 0.9);
 }
 
-.participants-card-stage {
-  min-height: var(--participants-height, 600px);
-  position: relative;
-}
-
-.participants-scatter-header {
-  position: relative;
-  z-index: 50;
-  text-align: center;
-  padding: 0.4rem 1rem 0;
-  margin-bottom: -0.5rem;
-}
-
-.participants-scatter-header h3 {
-  font-family: "Cinzel", serif;
-  transition: font-size 0.2s linear;
-}
-
-.participants-orbit-ring {
-  position: relative;
-  width: 100%;
-  min-height: 600px;
-  height: 70vh;
-  max-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.participant-card-v2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 0;
-  padding: 0;
-  overflow: visible;
-  background: transparent;
-  border: none;
-  backdrop-filter: none;
-  cursor: default;
-}
-
-.participant-card-orbit {
-  position: absolute;
-  width: 190px;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.participant-card-orbit:hover .participant-portrait-wrap {
-  animation: cardHighlightGlow 1.5s ease-in-out infinite alternate;
-}
-
-.participant-card-orbit.glow-red:hover .participant-portrait-wrap {
-  animation-name: cardHighlightGlowRed;
-}
-.participant-card-orbit.glow-blue:hover .participant-portrait-wrap {
-  animation-name: cardHighlightGlowBlue;
-}
-.participant-card-orbit.glow-yellow:hover .participant-portrait-wrap {
-  animation-name: cardHighlightGlowYellow;
-}
-
-@keyframes cardHighlightGlowRed {
-  0% { box-shadow: 0 0 12px rgba(182, 58, 46, 0.3), 0 0 30px rgba(182, 58, 46, 0.15), 0 8px 32px rgba(0,0,0,0.3); }
-  100% { box-shadow: 0 0 22px rgba(182, 58, 46, 0.55), 0 0 50px rgba(182, 58, 46, 0.25), 0 8px 32px rgba(0,0,0,0.3); }
-}
-@keyframes cardHighlightGlowBlue {
-  0% { box-shadow: 0 0 12px rgba(28, 69, 133, 0.3), 0 0 30px rgba(28, 69, 133, 0.15), 0 8px 32px rgba(0,0,0,0.3); }
-  100% { box-shadow: 0 0 22px rgba(28, 69, 133, 0.55), 0 0 50px rgba(28, 69, 133, 0.25), 0 8px 32px rgba(0,0,0,0.3); }
-}
-@keyframes cardHighlightGlowYellow {
-  0% { box-shadow: 0 0 12px rgba(200, 156, 45, 0.3), 0 0 30px rgba(200, 156, 45, 0.15), 0 8px 32px rgba(0,0,0,0.3); }
-  100% { box-shadow: 0 0 22px rgba(200, 156, 45, 0.55), 0 0 50px rgba(200, 156, 45, 0.25), 0 8px 32px rgba(0,0,0,0.3); }
-}
-
-.participant-card-v2.glow-red {
-  border-color: rgba(182, 58, 46, 0.28);
-}
-
-.participant-card-v2.glow-red:hover {
-  border-color: rgba(182, 58, 46, 0.55);
-  box-shadow: 0 4px 24px rgba(182, 58, 46, 0.18), 0 8px 28px rgba(0, 0, 0, 0.12);
-}
-
-.participant-card-v2.glow-blue {
-  border-color: rgba(45, 100, 180, 0.25);
-}
-
-.participant-card-v2.glow-blue:hover {
-  border-color: rgba(45, 100, 180, 0.5);
-  box-shadow: 0 4px 24px rgba(45, 100, 180, 0.18), 0 8px 28px rgba(0, 0, 0, 0.12);
-}
-
-.participant-card-v2.glow-yellow {
-  border-color: rgba(200, 156, 45, 0.28);
-}
-
-.participant-card-v2.glow-yellow:hover {
-  border-color: rgba(200, 156, 45, 0.55);
-  box-shadow: 0 4px 24px rgba(200, 156, 45, 0.2), 0 8px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* Hover detail panel — hidden by default */
-.participant-hover-detail {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.25s ease, margin 0.3s ease;
-  margin-top: 0;
-  padding: 0 0.6rem;
-  width: 100%;
-}
-
-/* Visible when card is focused */
-.participant-hover-detail.detail-visible {
-  opacity: 1;
-  margin-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-/* Collapsed: show partial text */
-.participant-hover-detail.detail-collapsed {
-  max-height: 100px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Expanded: show all text */
-.participant-hover-detail.detail-expanded {
-  max-height: 600px;
-  overflow: visible;
-}
-
-/* Focused card glow + bigger size */
-.card-focused {
-  width: 280px;
-}
-.card-focused .participant-portrait-wrap {
-  width: 220px;
-  height: 220px;
-}
-
-.card-focused.glow-red .participant-portrait-wrap {
-  border-color: rgba(182, 58, 46, 0.6);
-  animation: cardHighlightGlowRed 1.5s ease-in-out infinite alternate;
-}
-.card-focused.glow-blue .participant-portrait-wrap {
-  border-color: rgba(28, 69, 133, 0.6);
-  animation: cardHighlightGlowBlue 1.5s ease-in-out infinite alternate;
-}
-.card-focused.glow-yellow .participant-portrait-wrap {
-  border-color: rgba(200, 156, 45, 0.6);
-  animation: cardHighlightGlowYellow 1.5s ease-in-out infinite alternate;
-}
-
-.participant-hover-detail::-webkit-scrollbar {
-  width: 4px;
-}
-.participant-hover-detail::-webkit-scrollbar-thumb {
-  background: rgba(248, 224, 181, 0.3);
-  border-radius: 10px;
-}
-
-.participant-hover-detail .side-tag {
-  margin-bottom: 0.3rem;
-}
-
-/* Portrait */
-.participant-portrait-wrap {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  perspective: 600px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2.5px solid var(--bronze-soft);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
-}
-
-.participant-portrait {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 50%;
-  background: rgba(215, 219, 224, 0.25);
-  position: relative;
-  z-index: 1;
-}
-
-.portrait-glow-ring {
-  position: absolute;
-  inset: -5px;
-  border-radius: 50%;
-  z-index: 0;
-  opacity: 0.6;
-  animation: glowPulse 2.8s ease-in-out infinite;
-}
-
-.portrait-glow-ring.glow-red {
-  box-shadow: 0 0 18px 4px rgba(182, 58, 46, 0.45), 0 0 40px 8px rgba(182, 58, 46, 0.2);
-}
-
-.portrait-glow-ring.glow-blue {
-  box-shadow: 0 0 18px 4px rgba(45, 100, 180, 0.45), 0 0 40px 8px rgba(45, 100, 180, 0.2);
-}
-
-.portrait-glow-ring.glow-yellow {
-  box-shadow: 0 0 18px 4px rgba(200, 156, 45, 0.5), 0 0 40px 8px rgba(200, 156, 45, 0.22);
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.45; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.04); }
-}
-
-/* Glowing participant name */
-.participant-name {
-  margin: 0;
-  padding: 0.35rem 0.5rem 0.15rem;
-  font-family: "Cinzel", serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  animation: nameGlow 3s ease-in-out infinite alternate;
-}
-
-.participant-name.glow-red {
-  color: #b63a2e;
-  text-shadow: 0 0 8px rgba(182, 58, 46, 0.5), 0 0 20px rgba(182, 58, 46, 0.25);
-}
-
-.participant-name.glow-blue {
-  color: #2d64b4;
-  text-shadow: 0 0 8px rgba(45, 100, 180, 0.5), 0 0 20px rgba(45, 100, 180, 0.25);
-}
-
-.participant-name.glow-yellow {
-  color: #a07c18;
-  text-shadow: 0 0 8px rgba(200, 156, 45, 0.55), 0 0 20px rgba(200, 156, 45, 0.3);
-}
-
-@keyframes nameGlow {
-  0% { text-shadow: 0 0 6px currentColor, 0 0 14px rgba(255, 255, 255, 0.05); filter: brightness(1); }
-  100% { text-shadow: 0 0 12px currentColor, 0 0 28px rgba(255, 255, 255, 0.12); filter: brightness(1.12); }
-}
-
-.participant-role {
-  margin: 0.3rem 0 0;
-  color: rgba(248, 234, 208, 0.72);
-  font-size: 0.72rem;
-  line-height: 1.35;
-}
+/* (old orbit/card styles removed — now using civ-grid + civ-detail above) */
 
 /* Glow labels in header */
 .glow-label-red {
@@ -1006,60 +1201,716 @@ body {
   background: rgba(232, 191, 66, 0.27);
 }
 
-.timeline-list {
-  list-style: none;
-  margin: 0.76rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 0.55rem;
+/* ── Cinematic Timeline ── */
+.cinematic-timeline-card {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
 }
 
-.timeline-list li {
-  display: grid;
-  grid-template-columns: 84px minmax(0, 1fr);
-  gap: 0.56rem;
-  padding: 0.48rem 0.6rem;
-  border-radius: 10px;
-  border: 1px solid rgba(65, 96, 128, 0.23);
-  background: rgba(255, 255, 255, 0.61);
-  cursor: default;
-  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+/* Header */
+.ct-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
 }
 
-.timeline-list li:hover {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(65, 96, 128, 0.38);
-  box-shadow: 0 2px 8px rgba(60, 80, 110, 0.10);
-}
-
-.timeline-list span {
-  font-family: "Cardo", serif;
+.ct-header h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #7d5638;
-  font-size: 0.82rem;
-}
-
-.timeline-list h4 {
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #f8ead0;
   margin: 0;
-  font-size: 0.93rem;
+  text-shadow: 0 0 30px rgba(248, 224, 181, 0.1);
+}
+
+.ct-header p {
+  font-family: "Cardo", serif;
+  font-size: 0.92rem;
+  color: rgba(248, 224, 181, 0.45);
+  margin: 0.35rem 0 0;
+  letter-spacing: 0.04em;
+}
+
+.ct-header-rule {
+  width: 120px;
+  height: 1px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, transparent, rgba(248, 224, 181, 0.35), transparent);
+}
+
+/* Track container */
+.ct-track {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Animated vertical centre line */
+.ct-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 224, 181, 0.05) 0%,
+    rgba(185, 139, 97, 0.35) 12%,
+    rgba(185, 139, 97, 0.35) 88%,
+    rgba(248, 224, 181, 0.05) 100%
+  );
+  transform-origin: top center;
+}
+
+/* Each timeline entry */
+.ct-entry {
+  position: relative;
+  display: grid;
+  gap: 0;
+  margin-bottom: 1.6rem;
+  padding-left: calc(50% + 28px);
+}
+
+.ct-entry-left {
+  padding-left: 0;
+  padding-right: calc(50% + 28px);
+  text-align: right;
+}
+
+.ct-entry-right {
+  padding-left: calc(50% + 28px);
+  padding-right: 0;
+  text-align: left;
+}
+
+/* Node dot on the centre line */
+.ct-node {
+  position: absolute;
+  left: 50%;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bronze-soft) 40%, rgba(185, 139, 97, 0.3) 100%);
+  border: 2px solid rgba(248, 224, 181, 0.5);
+  box-shadow:
+    0 0 10px rgba(185, 139, 97, 0.4),
+    0 0 25px rgba(185, 139, 97, 0.15);
+  z-index: 2;
+}
+
+/* Date badge */
+.ct-date {
+  display: inline-block;
+  font-family: "Cardo", serif;
+  font-size: 0.88rem;
   font-weight: 700;
+  color: var(--bronze-soft);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 0 14px rgba(185, 139, 97, 0.3);
+}
+
+/* Content card */
+.ct-content {
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, rgba(28, 38, 52, 0.65) 0%, rgba(22, 16, 12, 0.6) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+  backdrop-filter: blur(4px);
+  cursor: default;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.ct-content:hover {
+  border-color: rgba(185, 139, 97, 0.3);
+  box-shadow: 0 0 20px rgba(185, 139, 97, 0.08), 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(32, 44, 60, 0.75) 0%, rgba(28, 20, 16, 0.7) 100%);
+}
+
+.ct-content h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #f8ead0;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+/* Detail text — hidden by default, reveals on hover */
+.ct-detail {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.35s ease;
+  margin-top: 0;
+}
+
+.ct-content:hover .ct-detail {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.ct-detail p {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(248, 234, 208, 0.78);
+  margin: 0;
+}
+
+.ct-detail p strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+/* Responsive: stack entries vertically on narrow screens */
+@media (max-width: 700px) {
+  .ct-entry,
+  .ct-entry-left,
+  .ct-entry-right {
+    padding-left: 36px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .ct-line {
+    left: 12px;
+    margin-left: 0;
+  }
+
+  .ct-node {
+    left: 12px;
+    margin-left: -7px;
+  }
+}
+
+/* ── Shared Cinematic Section Base ── */
+.cin-section {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem 3.5rem;
+  background: transparent;
+}
+
+.cin-section-header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.cin-section-header h2 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f8ead0;
+  margin: 0;
+  text-shadow: 0 0 40px rgba(248, 224, 181, 0.08);
+}
+
+.cin-section-header p {
+  font-family: "Cardo", serif;
+  font-size: 0.95rem;
+  color: rgba(248, 224, 181, 0.4);
+  margin: 0.4rem 0 0;
+  letter-spacing: 0.04em;
+}
+
+.cin-header-rule {
+  width: 140px;
+  height: 1px;
+  margin: 1.1rem auto 0;
+  background: linear-gradient(90deg, transparent, rgba(248, 224, 181, 0.35), transparent);
+}
+
+/* ── CinematicBackground ── */
+.cin-bg-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cin-bg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.cin-bg-row:nth-child(even) {
+  direction: rtl;
+}
+
+.cin-bg-row:nth-child(even) > * {
+  direction: ltr;
+}
+
+.cin-bg-text p {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(248, 234, 208, 0.85);
+  margin: 0;
+}
+
+.cin-bg-text p strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+.cin-bg-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cin-bg-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(80, 90, 110, 0.3) 0%, rgba(14, 22, 32, 0.6) 80%),
+    linear-gradient(135deg, rgba(28, 38, 52, 0.7) 0%, rgba(22, 16, 12, 0.65) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cin-bg-placeholder span {
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(248, 224, 181, 0.2);
+}
+
+@media (max-width: 700px) {
+  .cin-bg-row {
+    grid-template-columns: 1fr;
+  }
+  .cin-bg-row:nth-child(even) {
+    direction: ltr;
+  }
+}
+
+/* ── CinematicOutcome ── */
+.cin-outcome-body {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cin-outcome-sentence {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(248, 234, 208, 0.85);
+  margin: 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(185, 139, 97, 0.25);
+}
+
+.cin-outcome-sentence strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+/* ── CinematicOrderOfBattle ── */
+.cin-oob-split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.cin-oob-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cin-oob-left {
+  padding-right: 1.5rem;
+}
+
+.cin-oob-right {
+  padding-left: 1.5rem;
+}
+
+.cin-oob-divider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  min-height: 100%;
+}
+
+.cin-oob-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  left: 50%;
+  margin-left: -1px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 224, 181, 0.05) 0%,
+    rgba(185, 139, 97, 0.35) 15%,
+    rgba(185, 139, 97, 0.35) 85%,
+    rgba(248, 224, 181, 0.05) 100%
+  );
+  transform-origin: top center;
+}
+
+.cin-oob-vs {
+  position: sticky;
+  top: 50%;
+  z-index: 2;
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--bronze-soft);
+  background: rgba(14, 22, 32, 0.95);
+  border: 1px solid rgba(185, 139, 97, 0.3);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 14px rgba(185, 139, 97, 0.2);
+}
+
+.cin-oob-card {
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(28, 38, 52, 0.55) 0%, rgba(22, 16, 12, 0.5) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cin-oob-card:hover {
+  border-color: rgba(185, 139, 97, 0.25);
+  box-shadow: 0 0 16px rgba(185, 139, 97, 0.08);
+}
+
+.cin-oob-card h4 {
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8ead0;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.cin-oob-strength {
+  font-family: "Cardo", serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--bronze-soft);
+  margin: 0 0 0.3rem;
+}
+
+.cin-oob-note {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(248, 234, 208, 0.75);
+  margin: 0;
+}
+
+.cin-oob-note strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .cin-oob-split {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .cin-oob-left,
+  .cin-oob-right {
+    padding: 0;
+  }
+
+  .cin-oob-divider {
+    flex-direction: row;
+    width: 100%;
+    min-height: auto;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .cin-oob-line {
+    position: static;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(185, 139, 97, 0.35), transparent);
+    transform-origin: center;
+  }
+}
+
+/* ── CinematicCasualties ── */
+.cin-cas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  max-width: 780px;
+  margin: 0 auto 1.6rem;
+}
+
+.cin-cas-card {
+  text-align: center;
+  border-radius: 12px;
+  padding: 1.6rem 1rem 1.4rem;
+  background: linear-gradient(135deg, rgba(28, 38, 52, 0.55) 0%, rgba(22, 16, 12, 0.5) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cin-cas-card:hover {
+  border-color: rgba(185, 139, 97, 0.3);
+  box-shadow: 0 0 22px rgba(185, 139, 97, 0.1);
+}
+
+.cin-cas-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  filter: grayscale(0.25);
+}
+
+.cin-cas-card h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bronze-soft);
+  margin: 0 0 0.55rem;
+}
+
+.cin-cas-card p {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(248, 234, 208, 0.8);
+  margin: 0;
+}
+
+.cin-cas-card p strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+.cin-cas-note {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(248, 224, 181, 0.08);
+}
+
+.cin-cas-note p {
+  font-family: "Cardo", serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(248, 234, 208, 0.6);
+  margin: 0;
+}
+
+.cin-cas-note p strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .cin-cas-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+}
+
+/* ── CinematicTechnology ── */
+.cin-tech-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.cin-tech-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  background: linear-gradient(135deg, rgba(28, 38, 52, 0.5) 0%, rgba(22, 16, 12, 0.45) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+  border-radius: 10px;
+  padding: 0.5rem 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  color: inherit;
+  font: inherit;
+}
+
+.cin-tech-thumb:hover {
+  border-color: rgba(185, 139, 97, 0.25);
+}
+
+.cin-tech-thumb.active {
+  border-color: rgba(185, 139, 97, 0.5);
+  box-shadow:
+    0 0 18px rgba(185, 139, 97, 0.15),
+    inset 0 0 12px rgba(185, 139, 97, 0.05);
+  background: linear-gradient(135deg, rgba(40, 48, 62, 0.6) 0%, rgba(30, 22, 16, 0.55) 100%);
+}
+
+.cin-tech-thumb-img {
+  width: 90px;
+  height: 60px;
+  border-radius: 6px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(80, 90, 110, 0.35) 0%, rgba(14, 22, 32, 0.55) 80%),
+    linear-gradient(135deg, rgba(28, 38, 52, 0.6) 0%, rgba(22, 16, 12, 0.5) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+}
+
+.cin-tech-thumb-img span {
+  font-family: "Cinzel", serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(248, 224, 181, 0.18);
+}
+
+.cin-tech-thumb-label {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(248, 234, 208, 0.75);
+  text-align: center;
   line-height: 1.3;
 }
 
-.timeline-list p {
-  font-size: 0.82rem;
-  color: #44556e;
-  overflow: hidden;
-  max-height: 0;
-  margin: 0;
-  opacity: 0;
-  transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.3s ease;
+.cin-tech-thumb.active .cin-tech-thumb-label {
+  color: var(--bronze-soft);
 }
 
-.timeline-list li:hover p {
-  max-height: 600px;
-  opacity: 1;
-  margin: 0.35rem 0 0;
+/* Detail panel */
+.cin-tech-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(28, 38, 52, 0.45) 0%, rgba(22, 16, 12, 0.4) 100%);
+  border: 1px solid rgba(248, 224, 181, 0.08);
+}
+
+.cin-tech-detail-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cin-tech-detail-image .cin-bg-placeholder {
+  min-height: 200px;
+}
+
+.cin-tech-detail-info h3 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: #f8ead0;
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.03em;
+}
+
+.cin-tech-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.cin-tech-tag {
+  font-family: "Cardo", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: rgba(248, 234, 208, 0.55);
+  background: rgba(248, 224, 181, 0.06);
+  border: 1px solid rgba(248, 224, 181, 0.1);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+}
+
+.cin-tech-divider {
+  width: 60px;
+  height: 1px;
+  margin: 0.4rem 0 0.8rem;
+  background: linear-gradient(90deg, rgba(185, 139, 97, 0.4), transparent);
+}
+
+.cin-tech-impact {
+  font-family: "EB Garamond", "Georgia", serif;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(248, 234, 208, 0.82);
+  margin: 0;
+}
+
+.cin-tech-impact strong {
+  color: var(--bronze-soft);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .cin-tech-detail {
+    grid-template-columns: 1fr;
+  }
+  .cin-tech-thumb {
+    width: 90px;
+  }
+  .cin-tech-thumb-img {
+    width: 72px;
+    height: 48px;
+  }
 }
 
 .result-card p {
@@ -1349,7 +2200,6 @@ body {
   .map-card,
   .tech-card,
   .participants-card-v2,
-  .timeline-card,
   .casualties-card,
   .order-card,
   .infobox {
@@ -1427,7 +2277,6 @@ body {
   .map-card,
   .tech-card,
   .participants-card-v2,
-  .timeline-card,
   .casualties-card,
   .order-card,
   .infobox {
@@ -1438,14 +2287,31 @@ body {
     grid-column: 1 / -1;
   }
 
-  .participant-card-v2 {
-    flex: 0 0 150px;
-    min-width: 150px;
+  .civ-grid {
+    gap: 0.6rem;
   }
 
-  .participant-portrait-wrap {
-    width: 90px;
-    height: 90px;
+  .civ-tile {
+    width: 120px;
+  }
+
+  .civ-detail-card {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: 90vh;
+  }
+
+  .civ-detail-portrait {
+    height: 35vh;
+    order: -1;
+  }
+
+  .civ-detail-info {
+    padding: 1.5rem 1.2rem 1.2rem;
+  }
+
+  .civ-detail-name {
+    font-size: 1.5rem;
   }
 
   .figures-grid {

@@ -30,100 +30,32 @@ const glowClass = {
   debated: "glow-yellow",
 };
 
-// Deterministic pseudo-random from seed
-const seededRand = (seed) => {
-  let x = Math.sin(seed * 9301 + 49297) * 49297;
-  return x - Math.floor(x);
-};
-
-// Pre-compute fly-in origins (edges/corners of the screen)
-const flyOrigins = [
-  { x: -600, y: -300 },  // top-left
-  { x: 600, y: -300 },   // top-right
-  { x: -700, y: 200 },   // left
-  { x: 700, y: 200 },    // right
-  { x: -500, y: 500 },   // bottom-left
-  { x: 500, y: 500 },    // bottom-right
-  { x: 0, y: -500 },     // top-center
-  { x: 0, y: 600 },      // bottom-center
-  { x: -800, y: 0 },     // far left
-  { x: 800, y: 0 },      // far right
-];
-
 function ParticipantsCarousel({ warId, participants, scrollPhase = 1 }) {
   const sectionRef = useRef(null);
-  const ringRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
-  const phase = Math.min(Math.max(scrollPhase, 0), 1);
-  const [hasLanded, setHasLanded] = useState(false);
-  const [focusedIndex, setFocusedIndex] = useState(null);
-  const [detailOpen, setDetailOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // Measure ring size to compute radius
-  const [radius, setRadius] = useState(300);
+  // Reset selection when war changes
   useEffect(() => {
-    const measure = () => {
-      if (ringRef.current) {
-        const w = ringRef.current.offsetWidth;
-        const h = ringRef.current.offsetHeight;
-        setRadius(Math.min(w, h) * 0.34);
-      }
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    setSelectedIndex(null);
   }, [warId]);
 
-  // Mark when fly-in is done so orbit can begin
+  // Close on Escape
   useEffect(() => {
-    if (isInView && !hasLanded) {
-      const t = setTimeout(() => setHasLanded(true), participants.length * 140 + 800);
-      return () => clearTimeout(t);
-    }
-    if (!isInView) setHasLanded(false);
-  }, [isInView, participants.length, hasLanded]);
-
-  // Orbit angle driven by requestAnimationFrame — pauses when any card is focused
-  const [orbitAngle, setOrbitAngle] = useState(0);
-  useEffect(() => {
-    if (!hasLanded || focusedIndex !== null) return;
-    let raf;
-    let lastTime = performance.now();
-    const speed = 0.12;
-    const tick = (now) => {
-      const dt = Math.min(now - lastTime, 50);
-      lastTime = now;
-      setOrbitAngle((prev) => (prev + speed * (dt / 16.67)) % 360);
-      raf = requestAnimationFrame(tick);
+    const handler = (e) => {
+      if (e.key === "Escape") setSelectedIndex(null);
     };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [hasLanded, focusedIndex]);
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
 
-  // Compute fly-in origins per card (static)
-  const flyData = useMemo(() => {
-    return participants.map((_, i) => {
-      const seed = i + 1;
-      const origin = flyOrigins[i % flyOrigins.length];
-      const flyRotate = (seededRand(seed * 17) - 0.5) * 80;
-      return { originX: origin.x, originY: origin.y, flyRotate };
-    });
-  }, [participants]);
-
-  const count = participants.length;
+  const selected = selectedIndex !== null ? participants[selectedIndex] : null;
+  const selectedGlow = selected ? (glowClass[selected.side] || "glow-yellow") : "";
 
   return (
-    <section
-      className="participants-card-v2 participants-card-stage"
-      ref={sectionRef}
-      style={{
-        "--participants-height": `max(${Math.round(300 + (1 - phase) * 500)}px, ${(96 - phase * 60).toFixed(2)}vh)`,
-      }}
-    >
-      <header className="card-head participants-scatter-header">
-        <h3 style={{ fontSize: `${Math.max(1.1, 2.7 - phase * 1.6)}rem` }}>
-          Belligerents &amp; Key Participants
-        </h3>
+    <section className="participants-card-v2 participants-civ-stage" ref={sectionRef}>
+      <header className="card-head participants-civ-header">
+        <h3>Belligerents &amp; Key Participants</h3>
         <p>
           Belligerents in <span className="glow-label-red">red</span>, non-belligerent actors in{" "}
           <span className="glow-label-blue">blue</span>, and debated attribution in{" "}
@@ -131,114 +63,118 @@ function ParticipantsCarousel({ warId, participants, scrollPhase = 1 }) {
         </p>
       </header>
 
-      <div className="participants-orbit-ring" ref={ringRef}>
+      {/* Civ7-style tile grid */}
+      <div className="civ-grid">
         {participants.map((participant, index) => {
           const glow = glowClass[participant.side] || "glow-yellow";
-          const fly = flyData[index];
-          const isFocused = focusedIndex === index;
-          const hasFocus = focusedIndex !== null;
-
-          // Compute position
-          let cx, cy, targetScale, targetZIndex;
-          const seed = index + 1;
-
-          if (isFocused) {
-            // Focused card → center, bigger
-            cx = 0;
-            cy = 0;
-            targetScale = 1.5;
-            targetZIndex = 200;
-          } else if (hasFocus) {
-            // Displaced cards → line up vertically on the right side, spread enough to click each
-            const othersCount = count - 1;
-            const reIndex = index < focusedIndex ? index : index - 1;
-            const spacing = Math.min(120, (radius * 3) / Math.max(othersCount, 1));
-            const totalHeight = (othersCount - 1) * spacing;
-            cx = radius * 1.25;
-            cy = -totalHeight / 2 + reIndex * spacing;
-            targetScale = 0.55;
-            targetZIndex = 20 + reIndex;
-          } else {
-            // Circular orbit
-            const angleDeg = (index / count) * 360 - 90 + (hasLanded ? orbitAngle : 0);
-            const angleRad = (angleDeg * Math.PI) / 180;
-            cx = Math.cos(angleRad) * radius;
-            cy = Math.sin(angleRad) * radius;
-            targetScale = 1;
-            targetZIndex = count - index;
-          }
-
           return (
-            <motion.article
-              key={`${warId}-participant-${index}`}
-              className={`participant-card-v2 participant-card-orbit ${glow} ${isFocused ? "card-focused" : ""}`}
-              style={{ zIndex: targetZIndex }}
-              onClick={() => {
-                setDetailOpen(false);
-                setFocusedIndex(isFocused ? null : index);
-              }}
-              initial={{
-                opacity: 0,
-                scale: 0.2,
-                x: fly.originX,
-                y: fly.originY,
-                rotate: fly.flyRotate,
-              }}
-              animate={isInView ? {
-                opacity: hasFocus && !isFocused ? 0.7 : 1,
-                scale: targetScale,
-                x: cx,
-                y: cy,
-                rotate: 0,
-              } : {
-                opacity: 0,
-                scale: 0.2,
-                x: fly.originX,
-                y: fly.originY,
-                rotate: fly.flyRotate,
-              }}
-              transition={hasLanded ? {
-                type: "spring",
-                stiffness: 120,
-                damping: 18,
-                mass: 0.8,
-              } : {
-                type: "spring",
-                stiffness: 45,
-                damping: 13,
-                mass: 1,
-                delay: index * 0.14,
-              }}
+            <motion.button
+              key={`${warId}-tile-${index}`}
+              className={`civ-tile ${glow}`}
+              onClick={() => setSelectedIndex(index)}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+              transition={{ duration: 0.45, delay: index * 0.07, ease: "easeOut" }}
+              whileHover={{ scale: 1.04, y: -4 }}
+              whileTap={{ scale: 0.97 }}
             >
-              <div className="participant-portrait-wrap">
+              <div className="civ-tile-portrait">
                 <img
                   src="/portraits/placeholder-figure.svg"
                   alt={`${participant.name} portrait`}
-                  className="participant-portrait"
                   loading="lazy"
-                  onError={(event) => {
-                    event.currentTarget.src = "/portraits/placeholder-figure.svg";
-                  }}
+                  onError={(e) => { e.currentTarget.src = "/portraits/placeholder-figure.svg"; }}
                 />
-                <div className={`portrait-glow-ring ${glow}`} />
+                <div className={`civ-tile-glow-edge ${glow}`} />
               </div>
-              <h4 className={`participant-name ${glow}`}>{participant.name}</h4>
-              {isFocused && (
-                <div
-                  className={`participant-hover-detail detail-visible ${detailOpen ? "detail-expanded" : "detail-collapsed"}`}
-                  onMouseEnter={() => setDetailOpen(true)}
-                  onMouseLeave={() => setDetailOpen(false)}
-                >
-                  <p className={`side-tag ${participant.side}`}>
-                    {participant.side === "belligerent" ? "Belligerent" : participant.side === "nonBelligerent" ? "Non-belligerent" : "Debated"}
-                  </p>
-                  <p className="participant-role">{renderBold(participant.role)}</p>
-                </div>
-              )}
-            </motion.article>
+              <div className="civ-tile-footer">
+                <span className={`civ-tile-diamond ${glow}`} />
+                <h4>{participant.name}</h4>
+              </div>
+            </motion.button>
           );
         })}
       </div>
+
+      {/* Fullscreen detail overlay (Civ7 detail view) */}
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            className="civ-detail-overlay"
+            key={`detail-overlay-${warId}-${selectedIndex}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            onClick={(e) => {
+              // Close if clicking the backdrop edges (not the card itself)
+              if (e.target === e.currentTarget) setSelectedIndex(null);
+            }}
+          >
+            <motion.div
+              className="civ-detail-card"
+              initial={{ opacity: 0, scale: 0.92, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 30 }}
+              transition={{ type: "spring", stiffness: 200, damping: 26 }}
+            >
+              {/* Back button */}
+              <button
+                type="button"
+                className="civ-detail-back"
+                onClick={() => setSelectedIndex(null)}
+              >
+                ← Back
+              </button>
+
+              {/* Left panel: info */}
+              <div className="civ-detail-info">
+                <div className={`civ-detail-icon ${selectedGlow}`} />
+                <h2 className={`civ-detail-name ${selectedGlow}`}>{selected.name}</h2>
+                <p className={`side-tag ${selected.side}`}>
+                  {selected.side === "belligerent" ? "Belligerent" : selected.side === "nonBelligerent" ? "Non-belligerent" : "Debated"}
+                </p>
+                <div className="civ-detail-divider" />
+                <div className="civ-detail-role">
+                  <h4>Role &amp; Context</h4>
+                  <p>{renderBold(selected.role)}</p>
+                </div>
+
+                {/* Prev / Next navigation among participants */}
+                <div className="civ-detail-nav">
+                  <button
+                    type="button"
+                    disabled={selectedIndex <= 0}
+                    onClick={(e) => { e.stopPropagation(); setSelectedIndex(selectedIndex - 1); }}
+                  >
+                    ◂ Prev
+                  </button>
+                  <span className="civ-detail-counter">
+                    {selectedIndex + 1} / {participants.length}
+                  </span>
+                  <button
+                    type="button"
+                    disabled={selectedIndex >= participants.length - 1}
+                    onClick={(e) => { e.stopPropagation(); setSelectedIndex(selectedIndex + 1); }}
+                  >
+                    Next ▸
+                  </button>
+                </div>
+              </div>
+
+              {/* Right panel: large portrait */}
+              <div className={`civ-detail-portrait ${selectedGlow}`}>
+                <img
+                  src="/portraits/placeholder-figure.svg"
+                  alt={`${selected.name} portrait`}
+                  onError={(e) => { e.currentTarget.src = "/portraits/placeholder-figure.svg"; }}
+                />
+                <div className={`civ-detail-portrait-vignette ${selectedGlow}`} />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
@@ -294,6 +230,369 @@ function CinematicIntro({ theater, summary, warId }) {
           </motion.span>
         ))}
       </div>
+    </section>
+  );
+}
+
+function CinematicTimeline({ warId, timeline }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-40px" });
+
+  return (
+    <section className="cinematic-timeline-card" ref={sectionRef}>
+      {/* Header */}
+      <motion.header
+        className="ct-header"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <h3>Course of the War</h3>
+        <p>Major phases and turning points</p>
+        <div className="ct-header-rule" />
+      </motion.header>
+
+      {/* Vertical timeline */}
+      <div className="ct-track">
+        {/* Animated vertical line */}
+        <motion.div
+          className="ct-line"
+          initial={{ scaleY: 0 }}
+          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        />
+
+        {timeline.map((event, index) => (
+          <motion.div
+            key={`${warId}-ct-${index}`}
+            className={`ct-entry ${index % 2 === 0 ? "ct-entry-left" : "ct-entry-right"}`}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60, y: 20 }}
+            animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: index % 2 === 0 ? -60 : 60, y: 20 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.5 + index * 0.18,
+              ease: "easeOut",
+            }}
+          >
+            {/* Node on the line */}
+            <motion.div
+              className="ct-node"
+              initial={{ scale: 0 }}
+              animate={isInView ? { scale: 1 } : { scale: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 18,
+                delay: 0.5 + index * 0.18,
+              }}
+            />
+
+            {/* Date badge */}
+            <motion.span
+              className="ct-date"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.6 + index * 0.18,
+                ease: "easeOut",
+              }}
+            >
+              {event.period}
+            </motion.span>
+
+            {/* Content card */}
+            <div className="ct-content">
+              <h4>{event.title}</h4>
+              <div className="ct-detail">
+                <p>{renderBold(event.detail)}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CinematicBackground({ warId, background }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+
+  return (
+    <section className="cin-section cin-background" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Background &amp; Causes</h2>
+        <p>Long-term drivers plus immediate triggers</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-bg-entries">
+        {background.map((item, index) => (
+          <motion.div
+            key={`${warId}-bg-${index}`}
+            className="cin-bg-row"
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.6, delay: 0.3 + index * 0.15, ease: "easeOut" }}
+          >
+            <div className="cin-bg-text">
+              <p>{renderBold(item)}</p>
+            </div>
+            <div className="cin-bg-image">
+              <div className="cin-bg-placeholder">
+                <span>Image</span>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CinematicOutcome({ warId, outcome }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+
+  // Split outcome into sentences
+  const sentences = useMemo(() => {
+    if (!outcome) return [];
+    return outcome
+      .replace(/([.!?])\s+/g, "$1|||")
+      .split("|||")
+      .filter((s) => s.trim().length > 0);
+  }, [outcome]);
+
+  return (
+    <section className="cin-section cin-outcome" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Result &amp; Outcome</h2>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-outcome-body">
+        {sentences.map((sentence, i) => (
+          <motion.p
+            key={`${warId}-outcome-${i}`}
+            className="cin-outcome-sentence"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 + i * 0.22, ease: "easeOut" }}
+          >
+            {renderBold(sentence)}
+          </motion.p>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CinematicOrderOfBattle({ warId, orderOfBattle }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+
+  // Split into two halves for left/right layout
+  const midpoint = Math.ceil(orderOfBattle.length / 2);
+  const leftSide = orderOfBattle.slice(0, midpoint);
+  const rightSide = orderOfBattle.slice(midpoint);
+
+  return (
+    <section className="cin-section cin-oob" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Strength &amp; Order of Battle</h2>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-oob-split">
+        <div className="cin-oob-column cin-oob-left">
+          {leftSide.map((item, index) => (
+            <motion.div
+              key={`${warId}-oob-l-${index}`}
+              className="cin-oob-card"
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ duration: 0.55, delay: 0.4 + index * 0.15, ease: "easeOut" }}
+            >
+              <h4>{item.name}</h4>
+              <p className="cin-oob-strength">{item.strength}</p>
+              <p className="cin-oob-note">{renderBold(item.note)}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="cin-oob-divider">
+          <motion.div
+            className="cin-oob-line"
+            initial={{ scaleY: 0 }}
+            animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+          />
+          <span className="cin-oob-vs">VS</span>
+        </div>
+
+        <div className="cin-oob-column cin-oob-right">
+          {rightSide.map((item, index) => (
+            <motion.div
+              key={`${warId}-oob-r-${index}`}
+              className="cin-oob-card"
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+              transition={{ duration: 0.55, delay: 0.4 + index * 0.15, ease: "easeOut" }}
+            >
+              <h4>{item.name}</h4>
+              <p className="cin-oob-strength">{item.strength}</p>
+              <p className="cin-oob-note">{renderBold(item.note)}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CinematicCasualties({ warId, casualties }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+
+  const stats = [
+    { label: "Military", value: casualties.military, icon: "⚔" },
+    { label: "Civilian", value: casualties.civilian, icon: "🏠" },
+    { label: "Displacement", value: casualties.displacement, icon: "🚶" },
+  ];
+
+  return (
+    <section className="cin-section cin-casualties" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Casualties &amp; Human Cost</h2>
+        <p>The toll of conflict on soldiers and civilians alike</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      <div className="cin-cas-grid">
+        {stats.map((stat, i) => (
+          <motion.div
+            key={`${warId}-cas-${i}`}
+            className="cin-cas-card"
+            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+            animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.85, y: 30 }}
+            transition={{ duration: 0.55, delay: 0.3 + i * 0.18, ease: "easeOut" }}
+          >
+            <span className="cin-cas-icon">{stat.icon}</span>
+            <h4>{stat.label}</h4>
+            <p>{renderBold(stat.value)}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {casualties.note && (
+        <motion.div
+          className="cin-cas-note"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
+        >
+          <p>{renderBold(casualties.note)}</p>
+        </motion.div>
+      )}
+    </section>
+  );
+}
+
+function CinematicTechnologyPanel({ warId, technology }) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-60px" });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const techList = technology || [];
+  const active = techList[activeIndex] || null;
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [warId]);
+
+  return (
+    <section className="cin-section cin-tech" ref={sectionRef}>
+      <motion.header
+        className="cin-section-header"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h2>Technology &amp; Weapons</h2>
+        <p>Systems that shaped battlefield outcomes and civilian effects</p>
+        <div className="cin-header-rule" />
+      </motion.header>
+
+      {/* Weapon selector gallery */}
+      <div className="cin-tech-gallery">
+        {techList.map((item, index) => (
+          <motion.button
+            key={`${warId}-tech-${index}`}
+            type="button"
+            className={`cin-tech-thumb ${index === activeIndex ? "active" : ""}`}
+            onClick={() => setActiveIndex(index)}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.45, delay: 0.3 + index * 0.1, ease: "easeOut" }}
+            whileHover={{ scale: 1.04, y: -3 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <div className="cin-tech-thumb-img">
+              <span>IMG</span>
+            </div>
+            <span className="cin-tech-thumb-label">{item.name}</span>
+          </motion.button>
+        ))}
+      </div>
+
+      {/* Active weapon detail */}
+      <AnimatePresence mode="wait">
+        {active && (
+          <motion.div
+            key={`${warId}-techd-${activeIndex}`}
+            className="cin-tech-detail"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+          >
+            <div className="cin-tech-detail-image">
+              <div className="cin-bg-placeholder">
+                <span>Weapon / Technology Image</span>
+              </div>
+            </div>
+            <div className="cin-tech-detail-info">
+              <h3>{active.name}</h3>
+              <div className="cin-tech-meta">
+                <span className="cin-tech-tag">Type: {active.type}</span>
+                <span className="cin-tech-tag">Used by: {active.side}</span>
+              </div>
+              <div className="cin-tech-divider" />
+              <p className="cin-tech-impact">{renderBold(active.impact)}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
@@ -667,6 +966,53 @@ export default function App() {
         warId={selectedEntry.id}
       />
 
+      <CinematicTimeline
+        warId={selectedEntry.id}
+        timeline={profile.timeline}
+      />
+
+      <CinematicBackground
+        warId={selectedEntry.id}
+        background={profile.background}
+      />
+
+      <CinematicOutcome
+        warId={selectedEntry.id}
+        outcome={profile.outcome}
+      />
+
+      <CinematicOrderOfBattle
+        warId={selectedEntry.id}
+        orderOfBattle={profile.orderOfBattle}
+      />
+
+      <CinematicCasualties
+        warId={selectedEntry.id}
+        casualties={profile.casualties}
+      />
+
+      <CinematicTechnologyPanel
+        warId={selectedEntry.id}
+        technology={profile.technology}
+      />
+
+      {/* Triangular index tab fixed to right screen edge */}
+      <div
+        className="index-tab-flag"
+        onClick={() => {
+          const rail = document.querySelector('.tab-rail');
+          if (rail) {
+            const zone = document.querySelector('.rail-hover-zone');
+            if (zone) {
+              zone.style.width = '280px';
+              setTimeout(() => { zone.style.width = ''; }, 3000);
+            }
+          }
+        }}
+      >
+        <span>INDEX</span>
+      </div>
+
       <div className="book-layout">
         <div className="rail-hover-zone">
         <aside
@@ -719,18 +1065,6 @@ export default function App() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               <section className="content-grid">
-                <section className="card span-two">
-                  <header className="card-head">
-                    <h3>Background / Causes</h3>
-                    <p>Long-term drivers plus immediate triggers.</p>
-                  </header>
-                  <ul className="bullet-list">
-                    {profile.background.map((item, index) => (
-                      <li key={`${selectedEntry.id}-background-${index}`}>{renderBold(item)}</li>
-                    ))}
-                  </ul>
-                </section>
-
                 <aside className="card infobox">
                   <header className="card-head">
                     <h3>Infobox</h3>
@@ -746,72 +1080,7 @@ export default function App() {
                   </dl>
                 </aside>
 
-                <section className="card timeline-card">
-                  <header className="card-head">
-                    <h3>Course of the War / Timeline</h3>
-                    <p>Major phases and turning points.</p>
-                  </header>
-
-                  <ol className="timeline-list">
-                    {profile.timeline.map((event, index) => (
-                      <li key={`${selectedEntry.id}-timeline-${index}`}>
-                        <span>{event.period}</span>
-                        <div>
-                          <h4>{event.title}</h4>
-                          <p>{renderBold(event.detail)}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ol>
-                </section>
-
-                <section className="card span-two result-card">
-                  <header className="card-head">
-                    <h3>Result / Outcome</h3>
-                  </header>
-                  <p>{renderBold(profile.outcome)}</p>
-                </section>
-
-                <section className="card casualties-card">
-                  <header className="card-head">
-                    <h3>Casualties and Human Cost</h3>
-                  </header>
-                  <ul className="bullet-list">
-                    <li>
-                      <strong>Military:</strong> {renderBold(profile.casualties.military)}
-                    </li>
-                    <li>
-                      <strong>Civilian:</strong> {renderBold(profile.casualties.civilian)}
-                    </li>
-                    <li>
-                      <strong>Displacement:</strong> {renderBold(profile.casualties.displacement)}
-                    </li>
-                    <li>
-                      <strong>Notes:</strong> {renderBold(profile.casualties.note)}
-                    </li>
-                  </ul>
-                </section>
-
-                <section className="card order-card">
-                  <header className="card-head">
-                    <h3>Strength / Order of Battle</h3>
-                  </header>
-                  <ul className="order-list">
-                    {profile.orderOfBattle.map((item) => (
-                      <li key={`${selectedEntry.id}-${item.name}`}>
-                        <h4>{item.name}</h4>
-                        <p>
-                          <strong>{item.strength}</strong>
-                        </p>
-                        <p>{renderBold(item.note)}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-
                 <InteractiveMap warId={selectedEntry.id} mapData={profile.maps} />
-
-                <TechnologyPanel warId={selectedEntry.id} technology={profile.technology} />
 
                 <CentralFigures figures={profile.centralFigures} />
 
